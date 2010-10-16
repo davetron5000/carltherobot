@@ -11,6 +11,8 @@ Carl::Application.configure do
 
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
+  ENV['RAILS_RELATIVE_URL_ROOT'] ="/carl"
+
 
   # For nginx:
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'

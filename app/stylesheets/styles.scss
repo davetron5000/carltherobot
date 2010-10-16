@@ -189,16 +189,24 @@ body.bp {
   }
   #solution {
     .controls {
-      div.command div, div.sub div, div.control-command div {
-        border: solid thin;
-        height: $line-height * 2;
+      div.command, div.sub, div.control-command {
+        margin-bottom: $line-height / 2;
+        div {
+          border: solid thin;
+          height: $line-height * 2;
+        }
       }
     }
     #board {
+      #goal-title {
+        h3 {
+          padding-top: $line-height;
+          text-align: right;
+        }
+      }
       ul {
         margin-top: $line-height;
         list-style: none;
-        text-align: center;
         li {
           color: $alt-color;
         }

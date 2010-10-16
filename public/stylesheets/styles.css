@@ -212,34 +212,42 @@ body.bp h3 {
   text-align: right;
 }
 /* line 192, ../../app/stylesheets/styles.scss */
+#content #solution .controls div.command, #content #solution .controls div.sub, #content #solution .controls div.control-command {
+  margin-bottom: 10px;
+}
+/* line 194, ../../app/stylesheets/styles.scss */
 #content #solution .controls div.command div, #content #solution .controls div.sub div, #content #solution .controls div.control-command div {
   border: solid thin;
   height: 40px;
 }
-/* line 198, ../../app/stylesheets/styles.scss */
+/* line 202, ../../app/stylesheets/styles.scss */
+#content #solution #board #goal-title h3 {
+  padding-top: 20px;
+  text-align: right;
+}
+/* line 207, ../../app/stylesheets/styles.scss */
 #content #solution #board ul {
   margin-top: 20px;
   list-style: none;
-  text-align: center;
 }
-/* line 202, ../../app/stylesheets/styles.scss */
+/* line 210, ../../app/stylesheets/styles.scss */
 #content #solution #board ul li {
   color: aqua;
 }
-/* line 206, ../../app/stylesheets/styles.scss */
+/* line 214, ../../app/stylesheets/styles.scss */
 #content #solution #board h3 {
   text-align: center;
 }
-/* line 210, ../../app/stylesheets/styles.scss */
+/* line 218, ../../app/stylesheets/styles.scss */
 #content #solution .hidden {
   visibility: hidden;
 }
-/* line 213, ../../app/stylesheets/styles.scss */
+/* line 221, ../../app/stylesheets/styles.scss */
 #content #solution #program form {
   margin-right: 30px;
 }
 
-/* line 218, ../../app/stylesheets/styles.scss */
+/* line 226, ../../app/stylesheets/styles.scss */
 textarea#solution_code, pre.code {
   width: 100%;
   color: white;
@@ -248,19 +256,19 @@ textarea#solution_code, pre.code {
   line-height: 20px;
 }
 
-/* line 228, ../../app/stylesheets/styles.scss */
+/* line 236, ../../app/stylesheets/styles.scss */
 #signin form input, #signup form input {
   font-size: 28px;
   font-family: 'CPMono_v07_ExtraLight', monospace;
   border: solid thin;
   margin-top: 14px;
 }
-/* line 234, ../../app/stylesheets/styles.scss */
+/* line 242, ../../app/stylesheets/styles.scss */
 #signin form input[type="submit"], #signup form input[type="submit"] {
   padding-left: 20px;
   padding-right: 20px;
 }
-/* line 238, ../../app/stylesheets/styles.scss */
+/* line 246, ../../app/stylesheets/styles.scss */
 #signin form .label, #signup form .label {
   text-align: right;
   vertical-align: middle;
@@ -268,25 +276,25 @@ textarea#solution_code, pre.code {
   padding-right: 0px;
   margin-right: 0px;
 }
-/* line 245, ../../app/stylesheets/styles.scss */
+/* line 253, ../../app/stylesheets/styles.scss */
 #signin form .input, #signup form .input {
   padding-left: 0px;
   margin-left: 0px;
 }
-/* line 249, ../../app/stylesheets/styles.scss */
+/* line 257, ../../app/stylesheets/styles.scss */
 #signin form label, #signup form label {
   font-size: 18px;
   font-family: 'CPMono_v07_Light', monospace;
   margin-left: 0px;
 }
-/* line 256, ../../app/stylesheets/styles.scss */
+/* line 264, ../../app/stylesheets/styles.scss */
 #signin ul#devise-links, #signup ul#devise-links {
   list-style: none;
   padding: 0;
   margin: 0;
   padding-top: 20px;
 }
-/* line 261, ../../app/stylesheets/styles.scss */
+/* line 269, ../../app/stylesheets/styles.scss */
 #signin ul#devise-links li, #signup ul#devise-links li {
   padding: 0;
   display: inline;
@@ -294,7 +302,7 @@ textarea#solution_code, pre.code {
   padding-right: 15px;
 }
 
-/* line 270, ../../app/stylesheets/styles.scss */
+/* line 278, ../../app/stylesheets/styles.scss */
 .square {
   border: solid thin aqua;
   background: #002200;
@@ -302,27 +310,27 @@ textarea#solution_code, pre.code {
   height: 30px;
 }
 
-/* line 276, ../../app/stylesheets/styles.scss */
+/* line 284, ../../app/stylesheets/styles.scss */
 .last-row .square {
   margin-bottom: 0;
 }
 
-/* line 280, ../../app/stylesheets/styles.scss */
+/* line 288, ../../app/stylesheets/styles.scss */
 .carl .square {
   background: #fff;
 }
 
-/* line 284, ../../app/stylesheets/styles.scss */
+/* line 292, ../../app/stylesheets/styles.scss */
 .goal .square {
   background: #f00;
 }
 
-/* line 288, ../../app/stylesheets/styles.scss */
+/* line 296, ../../app/stylesheets/styles.scss */
 .wall .square {
   background: lime;
 }
 
-/* line 291, ../../app/stylesheets/styles.scss */
+/* line 299, ../../app/stylesheets/styles.scss */
 #footer {
   background: lime;
   color: black;

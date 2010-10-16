@@ -29,17 +29,20 @@
     </div>
     <div id="board">
       <% goal_square = @solution.level.goal.carl %>
-      <ul>
-        <li>Bring C.A.R.L. to <%= @solution.level.goal.carl[0] %>, <%= @solution.level.goal.carl[1] %></li>
-        <% unless @solution.level.goal.beacons.nil? %>
-          <li>Place beacons at: <% @solution.level.goal.beacons.each do |b| %>
-            <%= b[0] %>,<%= b[1] %>&nbsp;&nbsp;
-          <% end %></li>
-        <% end %>
-        <% unless @solution.level.goal.lines_of_code.nil? %>
-          <li>Do this in <%= @solution.level.goal.lines_of_code %> lines of code or less</li>
-        <% end %>
-      </ul>
+      <div id="goal-title"><h3>Goals:</h3></div>
+      <div id="goal-list">
+        <ul>
+          <li>Bring C.A.R.L. to <%= goal_square[0] %>, <%= goal_square[1] %></li>
+          <% unless @solution.level.goal.beacons.nil? %>
+            <li>Place beacons at: <% @solution.level.goal.beacons.each do |b| %>
+              <%= b[0] %>,<%= b[1] %>&nbsp;&nbsp;
+            <% end %></li>
+          <% end %>
+          <% unless @solution.level.goal.lines_of_code.nil? %>
+            <li>Do this in <%= @solution.level.goal.lines_of_code %> lines of code or less</li>
+          <% end %>
+        </ul>
+      </div>
       <%
         hidden = ''
         hidden = 'hidden' if @solution.level.board1.nil?

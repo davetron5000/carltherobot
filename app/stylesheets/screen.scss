@@ -59,6 +59,8 @@ form.bp {
       }
       #board {
         @include column(16,true);
+        #goal-title { @include column(2); }
+        #goal-list { @include column(14,true); }
         #board0-title {
           @include column(8);
         }

@@ -1,3 +1,17 @@
+class Goal
+  # Coordinate of where carl must end up
+  attr_accessor :carl
+  # Array of coordinates where beacons must be brought
+  attr_accessor :beacons
+  # Number of lines or less that the solution must be
+  attr_accessor :lines_of_code
+
+  # Returns true if this board configuration satisfies the goals
+  def achieved?(board)
+    false
+  end
+end
+
 # A board is an 8x8 grid
 class Board
 
@@ -72,8 +86,10 @@ class Board
 end
 
 class Level < ActiveRecord::Base
+  serialize :board0, Board
   serialize :board1, Board
-  serialize :board2, Board
+  serialize :goal, Goal
+
   # Returns all levels organized by difficult, in ordinal order
   def self.by_difficulty
     result = { :tutorial => [], :easy => [], :hard => [] }
@@ -146,17 +162,3 @@ end
 #     raise "Explode!"
 #   end
 # end
-
-class Goal
-  # Coordinate of where carl must end up
-  attr_accessor :carl
-  # Array of coordinates where beacons must be brought
-  attr_accessor :beacons
-  # Number of lines or less that the solution must be
-  attr_accessor :lines_of_code
-
-  # Returns true if this board configuration satisfies the goals
-  def achieved?(board)
-    false
-  end
-end

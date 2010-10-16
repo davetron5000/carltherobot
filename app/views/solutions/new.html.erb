@@ -1,5 +1,5 @@
 <div id="solution">
-  <h2>Level XX</h2>
+  <h2><%= @solution.level.difficulty %> <%= sprintf("%02d",@solution.level.ordinal) %>: <%= @solution.level.name %></h2>
   <div id="program">
     <%= form_for @solution do |f| %>
       <%= f.hidden_field :level_id, :name => 'level_id' %>
@@ -28,21 +28,44 @@
       <div class="sub" id="sub4"><div>sub4</a></div></div>
     </div>
     <div id="board">
-      <h2>Carmack</h2>
+      <% goal_square = @solution.level.goal.carl %>
       <ul>
-        <li>Bring Carl to the goal square</li>
-        <li>Get there in 10 lines of code or less</li>
+        <li>Bring C.A.R.L. to <%= @solution.level.goal.carl[0] %>, <%= @solution.level.goal.carl[1] %></li>
+        <% unless @solution.level.goal.beacons.nil? %>
+          <li>Place beacons at: <% @solution.level.goal.beacons.each do |b| %>
+            <%= b[0] %>,<%= b[1] %>&nbsp;&nbsp;
+          <% end %></li>
+        <% end %>
+        <% unless @solution.level.goal.lines_of_code.nil? %>
+          <li>Do this in <%= @solution.level.goal.lines_of_code %> lines of code or less</li>
+        <% end %>
       </ul>
-      <div id="board0-title" class="board0"><h3>Board 00</h3></div>
-      <div id="board1-title" class="board1"><h3>Board 01</h3></div>
+      <%
+        hidden = ''
+        hidden = 'hidden' if @solution.level.board1.nil?
+      %>
+      <div id="board0-title" class="board0 <%= hidden %>"><h3>Board 00</h3></div>
+      <div id="board1-title" class="board1 <%= hidden %>"><h3>Board 01</h3></div>
       <% 8.times do |row| %>
-        <% 2.times do |board| %>
+        <% 2.times do |board_num| %>
           <% 8.times do |col| %>
-            <% klass = "board-square"
-               klass = "board-square-end" if board == 1 && col == 7
-               klass = "board-square-board0-end" if board == 0 && col == 7
-               klass += " last-row" if row == 7 %>
-               <div class="<%= klass %> board<%= board %>" id="board<%= board %>-<%= row %>-<%= col %>"><div class="square">&nbsp;</div></div>
+            <% 
+               board = @solution.level.board0
+               board = @solution.level.board1 if board_num == 1
+               klass = "board-square"
+               klass = "board-square-end" if board_num == 1 && col == 7
+               klass = "board-square-board0-end" if board_num == 0 && col == 7
+               klass += " last-row" if row == 7
+               klass += " " + hidden if board_num == 1
+               square_contents = ''
+               unless board.nil?
+                 square_contents = 'wall' if board.wall?(row,col)
+                 square_contents = 'beacon' if board.beacon?(row,col)
+                 square_contents = 'goal' if goal_square == [row,col]
+                 square_contents += ' carl' if board.carl?(row,col)
+               end
+             %>
+             <div class="<%= klass %> board<%= board_num %> <%= square_contents %>" id="board<%= board_num %>-<%= row %>-<%= col %>"><div class="square">&nbsp;</div></div>
           <% end %>
         <% end %>
       <% end %>

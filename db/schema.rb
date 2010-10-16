@@ -22,13 +22,14 @@ ActiveRecord::Schema.define(:version => 20101016182843) do
   end
 
   create_table "levels", :force => true do |t|
-    t.string   "goal_description"
     t.integer  "ordinal"
     t.string   "difficulty"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "board0",     :null => false
     t.text     "board1"
-    t.text     "board2"
+    t.text     "goal",       :null => false
+    t.string   "name",       :null => false
   end
 
   create_table "players", :force => true do |t|

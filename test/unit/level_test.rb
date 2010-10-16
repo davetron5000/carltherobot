@@ -16,15 +16,20 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal 3,levels[:hard][2].ordinal
   end
 
-  test "board_serialization" do
+  test "board_and_goal_serialization" do
     level = Level.find_by_id(1)
-    assert_not_nil level.board1
-    assert_nil level.board2
-    assert level.board1.kind_of? Board
+    assert_not_nil level.board0
+    assert_nil level.board1
+    assert level.board0.kind_of? Board
+
+    assert level.goal.kind_of? Goal
+    assert_equal [1,1],level.goal.carl
+    assert_nil level.goal.beacons
+    assert_equal 10,level.goal.lines_of_code
 
     level = Level.find_by_id(4)
+    assert_not_nil level.board0
     assert_not_nil level.board1
-    assert_not_nil level.board2
   end
 
   test "empty board behaves" do

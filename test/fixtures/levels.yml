@@ -2,39 +2,49 @@
 
 t_01:
   id: 1
-  goal_description: Get Carl to the Goal
   ordinal: 1
+  name: Carmack
+  goal: "--- !ruby/object:Goal \ncarl: \n- 1\n- 1\nlines_of_code: 10\n"
   difficulty: tutorial
-  board1: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
+  board0: "--- !ruby/object:Board \ncarl: \n- 0\n- 0\nmap: \n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n"
 
 t_02:
   id: 2
-  goal_description: Bring a beacon to the goal
+  name: Knuth
   ordinal: 2
   difficulty: tutorial
+  goal: "--- !ruby/object:Goal \nbeacons: \n- - 1\n  - 1\n- - 0\n  - 1\ncarl: \n- 1\n- 1\nlines_of_code: 10\n" 
+  board0: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
 
 e_01:
   id: 3
-  goal_description: Bring all beacon to the goal
+  name: Oderksy
   ordinal: 1
   difficulty: easy
+  goal: "--- !ruby/object:Goal \nbeacons: \n- - 1\n  - 1\n- - 0\n  - 1\ncarl: \n- 1\n- 1\nlines_of_code: 10\n" 
+  board0: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
 
 h_01:
   id: 4
-  goal_description: Bring all beacon to the goal
+  name: Hanson
   ordinal: 1
   difficulty: hard
+  goal: "--- !ruby/object:Goal \nbeacons: \n- - 1\n  - 1\n- - 0\n  - 1\ncarl: \n- 1\n- 1\nlines_of_code: 10\n" 
+  board0: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
   board1: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
-  board2: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
 
 h_02:
   id: 5
-  goal_description: Bring all beacon to the goal
   ordinal: 2
+  name: Johnson
   difficulty: hard
+  goal: "--- !ruby/object:Goal \nbeacons: \n- - 1\n  - 1\n- - 0\n  - 1\ncarl: \n- 1\n- 1\nlines_of_code: 10\n" 
+  board0: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
 
 h_03:
   id: 6
-  goal_description: Bring all beacon to the goal
+  name: Hellesoy
   ordinal: 3
   difficulty: hard
+  goal: "--- !ruby/object:Goal \nbeacons: \n- - 1\n  - 1\n- - 0\n  - 1\ncarl: \n- 1\n- 1\nlines_of_code: 10\n" 
+  board0: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"

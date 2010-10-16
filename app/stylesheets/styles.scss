@@ -196,15 +196,19 @@ body.bp {
     }
     #board {
       ul {
+        margin-top: $line-height;
         list-style: none;
         text-align: center;
+        li {
+          color: $alt-color;
+        }
       }
       h3 {
         text-align: center;
       }
     }
-    .board1 {
-      //visibility:hidden;
+    .hidden {
+      visibility:hidden;
     }
     #program form {
       margin-right: $blueprint-grid-width;
@@ -272,11 +276,17 @@ textarea#solution_code, pre.code {
 .last-row .square {
   margin-bottom: 0;
 }
-.goal {
-  background: #faf;
+
+.carl .square {
+  background: #fff;
 }
-.carl {
-  background: #aff;
+
+.goal .square {
+  background: #f00;
+}
+
+.wall .square {
+  background: $main-color;
 }
 #footer {
   background: $main-color;

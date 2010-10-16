@@ -1,0 +1,17 @@
+<div id="signup">
+  <div id="padleft">&nbsp;</div>
+  <div id="signup-content">
+    <h2>Sign up</h2>
+
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      <div id="email"><div class="label"><%= f.label :email,'email:' %></div><div class="input"><%= f.text_field :email %></div></div>
+      <div id="password"><div class="label"><%= f.label :password,'password:' %></div><div class="input"><%= f.password_field :password %></div></div>
+      <div id="password-confirm"><div class="label"><%= f.label :password_confirmation,'confirm:' %></div><div class="input"><%= f.password_field :password_confirmation %></div></div>
+      <div id="submit-button"><div class="label">&nbsp;</div><div class="input"><%= f.submit "Sign up" %></div></div>
+    <% end %>
+    <div class="label">&nbsp;</div>
+    <div class="input"><%= render :partial => "devise/shared/links" %></div>
+  </div>
+  <div id="padright">&nbsp;</div>
+</div>

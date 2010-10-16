@@ -12,6 +12,18 @@
 
 $font-size: 20px;
 $line-height: 20px;
+//$main-color: black;
+//$link-color: black;
+//$alt-color: #777;
+//$altalt-color: black;
+//$bg-color: white;
+//$highlight-color: #ddd;
+$main-color: #0F0;
+$link-color: #FFF;
+$alt-color: #0FF;
+$altalt-color: #FF0;
+$bg-color: black;
+$highlight-color: #020;
 
 body.bp, textarea {
   font-family: 'CPMono_v07_Plain', monospace;
@@ -19,9 +31,24 @@ body.bp, textarea {
 
 body.bp {
   line-height: $line-height;
+  background: $bg-color;
+  color: $main-color;
   h1 {
     font-size: $font-size + 40;
     line-height: $font-size + 40; 
+    a {
+      text-decoration: none;
+      color: $main-color;
+      &:hover, &:visited {
+        color: $main-color;
+      }
+    }
+  }
+  h1, h3, h5 {
+    color: $main-color;
+  }
+  h2, h4 {
+    color: $altalt-color;
   }
 
   h2 {
@@ -51,15 +78,19 @@ body.bp {
         display: inline;
         a {
           font-family: 'CPMono_v07_Light', monospace;
+          color: $link-color;
+          &:hover, &:visited {
+            color: $link-color;
+          }
         }
       }
     }
   }
-  border-bottom: solid thin black;
+  border-bottom: solid thin $main-color;
   .subhead {
     font-family: 'CPMono_v07_ExtraLight', monospace;
     font-size: $font-size - 8;
-    color: #777;
+    color: $alt-color;
     line-height: $font-size - 10;
   }
 }
@@ -76,47 +107,130 @@ body.bp {
       text-align: center;
     }
   }
-  #start {
-    text-align: center;
-    .difficulty {
-      border: solid thin black;
-      margin-top: $line-height;
-      margin-bottom: $line-height;
-      margin-left: $blueprint-grid-width/2;
-      margin-right: $blueprint-grid-width/2;
-      padding-left: $blueprint-grid-width/2;
-      padding-right: $blueprint-grid-width/2;
-      padding-bottom: 0px;
-      padding-top: $line-height;
+  #welcome {
+    div {
+      &:hover {
+        background: $highlight-color;
+        cursor: pointer; cursor:hand;
+      }
     }
-    .disabled h3 {
-      color: #aaa;
+    h2, h3 {
+      color: $altalt-color;
+      a {
+        text-decoration: none;
+        color: $altalt-color;
+        &:hover, &:visited {
+          color: $altalt-color;
+        }
+      }
+    }
+    h3 {
+      text-align: center;
+      margin-top: 0;
+      line-height: 0;
+    }
+  }
+  #solutions {
+    #start {
+      .difficulty {
+        border: solid thin $main-color;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: $blueprint-grid-width/2;
+        margin-right: $blueprint-grid-width/2;
+        padding-left: $blueprint-grid-width/2;
+        padding-right: $blueprint-grid-width/2;
+        padding-bottom: 0px;
+        padding-top: $line-height;
+        cursor: pointer; cursor:hand;
+        a {
+          text-decoration: none;
+          color: $main-color;
+          &:hover, &:visited {
+            color: $main-color;
+          }
+        }
+        p {
+          font-family: 'CPMono_v07_Light', monospace;
+          color: lighten($main-color,20%);
+          text-align: center;
+        }
+      }
+      .disabled {
+        cursor: default;
+        h3, p, p a, p a:visited, p a:hover {
+          color: #222;
+        }
+      }
+      #tutorial, #easy {
+        border-bottom: none;
+      }
+      text-align: left;
+      h2 {
+        text-align: left;
+        padding-left: $blueprint-grid-width/2;
+      }
+      h3 {
+        text-align: center;
+      }
+    }
+    #resume {
+      text-align: right;
+      h2,h3 {
+        text-align: right;
+      }
     }
   }
 }
-
-.disabled {
-  background: #888;
-}
-
-
 textarea#solution_code, pre.code {
-  color: #0f0;
-  background: black;
   width: 100%;
+  color: $link-color;
+  background-color: $highlight-color;
   font-size: $font-size;
   line-height: $line-height;
 }
 
-form#player_new {
-  text-align: center;
-  input {
-    font-size: $font-size - 2;
-    font-family: 'CPMono_v07_Plain', monospace;
+#signin, #signup {
+  form {
+    input {
+      font-size: $font-size + 8;
+      font-family: 'CPMono_v07_ExtraLight', monospace;
+      border: solid thin;
+      margin-top: ($font-size + 8)/2;
+    }
+    input[type="submit"] {
+      padding-left: $font-size;
+      padding-right: $font-size;
+    }
+    .label {
+      text-align: right;
+      vertical-align: middle;
+      padding-top: ($font-size + 8);
+      padding-right: 0px;
+      margin-right: 0px;
+    }
+    .input {
+      padding-left: 0px;
+      margin-left: 0px;
+    }
+    label {
+      font-size: $font-size - 2;
+      font-family: 'CPMono_v07_Light', monospace;
+      margin-left: 0px;
+    }
   }
-  label {
-    font-size: $font-size + 5;
-    font-family: 'CPMono_v07_Black', monospace;
+
+  ul#devise-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-top: $line-height;
+    li {
+      padding: 0;
+      display: inline;
+      margin: 0;
+      padding-right: $blueprint-grid-width/2;
+    }
   }
 }
 // Sketchy
@@ -132,8 +246,8 @@ form#player_new {
   background: #aff;
 }
 #footer {
-  background: black;
-  color:white;
+  background: $main-color;
+  color:$bg-color;
   width: 100%;
   text-align: center;
 }

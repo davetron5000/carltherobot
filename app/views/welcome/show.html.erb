@@ -1,23 +1,21 @@
-<div id="start">
-  <h2>Start</h2>
-  <div class="difficulty" id="tutorial"><a href="<%= new_solution_url %>"<h3>Tutorial</h3></a></div>
-  <div class="difficulty disabled" id="easy"><a href="#"><h3>Easy</h3></a></div>
-  <div class="difficulty disabled" id="hard"><a href="#"><h3>Hard</h3></a></div>
-</div>
-<div id="resume">
-  <h2>Resume</h2>
-  <ul>
-    <li>T:03 - 10/16/10</li>
-    <li>E:05 - 10/16/10</li>
-    <li>E:07 - 10/16/10</li>
-    <li>H:01 - 10/16/10</li>
-  </ul>
-</div>
-<div id="help">
-  <h2>Help!</h2>
-  <ul>
-    <li>How do I play?</li>
-    <li>What is this?</li>
-    <li>Why is this?</li>
-  </ul>
+<div id="welcome">
+  <% if player_signed_in? %>
+    <%= link_box("playnow",
+                 "Play Now!",
+                 "C.A.R.L. is waiting",
+                 "Can you beat your previous score, get to a higher level, or unlock more upgrades?",
+                 solutions_url) %>
+  <% else %>
+    <%= link_box("signin",
+                 "Sign In",
+                 "To Play",
+                 "You're just moments away for testing your skills as a robot programmer!",
+                 new_player_session_url) %>
+    <%= link_box("signup",
+                 "Sign-Up",
+                 "Now",
+                 "Sign up is easy; you just need an email address and a password, and you'll be on your way!",
+                 new_player_registration_url) %>
+  <% end %>
+  <%= link_box("wtf","WTF","is all this?","Find out what C.A.R.L. is all about","#") %>
 </div>

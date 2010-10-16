@@ -42,11 +42,80 @@ class Board
   end
 end
 
+# class Doit
+#   carl.board = board.copy
+#   solution.code.each { |command| self.execute(command) }
+#   begin
+#   if level.goal.satisfies?(board)
+#     win!
+#   else
+#     fail!
+#   end
+#   rescue "explosion"
+#     carls -= 1
+#   end
+# end
+# 
+# 
+# class Carl
+#   attr_accessor :board
+# 
+#   def execute(command)
+#     if command == :move
+#       if board.clear?(board.carl + self.direction)
+#         move
+#       else
+#         explode
+#       end
+#     elsif command == :turnleft
+#       rotate
+#     elsif command == :pickbeacon
+#       explode unless board.beacon_at?(board.carl)
+#       board.remove_beacon_at(board.carl)
+#       @beacons += 1
+#     elsif command == :putbeacon
+#       explode unless has_beacons?
+#       explode if board.beacon_at?(board.carl)
+#       board.add_beacon(board.carl)
+#       @beacons -= 1
+#     elsif command.kind_of? Loop
+#       count = 0
+#       while command.true?(board,self)
+#         command.each do |cmd|
+#           self.execute(cmd)
+#         end
+#         count += 1
+#         explode if count > 20
+#       end
+#     elsif command.kind_of? Branch
+#       if command.true?(board,self)
+#         command.each { |cmd| self.execute(cmd) }
+#       end
+#     elsif command.kind_of? Iterate
+#       command.times { command.each { |cmd| self.execute(cmd) } }
+#     elsif command.kind_of? Subroutine
+#       command.each { |cmd| self.execute(cmd) }
+#     else
+#       explode
+#     end
+# 
+#   end
+# 
+#   def explode
+#     raise "Explode!"
+#   end
+# end
+
 class Goal
   # Coordinate of where carl must end up
   attr_accessor :carl
   # Array of coordinates where beacons must be brought
-  attr_accessor :beepers
+  attr_accessor :beacons
   # Number of lines or less that the solution must be
   attr_accessor :lines_of_code
+
+  # Returns true if this board configuration satisfies the goals
+  def achieved?(board)
+    false
+  end
 end

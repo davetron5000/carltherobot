@@ -42,17 +42,30 @@ form.bp {
   }
   #content {
     @include column($blueprint-grid-columns); 
-    #start {
-      @include column($blueprint-grid-columns/6 + 2);
-    }
-    #resume {
-      @include column(2 * $blueprint-grid-columns/3 - 4);
-    }
-    #help {
-      @include column($blueprint-grid-columns/6 + 2,true);
+    #solutions {
+      #start {
+        @include column($blueprint-grid-columns/3);
+        .difficulty {
+          @include column($blueprint-grid-columns/3);
+        }
+      }
+      #resume {
+        @include column(2 * $blueprint-grid-columns/3,true);
+      }
     }
     #solution {
       @include column($blueprint-grid-columns - 6);
+    }
+    #welcome {
+      #playnow {
+        @include column(2 * ($blueprint-grid-columns / 3));
+      }
+      #signin, #signup {
+        @include column($blueprint-grid-columns / 3);
+      }
+      #wtf {
+        @include column($blueprint-grid-columns / 3,true);
+      }
     }
     #board {
       .square {
@@ -62,8 +75,20 @@ form.bp {
         @include column(1,true);
       }
     }
-    #player_new {
-      @include column($blueprint-grid-columns);
+    #signin, #signup {
+      #padleft { @include column(4); }
+      #padright { @include column(4,true); }
+      #signin-content, #signup-content {
+        @include column($blueprint-grid-columns - 8);
+      }
+      .label {
+        @include column(4);
+      }
+      .input {
+        @include column($blueprint-grid-columns - 8 - 4,true);
+      }
+      #email, #password, #rememberme, #submit-button, #devise-links {
+      }
     }
   }
 }

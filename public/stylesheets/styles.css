@@ -18,151 +18,268 @@
   src: local("☺"), url('/fonts/../fonts/CPMono_v07_Black-webfont.woff') format('woff'), url('/fonts/../fonts/CPMono_v07_Black-webfont.ttf') format('truetype'), url('/fonts/../fonts/CPMono_v07_Black-webfont.svg#webfontRVXSRgPv') format('svg');
 }
 
-/* line 16, ../../app/stylesheets/styles.scss */
+/* line 28, ../../app/stylesheets/styles.scss */
 body.bp, textarea {
   font-family: 'CPMono_v07_Plain', monospace;
 }
 
-/* line 20, ../../app/stylesheets/styles.scss */
+/* line 32, ../../app/stylesheets/styles.scss */
 body.bp {
   line-height: 20px;
+  background: black;
+  color: lime;
 }
-/* line 22, ../../app/stylesheets/styles.scss */
+/* line 36, ../../app/stylesheets/styles.scss */
 body.bp h1 {
   font-size: 60px;
   line-height: 60px;
 }
-/* line 27, ../../app/stylesheets/styles.scss */
+/* line 39, ../../app/stylesheets/styles.scss */
+body.bp h1 a {
+  text-decoration: none;
+  color: lime;
+}
+/* line 42, ../../app/stylesheets/styles.scss */
+body.bp h1 a:hover, body.bp h1 a:visited {
+  color: lime;
+}
+/* line 47, ../../app/stylesheets/styles.scss */
+body.bp h1, body.bp h3, body.bp h5 {
+  color: lime;
+}
+/* line 50, ../../app/stylesheets/styles.scss */
+body.bp h2, body.bp h4 {
+  color: yellow;
+}
+/* line 54, ../../app/stylesheets/styles.scss */
 body.bp h2 {
   font-size: 35px;
   line-height: 40px;
 }
-/* line 31, ../../app/stylesheets/styles.scss */
+/* line 58, ../../app/stylesheets/styles.scss */
 body.bp h3 {
   font-size: 25px;
   line-height: 30px;
 }
 
-/* line 37, ../../app/stylesheets/styles.scss */
+/* line 64, ../../app/stylesheets/styles.scss */
 #title {
   display: inline;
   float: left;
 }
-/* line 40, ../../app/stylesheets/styles.scss */
+/* line 67, ../../app/stylesheets/styles.scss */
 #title h1 {
   margin: 0;
   font-family: 'CPMono_v07_Black', monospace;
 }
 
-/* line 46, ../../app/stylesheets/styles.scss */
+/* line 73, ../../app/stylesheets/styles.scss */
 #header {
-  border-bottom: solid thin black;
+  border-bottom: solid thin lime;
 }
-/* line 47, ../../app/stylesheets/styles.scss */
+/* line 74, ../../app/stylesheets/styles.scss */
 #header #nav {
   text-align: right;
 }
-/* line 50, ../../app/stylesheets/styles.scss */
+/* line 77, ../../app/stylesheets/styles.scss */
 #header #nav ul li {
   display: inline;
 }
-/* line 52, ../../app/stylesheets/styles.scss */
+/* line 79, ../../app/stylesheets/styles.scss */
 #header #nav ul li a {
   font-family: 'CPMono_v07_Light', monospace;
+  color: white;
 }
-/* line 59, ../../app/stylesheets/styles.scss */
+/* line 82, ../../app/stylesheets/styles.scss */
+#header #nav ul li a:hover, #header #nav ul li a:visited {
+  color: white;
+}
+/* line 90, ../../app/stylesheets/styles.scss */
 #header .subhead {
   font-family: 'CPMono_v07_ExtraLight', monospace;
   font-size: 12px;
-  color: #777;
+  color: aqua;
   line-height: 10px;
 }
 
-/* line 67, ../../app/stylesheets/styles.scss */
+/* line 98, ../../app/stylesheets/styles.scss */
 #content {
   margin-bottom: 30px;
 }
-/* line 69, ../../app/stylesheets/styles.scss */
+/* line 100, ../../app/stylesheets/styles.scss */
 #content h2 {
   text-align: center;
   padding-top: 20px;
 }
-/* line 74, ../../app/stylesheets/styles.scss */
+/* line 105, ../../app/stylesheets/styles.scss */
 #content #help ul {
   list-style: none;
   text-align: center;
 }
-/* line 79, ../../app/stylesheets/styles.scss */
-#content #start {
-  text-align: center;
+/* line 112, ../../app/stylesheets/styles.scss */
+#content #welcome div:hover {
+  background: #002200;
+  cursor: pointer;
+  cursor: hand;
 }
-/* line 81, ../../app/stylesheets/styles.scss */
-#content #start .difficulty {
-  border: solid thin black;
-  margin-top: 20px;
-  margin-bottom: 20px;
+/* line 117, ../../app/stylesheets/styles.scss */
+#content #welcome h2, #content #welcome h3 {
+  color: yellow;
+}
+/* line 119, ../../app/stylesheets/styles.scss */
+#content #welcome h2 a, #content #welcome h3 a {
+  text-decoration: none;
+  color: yellow;
+}
+/* line 122, ../../app/stylesheets/styles.scss */
+#content #welcome h2 a:hover, #content #welcome h2 a:visited, #content #welcome h3 a:hover, #content #welcome h3 a:visited {
+  color: yellow;
+}
+/* line 127, ../../app/stylesheets/styles.scss */
+#content #welcome h3 {
+  text-align: center;
+  margin-top: 0;
+  line-height: 0;
+}
+/* line 134, ../../app/stylesheets/styles.scss */
+#content #solutions #start {
+  text-align: left;
+}
+/* line 135, ../../app/stylesheets/styles.scss */
+#content #solutions #start .difficulty {
+  border: solid thin lime;
+  margin-top: 0;
+  margin-bottom: 0;
   margin-left: 15px;
   margin-right: 15px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 0px;
   padding-top: 20px;
+  cursor: pointer;
+  cursor: hand;
 }
-/* line 92, ../../app/stylesheets/styles.scss */
-#content #start .disabled h3 {
-  color: #aaa;
+/* line 146, ../../app/stylesheets/styles.scss */
+#content #solutions #start .difficulty a {
+  text-decoration: none;
+  color: lime;
+}
+/* line 149, ../../app/stylesheets/styles.scss */
+#content #solutions #start .difficulty a:hover, #content #solutions #start .difficulty a:visited {
+  color: lime;
+}
+/* line 153, ../../app/stylesheets/styles.scss */
+#content #solutions #start .difficulty p {
+  font-family: 'CPMono_v07_Light', monospace;
+  color: #66ff66;
+  text-align: center;
+}
+/* line 159, ../../app/stylesheets/styles.scss */
+#content #solutions #start .disabled {
+  cursor: default;
+}
+/* line 161, ../../app/stylesheets/styles.scss */
+#content #solutions #start .disabled h3, #content #solutions #start .disabled p, #content #solutions #start .disabled p a, #content #solutions #start .disabled p a:visited, #content #solutions #start .disabled p a:hover {
+  color: #222;
+}
+/* line 165, ../../app/stylesheets/styles.scss */
+#content #solutions #start #tutorial, #content #solutions #start #easy {
+  border-bottom: none;
+}
+/* line 169, ../../app/stylesheets/styles.scss */
+#content #solutions #start h2 {
+  text-align: left;
+  padding-left: 15px;
+}
+/* line 173, ../../app/stylesheets/styles.scss */
+#content #solutions #start h3 {
+  text-align: center;
+}
+/* line 177, ../../app/stylesheets/styles.scss */
+#content #solutions #resume {
+  text-align: right;
+}
+/* line 179, ../../app/stylesheets/styles.scss */
+#content #solutions #resume h2, #content #solutions #resume h3 {
+  text-align: right;
 }
 
-/* line 98, ../../app/stylesheets/styles.scss */
-.disabled {
-  background: #888;
-}
-
-/* line 103, ../../app/stylesheets/styles.scss */
+/* line 185, ../../app/stylesheets/styles.scss */
 textarea#solution_code, pre.code {
-  color: #0f0;
-  background: black;
   width: 100%;
+  color: white;
+  background-color: #002200;
   font-size: 20px;
   line-height: 20px;
 }
 
-/* line 111, ../../app/stylesheets/styles.scss */
-form#player_new {
-  text-align: center;
+/* line 195, ../../app/stylesheets/styles.scss */
+#signin form input, #signup form input {
+  font-size: 28px;
+  font-family: 'CPMono_v07_ExtraLight', monospace;
+  border: solid thin;
+  margin-top: 14px;
 }
-/* line 113, ../../app/stylesheets/styles.scss */
-form#player_new input {
+/* line 201, ../../app/stylesheets/styles.scss */
+#signin form input[type="submit"], #signup form input[type="submit"] {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* line 205, ../../app/stylesheets/styles.scss */
+#signin form .label, #signup form .label {
+  text-align: right;
+  vertical-align: middle;
+  padding-top: 28px;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+/* line 212, ../../app/stylesheets/styles.scss */
+#signin form .input, #signup form .input {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+/* line 216, ../../app/stylesheets/styles.scss */
+#signin form label, #signup form label {
   font-size: 18px;
-  font-family: 'CPMono_v07_Plain', monospace;
+  font-family: 'CPMono_v07_Light', monospace;
+  margin-left: 0px;
 }
-/* line 117, ../../app/stylesheets/styles.scss */
-form#player_new label {
-  font-size: 25px;
-  font-family: 'CPMono_v07_Black', monospace;
+/* line 223, ../../app/stylesheets/styles.scss */
+#signin ul#devise-links, #signup ul#devise-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+}
+/* line 228, ../../app/stylesheets/styles.scss */
+#signin ul#devise-links li, #signup ul#devise-links li {
+  padding: 0;
+  display: inline;
+  margin: 0;
+  padding-right: 15px;
 }
 
-/* line 123, ../../app/stylesheets/styles.scss */
+/* line 237, ../../app/stylesheets/styles.scss */
 .square {
   border: solid thin;
   background: #afa;
   margin-bottom: 10px;
 }
 
-/* line 128, ../../app/stylesheets/styles.scss */
+/* line 242, ../../app/stylesheets/styles.scss */
 .goal {
   background: #faf;
 }
 
-/* line 131, ../../app/stylesheets/styles.scss */
+/* line 245, ../../app/stylesheets/styles.scss */
 .carl {
   background: #aff;
 }
 
-/* line 134, ../../app/stylesheets/styles.scss */
+/* line 248, ../../app/stylesheets/styles.scss */
 #footer {
-  background: black;
-  color: white;
+  background: lime;
+  color: black;
   width: 100%;
   text-align: center;
 }

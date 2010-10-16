@@ -1017,40 +1017,40 @@ form.bp textarea {
 * html .mainpage #content {
   overflow-x: hidden;
 }
-/* line 45, ../../app/stylesheets/screen.scss */
-.mainpage #content #start {
+/* line 46, ../../app/stylesheets/screen.scss */
+.mainpage #content #solutions #start {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 230px;
+  width: 310px;
 }
 /* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .mainpage #content #start {
+* html .mainpage #content #solutions #start {
   overflow-x: hidden;
 }
 /* line 48, ../../app/stylesheets/screen.scss */
-.mainpage #content #resume {
+.mainpage #content #solutions #start .difficulty {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 470px;
+  width: 310px;
 }
 /* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .mainpage #content #resume {
+* html .mainpage #content #solutions #start .difficulty {
   overflow-x: hidden;
 }
-/* line 51, ../../app/stylesheets/screen.scss */
-.mainpage #content #help {
+/* line 52, ../../app/stylesheets/screen.scss */
+.mainpage #content #solutions #resume {
   display: inline;
   float: left;
   margin-right: 0;
-  width: 230px;
+  width: 630px;
 }
 /* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .mainpage #content #help {
+* html .mainpage #content #solutions #resume {
   overflow-x: hidden;
 }
-/* line 54, ../../app/stylesheets/screen.scss */
+/* line 56, ../../app/stylesheets/screen.scss */
 .mainpage #content #solution {
   display: inline;
   float: left;
@@ -1061,7 +1061,40 @@ form.bp textarea {
 * html .mainpage #content #solution {
   overflow-x: hidden;
 }
-/* line 58, ../../app/stylesheets/screen.scss */
+/* line 60, ../../app/stylesheets/screen.scss */
+.mainpage #content #welcome #playnow {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 630px;
+}
+/* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .mainpage #content #welcome #playnow {
+  overflow-x: hidden;
+}
+/* line 63, ../../app/stylesheets/screen.scss */
+.mainpage #content #welcome #signin, .mainpage #content #welcome #signup {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 310px;
+}
+/* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .mainpage #content #welcome #signin, * html .mainpage #content #welcome #signup {
+  overflow-x: hidden;
+}
+/* line 66, ../../app/stylesheets/screen.scss */
+.mainpage #content #welcome #wtf {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 310px;
+}
+/* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .mainpage #content #welcome #wtf {
+  overflow-x: hidden;
+}
+/* line 71, ../../app/stylesheets/screen.scss */
 .mainpage #content #board .square {
   display: inline;
   float: left;
@@ -1072,7 +1105,7 @@ form.bp textarea {
 * html .mainpage #content #board .square {
   overflow-x: hidden;
 }
-/* line 61, ../../app/stylesheets/screen.scss */
+/* line 74, ../../app/stylesheets/screen.scss */
 .mainpage #content #board .square .last-square {
   display: inline;
   float: left;
@@ -1083,14 +1116,58 @@ form.bp textarea {
 * html .mainpage #content #board .square .last-square {
   overflow-x: hidden;
 }
-/* line 65, ../../app/stylesheets/screen.scss */
-.mainpage #content #player_new {
+/* line 79, ../../app/stylesheets/screen.scss */
+.mainpage #content #signin #padleft, .mainpage #content #signup #padleft {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 950px;
+  width: 150px;
 }
 /* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .mainpage #content #player_new {
+* html .mainpage #content #signin #padleft, * html .mainpage #content #signup #padleft {
+  overflow-x: hidden;
+}
+/* line 80, ../../app/stylesheets/screen.scss */
+.mainpage #content #signin #padright, .mainpage #content #signup #padright {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 150px;
+}
+/* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .mainpage #content #signin #padright, * html .mainpage #content #signup #padright {
+  overflow-x: hidden;
+}
+/* line 81, ../../app/stylesheets/screen.scss */
+.mainpage #content #signin #signin-content, .mainpage #content #signin #signup-content, .mainpage #content #signup #signin-content, .mainpage #content #signup #signup-content {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 630px;
+}
+/* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .mainpage #content #signin #signin-content, * html .mainpage #content #signin #signup-content, * html .mainpage #content #signup #signin-content, * html .mainpage #content #signup #signup-content {
+  overflow-x: hidden;
+}
+/* line 84, ../../app/stylesheets/screen.scss */
+.mainpage #content #signin .label, .mainpage #content #signup .label {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 150px;
+}
+/* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .mainpage #content #signin .label, * html .mainpage #content #signup .label {
+  overflow-x: hidden;
+}
+/* line 87, ../../app/stylesheets/screen.scss */
+.mainpage #content #signin .input, .mainpage #content #signup .input {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 470px;
+}
+/* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .mainpage #content #signin .input, * html .mainpage #content #signup .input {
   overflow-x: hidden;
 }

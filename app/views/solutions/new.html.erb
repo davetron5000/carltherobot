@@ -1,18 +1,35 @@
-<h2>New Solution</h2>
 <div id="solution">
-<%= form_for @solution do |f| %>
-  <%= f.text_area :code, :name => 'code' %><br />
-  <%= f.hidden_field :level_id, :name => 'level_id' %>
-  <%= f.submit 'Save Solution' %>
-<% end %>
+  <h2>Level XX</h2>
+  <div id="program">
+    <%= form_for @solution do |f| %>
+      <%= f.hidden_field :level_id, :name => 'level_id' %>
+      <div id="code"><%= f.text_area :code, :name => 'code' %></div>
+      <div id="execute"><%= f.submit 'Save Solution' %></div>
+    <% end %>
+  </div>
+  <div id="playfield">
+    <div class="controls">
+      <div class="command" id="move"><div>Move</div></div>
+      <div class="command" id="turnleft"><div>Turn Left</div></div>
+      <div class="command" id="pickbeacon"><div>Pick Beacon</div></div>
+      <div class="command" id="putbeacon"><div>Put Beacon</div></div>
+      <div class="sub" id="sub1"><div>sub1</a></div></div>
+    </div>
+    <div class="controls">
+      <div class="control-command" id="branch"><div>Branch</div></div>
+      <div class="sub" id="sub2"><div>sub2</a></div></div>
+    </div>
+    <div class="controls">
+      <div class="control-command" id="loop"><div>Loop</div></div>
+      <div class="sub" id="sub3"><div>sub3</a></div></div>
+    </div>
+    <div class="controls">
+      <div class="control-command" id="iterate"><div>Iterate</div></div>
+      <div class="sub" id="sub4"><div>sub4</a></div></div>
+    </div>
+    <div id="board">
+      <h3>Board</h3>
+    </div>
+  </div>
 </div>
-<div id="board">
-  <% board = @solution.level.boards[0] %>
-  <% board.rows.times do |x| %>
-    <% board.columns.times do |y| %>
-      <% goal = board.goal.carl == [x,y] ? 'goal' : '' %>
-      <% carl = board.carl == [x,y] ? 'carl' : '' %>
-      <div class="square <%= carl %> <%= goal %> <%= y == (board.rows-1) ? 'last-square' : '' %>">&nbsp;</div>
-    <% end %><br /><br />
-  <% end %>
-</div>
+

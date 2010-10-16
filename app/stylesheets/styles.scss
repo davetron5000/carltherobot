@@ -187,6 +187,14 @@ body.bp {
       }
     }
   }
+  #solution {
+    .controls {
+      div.command div, div.sub div, div.control-command div {
+        border: solid thin;
+        height: $line-height * 2;
+      }
+    }
+  }
 }
 textarea#solution_code, pre.code {
   width: 100%;

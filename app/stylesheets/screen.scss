@@ -54,7 +54,29 @@ form.bp {
       }
     }
     #solution {
-      @include column($blueprint-grid-columns - 6);
+      #program {
+        @include column(8);
+        height: 400px;
+      }
+      #board {
+        @include column(16,true);
+        height: 400px;
+      }
+      .controls {
+        $controls-columns: 2 * $blueprint-grid-columns / 3;
+        .command {
+          @include column(2);
+        }
+        .control-command {
+          @include column(8);
+        }
+        .command-empty {
+          @include column(8);
+        }
+        .sub {
+          @include column(8,true);
+        }
+      }
     }
     #welcome {
       #playnow {
@@ -65,14 +87,6 @@ form.bp {
       }
       #wtf {
         @include column($blueprint-grid-columns / 3,true);
-      }
-    }
-    #board {
-      .square {
-        @include column(1);
-      }
-      .square .last-square {
-        @include column(1,true);
       }
     }
     #signin, #signup {

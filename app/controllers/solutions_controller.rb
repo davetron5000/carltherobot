@@ -8,13 +8,13 @@ class SolutionsController < ApplicationController
 
   def create
     code = params[:code].split(/\n/).map(&:strip)
-    solution = Solution.new(:player_id => current_player.id, :code => code)
+    solution = Solution.new(:player_id => current_player.id, :code => code, :level_id => params[:level_id])
     solution.save
     redirect_to edit_solution_url(solution)
   end
 
   def new
-    @solution = Solution.new(:player_id => current_player.id)
+    @solution = Solution.new(:player_id => current_player.id, :level => Level.find_by_difficulty_and_ordinal('tutorial',1))
   end
 
   def edit

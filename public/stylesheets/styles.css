@@ -3,97 +3,163 @@
   src: local("☺"), url('/fonts/../fonts/CPMono_v07_Plain-webfont.woff') format('woff'), url('/fonts/../fonts/CPMono_v07_Plain-webfont.ttf') format('truetype'), url('/fonts/../fonts/CPMono_v07_Plain-webfont.svg#webfontRVXSRgPv') format('svg');
 }
 
-/* line 9, ../../app/stylesheets/styles.scss */
-body.bp, textarea {
-  font-family: 'CPMono_v07_Plain', serif;
+@font-face {
+  font-family: "CPMono_v07_Light";
+  src: local("☺"), url('/fonts/../fonts/CPMono_v07_Light-webfont.woff') format('woff'), url('/fonts/../fonts/CPMono_v07_Light-webfont.ttf') format('truetype'), url('/fonts/../fonts/CPMono_v07_Light-webfont.svg#webfontRVXSRgPv') format('svg');
 }
 
-/* line 13, ../../app/stylesheets/styles.scss */
-body.bp {
-  line-height: 24px;
+@font-face {
+  font-family: "CPMono_v07_ExtraLight";
+  src: local("☺"), url('/fonts/../fonts/CPMono_v07_ExtraLight-webfont.woff') format('woff'), url('/fonts/../fonts/CPMono_v07_ExtraLight-webfont.ttf') format('truetype'), url('/fonts/../fonts/CPMono_v07_ExtraLight-webfont.svg#webfontRVXSRgPv') format('svg');
 }
-/* line 15, ../../app/stylesheets/styles.scss */
-body.bp h1 {
-  font-size: 50px;
-  line-height: 50px;
+
+@font-face {
+  font-family: "CPMono_v07_Black";
+  src: local("☺"), url('/fonts/../fonts/CPMono_v07_Black-webfont.woff') format('woff'), url('/fonts/../fonts/CPMono_v07_Black-webfont.ttf') format('truetype'), url('/fonts/../fonts/CPMono_v07_Black-webfont.svg#webfontRVXSRgPv') format('svg');
 }
+
+/* line 16, ../../app/stylesheets/styles.scss */
+body.bp, textarea {
+  font-family: 'CPMono_v07_Plain', monospace;
+}
+
 /* line 20, ../../app/stylesheets/styles.scss */
-body.bp h2 {
-  font-size: 40px;
-  line-height: 50px;
-}
-/* line 24, ../../app/stylesheets/styles.scss */
-body.bp h3 {
-  font-size: 20px;
+body.bp {
   line-height: 20px;
 }
+/* line 22, ../../app/stylesheets/styles.scss */
+body.bp h1 {
+  font-size: 60px;
+  line-height: 60px;
+}
+/* line 27, ../../app/stylesheets/styles.scss */
+body.bp h2 {
+  font-size: 35px;
+  line-height: 40px;
+}
+/* line 31, ../../app/stylesheets/styles.scss */
+body.bp h3 {
+  font-size: 25px;
+  line-height: 30px;
+}
 
-/* line 30, ../../app/stylesheets/styles.scss */
+/* line 37, ../../app/stylesheets/styles.scss */
+#title {
+  display: inline;
+  float: left;
+}
+/* line 40, ../../app/stylesheets/styles.scss */
+#title h1 {
+  margin: 0;
+  font-family: 'CPMono_v07_Black', monospace;
+}
+
+/* line 46, ../../app/stylesheets/styles.scss */
 #header {
   border-bottom: solid thin black;
 }
-/* line 31, ../../app/stylesheets/styles.scss */
+/* line 47, ../../app/stylesheets/styles.scss */
 #header #nav {
   text-align: right;
 }
-/* line 34, ../../app/stylesheets/styles.scss */
+/* line 50, ../../app/stylesheets/styles.scss */
 #header #nav ul li {
   display: inline;
 }
+/* line 52, ../../app/stylesheets/styles.scss */
+#header #nav ul li a {
+  font-family: 'CPMono_v07_Light', monospace;
+}
+/* line 59, ../../app/stylesheets/styles.scss */
+#header .subhead {
+  font-family: 'CPMono_v07_ExtraLight', monospace;
+  font-size: 12px;
+  color: #777;
+  line-height: 10px;
+}
 
-/* line 42, ../../app/stylesheets/styles.scss */
+/* line 67, ../../app/stylesheets/styles.scss */
 #content {
   margin-bottom: 30px;
 }
-/* line 44, ../../app/stylesheets/styles.scss */
+/* line 69, ../../app/stylesheets/styles.scss */
 #content h2 {
   text-align: center;
+  padding-top: 20px;
 }
-/* line 48, ../../app/stylesheets/styles.scss */
+/* line 74, ../../app/stylesheets/styles.scss */
 #content #help ul {
   list-style: none;
   text-align: center;
 }
-/* line 53, ../../app/stylesheets/styles.scss */
+/* line 79, ../../app/stylesheets/styles.scss */
 #content #start {
   text-align: center;
 }
-/* line 55, ../../app/stylesheets/styles.scss */
+/* line 81, ../../app/stylesheets/styles.scss */
 #content #start .difficulty {
   border: solid thin black;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 5px;
-  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-bottom: 0px;
+  padding-top: 20px;
 }
-/* line 63, ../../app/stylesheets/styles.scss */
+/* line 92, ../../app/stylesheets/styles.scss */
 #content #start .disabled h3 {
   color: #aaa;
 }
 
-/* line 69, ../../app/stylesheets/styles.scss */
+/* line 98, ../../app/stylesheets/styles.scss */
 .disabled {
   background: #888;
 }
 
-/* line 74, ../../app/stylesheets/styles.scss */
-textarea#solution_code {
+/* line 103, ../../app/stylesheets/styles.scss */
+textarea#solution_code, pre.code {
   color: #0f0;
   background: black;
   width: 100%;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 20px;
 }
 
-/* line 81, ../../app/stylesheets/styles.scss */
+/* line 111, ../../app/stylesheets/styles.scss */
+form#player_new {
+  text-align: center;
+}
+/* line 113, ../../app/stylesheets/styles.scss */
+form#player_new input {
+  font-size: 18px;
+  font-family: 'CPMono_v07_Plain', monospace;
+}
+/* line 117, ../../app/stylesheets/styles.scss */
+form#player_new label {
+  font-size: 25px;
+  font-family: 'CPMono_v07_Black', monospace;
+}
+
+/* line 123, ../../app/stylesheets/styles.scss */
 .square {
   border: solid thin;
   background: #afa;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-/* line 86, ../../app/stylesheets/styles.scss */
+/* line 128, ../../app/stylesheets/styles.scss */
+.goal {
+  background: #faf;
+}
+
+/* line 131, ../../app/stylesheets/styles.scss */
+.carl {
+  background: #aff;
+}
+
+/* line 134, ../../app/stylesheets/styles.scss */
 #footer {
   background: black;
   color: white;

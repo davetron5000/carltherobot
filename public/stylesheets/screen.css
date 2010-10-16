@@ -990,24 +990,12 @@ form.bp textarea {
   float: left;
   margin-right: 10px;
   width: 630px;
-  display: inline;
-  float: left;
 }
 /* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .mainpage #header #title, * html .mainpage #footer #title {
   overflow-x: hidden;
 }
 /* line 39, ../../app/stylesheets/screen.scss */
-.mainpage #header #title h1, .mainpage #footer #title h1 {
-  margin: 0;
-}
-/* line 43, ../../app/stylesheets/screen.scss */
-.mainpage #header #title .subhead, .mainpage #footer #title .subhead {
-  font-size: 12px;
-  color: #777;
-  line-height: 12px;
-}
-/* line 49, ../../app/stylesheets/screen.scss */
 .mainpage #header #nav, .mainpage #footer #nav {
   display: inline;
   float: left;
@@ -1018,7 +1006,7 @@ form.bp textarea {
 * html .mainpage #header #nav, * html .mainpage #footer #nav {
   overflow-x: hidden;
 }
-/* line 53, ../../app/stylesheets/screen.scss */
+/* line 43, ../../app/stylesheets/screen.scss */
 .mainpage #content {
   display: inline;
   float: left;
@@ -1029,7 +1017,7 @@ form.bp textarea {
 * html .mainpage #content {
   overflow-x: hidden;
 }
-/* line 55, ../../app/stylesheets/screen.scss */
+/* line 45, ../../app/stylesheets/screen.scss */
 .mainpage #content #start {
   display: inline;
   float: left;
@@ -1040,7 +1028,7 @@ form.bp textarea {
 * html .mainpage #content #start {
   overflow-x: hidden;
 }
-/* line 58, ../../app/stylesheets/screen.scss */
+/* line 48, ../../app/stylesheets/screen.scss */
 .mainpage #content #resume {
   display: inline;
   float: left;
@@ -1051,7 +1039,7 @@ form.bp textarea {
 * html .mainpage #content #resume {
   overflow-x: hidden;
 }
-/* line 61, ../../app/stylesheets/screen.scss */
+/* line 51, ../../app/stylesheets/screen.scss */
 .mainpage #content #help {
   display: inline;
   float: left;
@@ -1062,7 +1050,7 @@ form.bp textarea {
 * html .mainpage #content #help {
   overflow-x: hidden;
 }
-/* line 64, ../../app/stylesheets/screen.scss */
+/* line 54, ../../app/stylesheets/screen.scss */
 .mainpage #content #solution {
   display: inline;
   float: left;
@@ -1073,18 +1061,7 @@ form.bp textarea {
 * html .mainpage #content #solution {
   overflow-x: hidden;
 }
-/* line 67, ../../app/stylesheets/screen.scss */
-.mainpage #content #board {
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 230px;
-}
-/* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .mainpage #content #board {
-  overflow-x: hidden;
-}
-/* line 69, ../../app/stylesheets/screen.scss */
+/* line 58, ../../app/stylesheets/screen.scss */
 .mainpage #content #board .square {
   display: inline;
   float: left;
@@ -1095,14 +1072,25 @@ form.bp textarea {
 * html .mainpage #content #board .square {
   overflow-x: hidden;
 }
-/* line 72, ../../app/stylesheets/screen.scss */
-.mainpage #content #board .square .last {
+/* line 61, ../../app/stylesheets/screen.scss */
+.mainpage #content #board .square .last-square {
   display: inline;
   float: left;
   margin-right: 0;
   width: 30px;
 }
 /* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .mainpage #content #board .square .last {
+* html .mainpage #content #board .square .last-square {
+  overflow-x: hidden;
+}
+/* line 65, ../../app/stylesheets/screen.scss */
+.mainpage #content #player_new {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+}
+/* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .mainpage #content #player_new {
   overflow-x: hidden;
 }

@@ -6,24 +6,40 @@
 @import "compass/utilities/general/clearfix";
 @import "compass/css3/box-shadow";
 @include font-face("CPMono_v07_Plain", font-files("../fonts/CPMono_v07_Plain-webfont.woff", woff, "../fonts/CPMono_v07_Plain-webfont.ttf", truetype, "../fonts/CPMono_v07_Plain-webfont.svg#webfontRVXSRgPv", svg));
+@include font-face("CPMono_v07_Light", font-files("../fonts/CPMono_v07_Light-webfont.woff", woff, "../fonts/CPMono_v07_Light-webfont.ttf", truetype, "../fonts/CPMono_v07_Light-webfont.svg#webfontRVXSRgPv", svg));
+@include font-face("CPMono_v07_ExtraLight", font-files("../fonts/CPMono_v07_ExtraLight-webfont.woff", woff, "../fonts/CPMono_v07_ExtraLight-webfont.ttf", truetype, "../fonts/CPMono_v07_ExtraLight-webfont.svg#webfontRVXSRgPv", svg));
+@include font-face("CPMono_v07_Black", font-files("../fonts/CPMono_v07_Black-webfont.woff", woff, "../fonts/CPMono_v07_Black-webfont.ttf", truetype, "../fonts/CPMono_v07_Black-webfont.svg#webfontRVXSRgPv", svg));
+
+$font-size: 20px;
+$line-height: 20px;
+
 body.bp, textarea {
-  font-family: 'CPMono_v07_Plain', serif;
+  font-family: 'CPMono_v07_Plain', monospace;
 }
 
 body.bp {
-  line-height: 24px;
+  line-height: $line-height;
   h1 {
-    font-size: 50px;
-    line-height: 50px;
+    font-size: $font-size + 40;
+    line-height: $font-size + 40; 
   }
 
   h2 {
-    font-size: 40px;
-    line-height: 50px;
+    font-size: $font-size + 15;
+    line-height: $font-size + 20;
   }
   h3 {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: $font-size + 5;
+    line-height: $font-size + 10; 
+  }
+}
+
+#title {
+  display: inline;
+  float: left;
+  h1 {
+    margin: 0;
+    font-family: 'CPMono_v07_Black', monospace;
   }
 }
 
@@ -33,16 +49,26 @@ body.bp {
     ul {
       li {
         display: inline;
+        a {
+          font-family: 'CPMono_v07_Light', monospace;
+        }
       }
     }
   }
   border-bottom: solid thin black;
+  .subhead {
+    font-family: 'CPMono_v07_ExtraLight', monospace;
+    font-size: $font-size - 8;
+    color: #777;
+    line-height: $font-size - 10;
+  }
 }
 
 #content {
   margin-bottom: 30px;
   h2 {
     text-align: center;
+    padding-top: $line-height;
   }
   #help {
     ul {
@@ -54,11 +80,14 @@ body.bp {
     text-align: center;
     .difficulty {
       border: solid thin black;
-      margin-left: 20px;
-      margin-right: 20px;
-      margin-top: 5px;
-      padding: 10px;
+      margin-top: $line-height;
+      margin-bottom: $line-height;
+      margin-left: $blueprint-grid-width/2;
+      margin-right: $blueprint-grid-width/2;
+      padding-left: $blueprint-grid-width/2;
+      padding-right: $blueprint-grid-width/2;
       padding-bottom: 0px;
+      padding-top: $line-height;
     }
     .disabled h3 {
       color: #aaa;
@@ -71,17 +100,36 @@ body.bp {
 }
 
 
-textarea#solution_code {
+textarea#solution_code, pre.code {
   color: #0f0;
   background: black;
   width: 100%;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: $font-size;
+  line-height: $line-height;
 }
+
+form#player_new {
+  text-align: center;
+  input {
+    font-size: $font-size - 2;
+    font-family: 'CPMono_v07_Plain', monospace;
+  }
+  label {
+    font-size: $font-size + 5;
+    font-family: 'CPMono_v07_Black', monospace;
+  }
+}
+// Sketchy
 .square {
   border: solid thin;
   background: #afa;
-  margin-bottom: 12px;
+  margin-bottom: $line-height/2;
+}
+.goal {
+  background: #faf;
+}
+.carl {
+  background: #aff;
 }
 #footer {
   background: black;

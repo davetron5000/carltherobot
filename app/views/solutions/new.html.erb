@@ -1,14 +1,18 @@
 <h2>New Solution</h2>
 <div id="solution">
-<% form_for @solution do |f| %>
+<%= form_for @solution do |f| %>
   <%= f.text_area :code, :name => 'code' %><br />
+  <%= f.hidden_field :level_id, :name => 'level_id' %>
   <%= f.submit 'Save Solution' %>
 <% end %>
 </div>
 <div id="board">
-  <% 5.times do |x| %>
-    <% 5.times do |x| %>
-      <div class="square <%= x == 4 ? 'last' : '' %>">&nbsp;</div>
-    <% end %>
+  <% board = @solution.level.boards[0] %>
+  <% board.rows.times do |x| %>
+    <% board.columns.times do |y| %>
+      <% goal = board.goal.carl == [x,y] ? 'goal' : '' %>
+      <% carl = board.carl == [x,y] ? 'carl' : '' %>
+      <div class="square <%= carl %> <%= goal %> <%= y == (board.rows-1) ? 'last-square' : '' %>">&nbsp;</div>
+    <% end %><br /><br />
   <% end %>
 </div>

@@ -35,16 +35,6 @@ form.bp {
     @include column($blueprint-grid-columns); 
     #title {
       @include column($blueprint-grid-columns - 8);
-      display: inline;
-      h1 { 
-        margin:0; 
-      }
-      float: left;
-      .subhead {
-        font-size: 12px;
-        color: #777;
-        line-height: 12px;
-      }
     }
     #nav {
       @include column(8,true);
@@ -65,13 +55,15 @@ form.bp {
       @include column($blueprint-grid-columns - 6);
     }
     #board {
-      @include column(6,true);
       .square {
         @include column(1);
       }
-      .square .last {
+      .square .last-square {
         @include column(1,true);
       }
+    }
+    #player_new {
+      @include column($blueprint-grid-columns);
     }
   }
 }

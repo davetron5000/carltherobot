@@ -1,0 +1,19 @@
+@import "compass/css3";
+@import "compass/css3/font-face";
+@import "partials/base";
+@import "compass/css3/border-radius";
+@import "compass/css3/gradient";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/box-shadow";
+@include font-face("CPMono_v07_Plain", font-files("../fonts/CPMono_v07_Plain-webfont.woff", woff, "../fonts/CPMono_v07_Plain-webfont.ttf", truetype, "../fonts/CPMono_v07_Plain-webfont.svg#webfontRVXSRgPv", svg));
+h1, h2 {
+  font-family: 'CPMono_v07_Plain', serif;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 40px;
+}

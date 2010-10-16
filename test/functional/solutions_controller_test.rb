@@ -23,10 +23,10 @@ class SolutionsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:solution)
     assert_not_nil assigns(:level)
     assert_not_nil assigns(:board0)
-    assert_not_nil assigns(:goal_result0)
-    assert !assigns(:goal_result0).carl_goal_met?
-    assert !assigns(:goal_result0).beacon_goals?
-    assert assigns(:goal_result0).lines_of_code_goal_met?
+    assert_not_nil assigns(:execution_result0)
+    assert !assigns(:execution_result0).carl_goal_met?
+    assert !assigns(:execution_result0).beacon_goals?
+    assert assigns(:execution_result0).lines_of_code_goal_met?
   end
 
   test "can get the new form for a new solution" do
@@ -36,10 +36,10 @@ class SolutionsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:solution)
     assert_not_nil assigns(:level)
     assert_not_nil assigns(:board0)
-    assert_not_nil assigns(:goal_result0)
-    assert !assigns(:goal_result0).carl_goal_met?
-    assert !assigns(:goal_result0).beacon_goals?
-    assert !assigns(:goal_result0).lines_of_code_goal_met?
+    assert_not_nil assigns(:execution_result0)
+    assert !assigns(:execution_result0).carl_goal_met?
+    assert !assigns(:execution_result0).beacon_goals?
+    assert !assigns(:execution_result0).lines_of_code_goal_met?
     assert_equal assigns(:solution).player_id,players(:one).id
   end
 

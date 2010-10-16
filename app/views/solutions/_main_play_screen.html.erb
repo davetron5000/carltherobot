@@ -32,12 +32,14 @@
       <div id="goal-title"><h3>Goals:</h3></div>
       <div id="goal-list">
         <ul>
-          <%= goal_li(@goal_result0.carl_goal_met?,@level.goal,:carl_goal_met?,new) %>
-          <% if @goal_result0.beacon_goals? %>
-            <%= goal_li(@goal_result0.beacon_goals_met?,@level.goal,:beacons_goal_met?,new) %>
+          <%= goal_li(@execution_result0.carl_goal_met?,@level.goal,:carl_goal_met?,new) %>
+          <% if @execution_result0.beacon_goals? %>
+            <%= goal_li(@execution_result0.beacon_goals_met?,@level.goal,:beacons_goal_met?,new) %>
           <% end %>
-          <% if @goal_result0.lines_of_code_goal? %>
-            <%= goal_li(@goal_result0.lines_of_code_goal_met?,@level.goal,:lines_of_code_goal_met?,new) %>
+          <% if @execution_result0.lines_of_code_goal? %>
+            <%= goal_li(@execution_result0.lines_of_code_goal_met?,@level.goal,:lines_of_code_goal_met?,new) %>
+          <% else %>
+            <li>&nbsp;</li>
           <% end %>
         </ul>
       </div>

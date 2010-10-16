@@ -46,7 +46,7 @@ class SolutionsController < ApplicationController
     @level = solution.level
     @board0 = @level.board0
     @board1 = @level.board1
-    @goal_result0 = GoalResult.new(@level.goal,@board0,solution)
-    @goal_result1 = GoalResult.new(@level.goal,@board1,solution) unless @board1.nil?
+    @execution_result0 = ExecutionResult.new(@level.goal,@board0,solution,false)
+    @execution_result1 = ExecutionResult.new(@level.goal,@board1,solution,false) unless @board1.nil?
   end
 end

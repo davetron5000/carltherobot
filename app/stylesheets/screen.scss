@@ -56,11 +56,21 @@ form.bp {
     #solution {
       #program {
         @include column(8);
-        height: 400px;
       }
       #board {
         @include column(16,true);
-        height: 400px;
+        #board0-title {
+          @include column(8);
+        }
+        #board1-title {
+          @include column(8,true);
+        }
+        .board-square { @include column(1); }
+        .board-square-end { @include column(1,true); }
+        .board-square-board0-end { 
+          @include column(1);
+          @include border(#FF0,1px);
+          }
       }
       .controls {
         $controls-columns: 2 * $blueprint-grid-columns / 3;

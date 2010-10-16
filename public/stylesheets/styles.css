@@ -216,8 +216,21 @@ body.bp h3 {
   border: solid thin;
   height: 40px;
 }
+/* line 198, ../../app/stylesheets/styles.scss */
+#content #solution #board ul {
+  list-style: none;
+  text-align: center;
+}
+/* line 202, ../../app/stylesheets/styles.scss */
+#content #solution #board h3 {
+  text-align: center;
+}
+/* line 209, ../../app/stylesheets/styles.scss */
+#content #solution #program form {
+  margin-right: 30px;
+}
 
-/* line 199, ../../app/stylesheets/styles.scss */
+/* line 214, ../../app/stylesheets/styles.scss */
 textarea#solution_code, pre.code {
   width: 100%;
   color: white;
@@ -226,19 +239,19 @@ textarea#solution_code, pre.code {
   line-height: 20px;
 }
 
-/* line 209, ../../app/stylesheets/styles.scss */
+/* line 224, ../../app/stylesheets/styles.scss */
 #signin form input, #signup form input {
   font-size: 28px;
   font-family: 'CPMono_v07_ExtraLight', monospace;
   border: solid thin;
   margin-top: 14px;
 }
-/* line 215, ../../app/stylesheets/styles.scss */
+/* line 230, ../../app/stylesheets/styles.scss */
 #signin form input[type="submit"], #signup form input[type="submit"] {
   padding-left: 20px;
   padding-right: 20px;
 }
-/* line 219, ../../app/stylesheets/styles.scss */
+/* line 234, ../../app/stylesheets/styles.scss */
 #signin form .label, #signup form .label {
   text-align: right;
   vertical-align: middle;
@@ -246,25 +259,25 @@ textarea#solution_code, pre.code {
   padding-right: 0px;
   margin-right: 0px;
 }
-/* line 226, ../../app/stylesheets/styles.scss */
+/* line 241, ../../app/stylesheets/styles.scss */
 #signin form .input, #signup form .input {
   padding-left: 0px;
   margin-left: 0px;
 }
-/* line 230, ../../app/stylesheets/styles.scss */
+/* line 245, ../../app/stylesheets/styles.scss */
 #signin form label, #signup form label {
   font-size: 18px;
   font-family: 'CPMono_v07_Light', monospace;
   margin-left: 0px;
 }
-/* line 237, ../../app/stylesheets/styles.scss */
+/* line 252, ../../app/stylesheets/styles.scss */
 #signin ul#devise-links, #signup ul#devise-links {
   list-style: none;
   padding: 0;
   margin: 0;
   padding-top: 20px;
 }
-/* line 242, ../../app/stylesheets/styles.scss */
+/* line 257, ../../app/stylesheets/styles.scss */
 #signin ul#devise-links li, #signup ul#devise-links li {
   padding: 0;
   display: inline;
@@ -272,24 +285,30 @@ textarea#solution_code, pre.code {
   padding-right: 15px;
 }
 
-/* line 251, ../../app/stylesheets/styles.scss */
+/* line 266, ../../app/stylesheets/styles.scss */
 .square {
-  border: solid thin;
-  background: #afa;
+  border: solid thin aqua;
+  background: #002200;
   margin-bottom: 10px;
+  height: 30px;
 }
 
-/* line 256, ../../app/stylesheets/styles.scss */
+/* line 272, ../../app/stylesheets/styles.scss */
+.last-row .square {
+  margin-bottom: 0;
+}
+
+/* line 275, ../../app/stylesheets/styles.scss */
 .goal {
   background: #faf;
 }
 
-/* line 259, ../../app/stylesheets/styles.scss */
+/* line 278, ../../app/stylesheets/styles.scss */
 .carl {
   background: #aff;
 }
 
-/* line 262, ../../app/stylesheets/styles.scss */
+/* line 281, ../../app/stylesheets/styles.scss */
 #footer {
   background: lime;
   color: black;

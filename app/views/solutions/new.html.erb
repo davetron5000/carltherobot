@@ -28,7 +28,24 @@
       <div class="sub" id="sub4"><div>sub4</a></div></div>
     </div>
     <div id="board">
-      <h3>Board</h3>
+      <h2>Carmack</h2>
+      <ul>
+        <li>Bring Carl to the goal square</li>
+        <li>Get there in 10 lines of code or less</li>
+      </ul>
+      <div id="board0-title" class="board0"><h3>Board 00</h3></div>
+      <div id="board1-title" class="board1"><h3>Board 01</h3></div>
+      <% 8.times do |row| %>
+        <% 2.times do |board| %>
+          <% 8.times do |col| %>
+            <% klass = "board-square"
+               klass = "board-square-end" if board == 1 && col == 7
+               klass = "board-square-board0-end" if board == 0 && col == 7
+               klass += " last-row" if row == 7 %>
+               <div class="<%= klass %> board<%= board %>" id="board<%= board %>-<%= row %>-<%= col %>"><div class="square">&nbsp;</div></div>
+          <% end %>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>

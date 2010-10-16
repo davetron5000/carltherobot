@@ -1056,25 +1056,81 @@ form.bp textarea {
   float: left;
   margin-right: 10px;
   width: 310px;
-  height: 400px;
 }
 /* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .mainpage #content #solution #program {
   overflow-x: hidden;
 }
-/* line 61, ../../app/stylesheets/screen.scss */
+/* line 60, ../../app/stylesheets/screen.scss */
 .mainpage #content #solution #board {
   display: inline;
   float: left;
   margin-right: 0;
   width: 630px;
-  height: 400px;
 }
 /* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .mainpage #content #solution #board {
   overflow-x: hidden;
 }
-/* line 67, ../../app/stylesheets/screen.scss */
+/* line 62, ../../app/stylesheets/screen.scss */
+.mainpage #content #solution #board #board0-title {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 310px;
+}
+/* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .mainpage #content #solution #board #board0-title {
+  overflow-x: hidden;
+}
+/* line 65, ../../app/stylesheets/screen.scss */
+.mainpage #content #solution #board #board1-title {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 310px;
+}
+/* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .mainpage #content #solution #board #board1-title {
+  overflow-x: hidden;
+}
+/* line 68, ../../app/stylesheets/screen.scss */
+.mainpage #content #solution #board .board-square {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 30px;
+}
+/* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .mainpage #content #solution #board .board-square {
+  overflow-x: hidden;
+}
+/* line 69, ../../app/stylesheets/screen.scss */
+.mainpage #content #solution #board .board-square-end {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 30px;
+}
+/* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .mainpage #content #solution #board .board-square-end {
+  overflow-x: hidden;
+}
+/* line 70, ../../app/stylesheets/screen.scss */
+.mainpage #content #solution #board .board-square-board0-end {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 30px;
+  padding-right: 4px;
+  margin-right: 5px;
+  border-right: 1px solid yellow;
+}
+/* line 139, ../../../../.rvm/gems/ruby-1.8.7-p302/gems/compass-0.10.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .mainpage #content #solution #board .board-square-board0-end {
+  overflow-x: hidden;
+}
+/* line 77, ../../app/stylesheets/screen.scss */
 .mainpage #content #solution .controls .command {
   display: inline;
   float: left;
@@ -1085,7 +1141,7 @@ form.bp textarea {
 * html .mainpage #content #solution .controls .command {
   overflow-x: hidden;
 }
-/* line 70, ../../app/stylesheets/screen.scss */
+/* line 80, ../../app/stylesheets/screen.scss */
 .mainpage #content #solution .controls .control-command {
   display: inline;
   float: left;
@@ -1096,7 +1152,7 @@ form.bp textarea {
 * html .mainpage #content #solution .controls .control-command {
   overflow-x: hidden;
 }
-/* line 73, ../../app/stylesheets/screen.scss */
+/* line 83, ../../app/stylesheets/screen.scss */
 .mainpage #content #solution .controls .command-empty {
   display: inline;
   float: left;
@@ -1107,7 +1163,7 @@ form.bp textarea {
 * html .mainpage #content #solution .controls .command-empty {
   overflow-x: hidden;
 }
-/* line 76, ../../app/stylesheets/screen.scss */
+/* line 86, ../../app/stylesheets/screen.scss */
 .mainpage #content #solution .controls .sub {
   display: inline;
   float: left;
@@ -1118,7 +1174,7 @@ form.bp textarea {
 * html .mainpage #content #solution .controls .sub {
   overflow-x: hidden;
 }
-/* line 82, ../../app/stylesheets/screen.scss */
+/* line 92, ../../app/stylesheets/screen.scss */
 .mainpage #content #welcome #playnow {
   display: inline;
   float: left;
@@ -1129,7 +1185,7 @@ form.bp textarea {
 * html .mainpage #content #welcome #playnow {
   overflow-x: hidden;
 }
-/* line 85, ../../app/stylesheets/screen.scss */
+/* line 95, ../../app/stylesheets/screen.scss */
 .mainpage #content #welcome #signin, .mainpage #content #welcome #signup {
   display: inline;
   float: left;
@@ -1140,7 +1196,7 @@ form.bp textarea {
 * html .mainpage #content #welcome #signin, * html .mainpage #content #welcome #signup {
   overflow-x: hidden;
 }
-/* line 88, ../../app/stylesheets/screen.scss */
+/* line 98, ../../app/stylesheets/screen.scss */
 .mainpage #content #welcome #wtf {
   display: inline;
   float: left;
@@ -1151,7 +1207,7 @@ form.bp textarea {
 * html .mainpage #content #welcome #wtf {
   overflow-x: hidden;
 }
-/* line 93, ../../app/stylesheets/screen.scss */
+/* line 103, ../../app/stylesheets/screen.scss */
 .mainpage #content #signin #padleft, .mainpage #content #signup #padleft {
   display: inline;
   float: left;
@@ -1162,7 +1218,7 @@ form.bp textarea {
 * html .mainpage #content #signin #padleft, * html .mainpage #content #signup #padleft {
   overflow-x: hidden;
 }
-/* line 94, ../../app/stylesheets/screen.scss */
+/* line 104, ../../app/stylesheets/screen.scss */
 .mainpage #content #signin #padright, .mainpage #content #signup #padright {
   display: inline;
   float: left;
@@ -1173,7 +1229,7 @@ form.bp textarea {
 * html .mainpage #content #signin #padright, * html .mainpage #content #signup #padright {
   overflow-x: hidden;
 }
-/* line 95, ../../app/stylesheets/screen.scss */
+/* line 105, ../../app/stylesheets/screen.scss */
 .mainpage #content #signin #signin-content, .mainpage #content #signin #signup-content, .mainpage #content #signup #signin-content, .mainpage #content #signup #signup-content {
   display: inline;
   float: left;
@@ -1184,7 +1240,7 @@ form.bp textarea {
 * html .mainpage #content #signin #signin-content, * html .mainpage #content #signin #signup-content, * html .mainpage #content #signup #signin-content, * html .mainpage #content #signup #signup-content {
   overflow-x: hidden;
 }
-/* line 98, ../../app/stylesheets/screen.scss */
+/* line 108, ../../app/stylesheets/screen.scss */
 .mainpage #content #signin .label, .mainpage #content #signup .label {
   display: inline;
   float: left;
@@ -1195,7 +1251,7 @@ form.bp textarea {
 * html .mainpage #content #signin .label, * html .mainpage #content #signup .label {
   overflow-x: hidden;
 }
-/* line 101, ../../app/stylesheets/screen.scss */
+/* line 111, ../../app/stylesheets/screen.scss */
 .mainpage #content #signin .input, .mainpage #content #signup .input {
   display: inline;
   float: left;

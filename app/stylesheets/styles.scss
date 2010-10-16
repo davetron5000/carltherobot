@@ -194,6 +194,21 @@ body.bp {
         height: $line-height * 2;
       }
     }
+    #board {
+      ul {
+        list-style: none;
+        text-align: center;
+      }
+      h3 {
+        text-align: center;
+      }
+    }
+    .board1 {
+      //visibility:hidden;
+    }
+    #program form {
+      margin-right: $blueprint-grid-width;
+    }
   }
 }
 textarea#solution_code, pre.code {
@@ -249,9 +264,13 @@ textarea#solution_code, pre.code {
 }
 // Sketchy
 .square {
-  border: solid thin;
-  background: #afa;
-  margin-bottom: $line-height/2;
+  border: solid thin $alt-color;
+  background: $highlight-color;
+  margin-bottom: $blueprint-grid-margin;
+  height: $blueprint-grid-width;
+}
+.last-row .square {
+  margin-bottom: 0;
 }
 .goal {
   background: #faf;

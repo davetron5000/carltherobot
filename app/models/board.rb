@@ -55,6 +55,8 @@ class Board
 
   def remove_beacon(row,col)
     return false if oob?(row,col)
+    return false unless beacon?(row,col)
+    @map[row][col] = nil
   end
 
   def add_beacon(row,col)

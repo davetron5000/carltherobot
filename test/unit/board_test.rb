@@ -65,7 +65,20 @@ class BoardTest < ActiveSupport::TestCase
 
     b2.map[1][1] = :wall
     assert !b.wall?(1,1)
-
-
   end
+
+  test "remove beacon works" do
+    b = Board.new
+    b.map[0][0] = :beacon
+    b.remove_beacon(0,0)
+    assert !b.beacon?(0,0)
+  end
+
+  test "add beacon works" do
+    b = Board.new
+    assert !b.beacon?(0,0)
+    b.add_beacon(0,0)
+    assert b.beacon?(0,0)
+  end
+
 end

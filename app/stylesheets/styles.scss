@@ -201,6 +201,7 @@ body.bp {
       }
     }
     #board {
+      border-top: solid 4px $altalt-color;
       #goal-title {
         h3 {
           padding-top: $line-height;
@@ -226,6 +227,38 @@ body.bp {
       }
       h3 {
         text-align: center;
+      }
+      #execution-result-summary {
+        div {
+          text-align: center;
+          h4 {
+            font-size: $line-height + 4;
+            padding: 0;
+            margin: 0;
+          }
+        }
+        .explosion {
+          color: #F70;
+          h4 {
+            color: #F70;
+          }
+        }
+        .failure {
+          color: $unsatisfied-color;
+          h4 {
+            color: $unsatisfied-color;
+          }
+        }
+        .passed {
+          background-color: $satisfied-color;
+          color: $bg-color;
+          font-family: 'CPMono_v07_Black', monospace;
+          h4 {
+            color: $bg-color;
+            background-color: $satisfied-color;
+            font-family: 'CPMono_v07_Black', monospace;
+          }
+        }
       }
     }
     .hidden {
@@ -287,9 +320,8 @@ textarea#solution_code, pre.code {
     }
   }
 }
-// Sketchy
+
 .square {
-  border: solid thin $alt-color;
   background: $highlight-color;
   margin-bottom: $blueprint-grid-margin;
   height: $blueprint-grid-width;
@@ -300,6 +332,10 @@ textarea#solution_code, pre.code {
 
 .carl .square {
   background: #fff;
+}
+
+.explosion .square {
+  background: #F87800;
 }
 
 .goal .square {

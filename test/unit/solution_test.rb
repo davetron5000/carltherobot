@@ -6,13 +6,13 @@ class SolutionTest < ActiveSupport::TestCase
 
     code = one.code
     assert_equal 1,code.size
-    assert_equal 'move',code[0]
+    assert_equal 'turnleft',code[0]
 
     two = solutions(:two)
     code = two.code
     assert_equal 2,code.size
-    assert_equal 'move',code[0]
-    assert_equal 'foobar',code[1]
+    assert_equal 'turnleft',code[0]
+    assert_equal 'turnleft',code[1]
 
   end
 

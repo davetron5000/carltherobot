@@ -38,9 +38,10 @@ class ExecutorTest < ActiveSupport::TestCase
     board.add_beacon(1,0)
     board.add_beacon(6,0)
     executor = Executor.new(board,carl,['pickbeacon'])
-    assert_raises Explosion do
+    explosion = assert_raises Explosion do
       new_board = executor.execute
     end
+    assert_equal [7,1],explosion.where?
   end
 
   test "putdown when carl has no beacon explodes" do
@@ -50,9 +51,10 @@ class ExecutorTest < ActiveSupport::TestCase
     board.add_beacon(1,0)
     board.add_beacon(6,0)
     executor = Executor.new(board,carl,['putbeacon'])
-    assert_raises Explosion do
+    explosion = assert_raises Explosion do
       new_board = executor.execute
     end
+    assert_equal [7,1],explosion.where?
   end
 
   test "oob explodes" do
@@ -60,9 +62,10 @@ class ExecutorTest < ActiveSupport::TestCase
     board = Board.new
     board.place_carl(0,0)
     executor = Executor.new(board,carl,['move'])
-    assert_raises Explosion do
+    explosion = assert_raises Explosion do
       new_board = executor.execute
     end
+    assert_equal [-1,0],explosion.where?
   end
 
   test "hitting wall explodes" do
@@ -71,8 +74,9 @@ class ExecutorTest < ActiveSupport::TestCase
     board.place_carl(1,1)
     board.map[0][1] = :wall
     executor = Executor.new(board,carl,['move'])
-    assert_raises Explosion do
+    explosion = assert_raises Explosion do
       new_board = executor.execute
     end
+    assert_equal [0,1],explosion.where?
   end
 end

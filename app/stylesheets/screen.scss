@@ -67,6 +67,9 @@ form.bp {
         #board1-title {
           @include column(8,true);
         }
+        #execution-result-summary {
+          @include column(16,true);
+        }
         .board-square { @include column(1); }
         .board-square-end { @include column(1,true); }
         .board-square-board0-end { 

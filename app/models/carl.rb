@@ -11,7 +11,7 @@ class CarlTheRobot
   end
 
   def putdown_beacon
-    raise Explosion,"no beacons!" if @num_beacons < 1
+    raise Explosion.new("no beacons!",nil) if @num_beacons < 1
     @num_beacons -= 1
   end
 

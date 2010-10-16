@@ -43,6 +43,19 @@
           <% end %>
         </ul>
       </div>
+      <div id="execution-result-summary">
+        <% if new %>
+          <div class="ready">READY!</div>
+        <% else %>
+          <% if @execution_result0.exploded? %>
+            <div class="explosion"><h4>BOOM!</h4>C.A.R.L. ran into something or did something he couldn't do!  Try Again.</div>
+          <% elsif @execution_result0.lines_of_code_goal_met? && @execution_result0.beacon_goals_met? && @execution_result0.carl_goal_met? %>
+            <div class="passed"><h4>YAY!</h4>You did it!  Move on to the next level &gt;&gt;</div>
+          <% else %>
+            <div class="failure"><h4>FAIL.</h4>You didn't meet all the goals; keep working on your code!</div>
+          <% end %>
+        <% end %>
+      </div>
       <%
         hidden = ''
         hidden = 'hidden' if @board1.nil?
@@ -65,7 +78,8 @@
                  square_contents = 'wall' if board.wall?(row,col)
                  square_contents = 'beacon' if board.beacon?(row,col)
                  square_contents = 'goal' if goal_square == [row,col]
-                 square_contents += ' carl' if board.carl?(row,col)
+                 square_contents = 'explosion' if board.map[row][col] == :explosion
+                 square_contents += ' carl' if board.carl?(row,col) && board.map[row][col] != :explosion
                end
              %>
              <div class="<%= klass %> board<%= board_num %> <%= square_contents %>" id="board<%= board_num %>-<%= row %>-<%= col %>"><div class="square">&nbsp;</div></div>

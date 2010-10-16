@@ -46,11 +46,24 @@ class SolutionsController < ApplicationController
 
   def set_assigns(solution)
     @level = solution.level
-    executor = Executor.new(@level.board0,CarlTheRobot.new,solution.code)
-    @board0 = executor.execute
-    executor = Executor.new(@level.board1,CarlTheRobot.new,solution.code)
-    @board1 = executor.execute
-    @execution_result0 = ExecutionResult.new(@level.goal,@board0,solution,false)
-    @execution_result1 = ExecutionResult.new(@level.goal,@board1,solution,false) unless @board1.nil?
+    @execution_result0,@board0 = execute_solution(@level.goal,@level.board0,solution)
+    @execution_result1,@board1 = execute_solution(@level.goal,@level.board1,solution)
+  end
+
+  def execute_solution(goal,board,solution)
+    executor = Executor.new(board,CarlTheRobot.new,solution.code)
+    exploded = false
+    new_board = nil
+    begin
+      new_board = executor.execute
+    rescue Explosion => explosion
+      exploded = true
+      new_board = board
+      row,col = explosion.where?
+      new_board.place_carl(row,col)
+      new_board.map[row][col] = :explosion
+    end
+    execution_result = ExecutionResult.new(goal,new_board,solution,exploded)
+    [execution_result,new_board]
   end
 end

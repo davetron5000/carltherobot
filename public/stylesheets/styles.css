@@ -220,44 +220,86 @@ body.bp h3 {
   border: solid thin;
   height: 40px;
 }
-/* line 205, ../../app/stylesheets/styles.scss */
+/* line 203, ../../app/stylesheets/styles.scss */
+#content #solution #board {
+  border-top: solid 4px yellow;
+}
+/* line 206, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-title h3 {
   padding-top: 20px;
   text-align: right;
   color: aqua;
 }
-/* line 212, ../../app/stylesheets/styles.scss */
+/* line 213, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-list ul {
   margin-top: 20px;
   list-style: none;
 }
-/* line 215, ../../app/stylesheets/styles.scss */
+/* line 216, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-list ul li {
   color: aqua;
 }
-/* line 218, ../../app/stylesheets/styles.scss */
+/* line 219, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-list ul li.satisfied {
   color: lime;
   font-family: 'CPMono_v07_Black', monospace;
 }
-/* line 222, ../../app/stylesheets/styles.scss */
+/* line 223, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-list ul li.unsatisfied {
   color: red;
 }
-/* line 227, ../../app/stylesheets/styles.scss */
+/* line 228, ../../app/stylesheets/styles.scss */
 #content #solution #board h3 {
   text-align: center;
 }
-/* line 231, ../../app/stylesheets/styles.scss */
+/* line 232, ../../app/stylesheets/styles.scss */
+#content #solution #board #execution-result-summary div {
+  text-align: center;
+}
+/* line 234, ../../app/stylesheets/styles.scss */
+#content #solution #board #execution-result-summary div h4 {
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+}
+/* line 240, ../../app/stylesheets/styles.scss */
+#content #solution #board #execution-result-summary .explosion {
+  color: #F70;
+}
+/* line 242, ../../app/stylesheets/styles.scss */
+#content #solution #board #execution-result-summary .explosion h4 {
+  color: #F70;
+}
+/* line 246, ../../app/stylesheets/styles.scss */
+#content #solution #board #execution-result-summary .failure {
+  color: red;
+}
+/* line 248, ../../app/stylesheets/styles.scss */
+#content #solution #board #execution-result-summary .failure h4 {
+  color: red;
+}
+/* line 252, ../../app/stylesheets/styles.scss */
+#content #solution #board #execution-result-summary .passed {
+  background-color: lime;
+  color: black;
+  font-family: 'CPMono_v07_Black', monospace;
+}
+/* line 256, ../../app/stylesheets/styles.scss */
+#content #solution #board #execution-result-summary .passed h4 {
+  color: black;
+  background-color: lime;
+  font-family: 'CPMono_v07_Black', monospace;
+}
+/* line 264, ../../app/stylesheets/styles.scss */
 #content #solution .hidden {
   visibility: hidden;
 }
-/* line 234, ../../app/stylesheets/styles.scss */
+/* line 267, ../../app/stylesheets/styles.scss */
 #content #solution #program form {
   margin-right: 30px;
 }
 
-/* line 239, ../../app/stylesheets/styles.scss */
+/* line 272, ../../app/stylesheets/styles.scss */
 textarea#solution_code, pre.code {
   width: 100%;
   color: white;
@@ -266,19 +308,19 @@ textarea#solution_code, pre.code {
   line-height: 20px;
 }
 
-/* line 249, ../../app/stylesheets/styles.scss */
+/* line 282, ../../app/stylesheets/styles.scss */
 #signin form input, #signup form input {
   font-size: 28px;
   font-family: 'CPMono_v07_ExtraLight', monospace;
   border: solid thin;
   margin-top: 14px;
 }
-/* line 255, ../../app/stylesheets/styles.scss */
+/* line 288, ../../app/stylesheets/styles.scss */
 #signin form input[type="submit"], #signup form input[type="submit"] {
   padding-left: 20px;
   padding-right: 20px;
 }
-/* line 259, ../../app/stylesheets/styles.scss */
+/* line 292, ../../app/stylesheets/styles.scss */
 #signin form .label, #signup form .label {
   text-align: right;
   vertical-align: middle;
@@ -286,25 +328,25 @@ textarea#solution_code, pre.code {
   padding-right: 0px;
   margin-right: 0px;
 }
-/* line 266, ../../app/stylesheets/styles.scss */
+/* line 299, ../../app/stylesheets/styles.scss */
 #signin form .input, #signup form .input {
   padding-left: 0px;
   margin-left: 0px;
 }
-/* line 270, ../../app/stylesheets/styles.scss */
+/* line 303, ../../app/stylesheets/styles.scss */
 #signin form label, #signup form label {
   font-size: 18px;
   font-family: 'CPMono_v07_Light', monospace;
   margin-left: 0px;
 }
-/* line 277, ../../app/stylesheets/styles.scss */
+/* line 310, ../../app/stylesheets/styles.scss */
 #signin ul#devise-links, #signup ul#devise-links {
   list-style: none;
   padding: 0;
   margin: 0;
   padding-top: 20px;
 }
-/* line 282, ../../app/stylesheets/styles.scss */
+/* line 315, ../../app/stylesheets/styles.scss */
 #signin ul#devise-links li, #signup ul#devise-links li {
   padding: 0;
   display: inline;
@@ -312,35 +354,39 @@ textarea#solution_code, pre.code {
   padding-right: 15px;
 }
 
-/* line 291, ../../app/stylesheets/styles.scss */
+/* line 324, ../../app/stylesheets/styles.scss */
 .square {
-  border: solid thin aqua;
   background: #002200;
   margin-bottom: 10px;
   height: 30px;
 }
 
-/* line 297, ../../app/stylesheets/styles.scss */
+/* line 329, ../../app/stylesheets/styles.scss */
 .last-row .square {
   margin-bottom: 0;
 }
 
-/* line 301, ../../app/stylesheets/styles.scss */
+/* line 333, ../../app/stylesheets/styles.scss */
 .carl .square {
   background: #fff;
 }
 
-/* line 305, ../../app/stylesheets/styles.scss */
+/* line 337, ../../app/stylesheets/styles.scss */
+.explosion .square {
+  background: #F87800;
+}
+
+/* line 341, ../../app/stylesheets/styles.scss */
 .goal .square {
   background: #f00;
 }
 
-/* line 309, ../../app/stylesheets/styles.scss */
+/* line 345, ../../app/stylesheets/styles.scss */
 .wall .square {
   background: lime;
 }
 
-/* line 312, ../../app/stylesheets/styles.scss */
+/* line 348, ../../app/stylesheets/styles.scss */
 #footer {
   background: lime;
   color: black;

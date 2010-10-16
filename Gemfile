@@ -6,6 +6,8 @@ gem 'rails', '3.0.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql'
+gem "compass", ">= 0.10.5"
+
 
 # Use unicorn as the web server
 # gem 'unicorn'

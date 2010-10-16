@@ -1,4 +1,6 @@
 Carl::Application.routes.draw do
+  resources :solutions
+
   devise_for :players
 
   get "welcome/show"

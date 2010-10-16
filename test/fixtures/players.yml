@@ -5,17 +5,20 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
+  id: 1
   email: foo@bar.com
   encrypted_password: asdfasdf
   password_salt: 123445
 
 new_player:
+  id: 2
   email: newbie@blah.com
   encrypted_password: asdfasdf
   password_salt: 123445
   unlock: 1
 
 advanced_player:
+  id: 3
   email: advanced_player@blah.com
   encrypted_password: asdfasdf
   password_salt: 123445

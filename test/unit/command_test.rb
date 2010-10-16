@@ -8,6 +8,12 @@ class CommandTest < ActiveSupport::TestCase
     assert_equal 'move',commands[0].command_name
   end
 
+  test "get command by name" do
+    assert_equal 'move',Command.named('move').command_name
+    assert_equal 'turnleft',Command.named('turnleft').command_name
+    assert_nil Command.named('foobar')
+  end
+
   test "get available commands for advanced player" do
     advanced_player = players(:advanced_player)
     commands = Command.available_to(advanced_player)

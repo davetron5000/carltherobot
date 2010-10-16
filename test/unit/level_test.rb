@@ -16,6 +16,17 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal 3,levels[:hard][2].ordinal
   end
 
+  test "board_serialization" do
+    level = Level.find_by_id(1)
+    assert_not_nil level.board1
+    assert_nil level.board2
+    assert level.board1.kind_of? Board
+
+    level = Level.find_by_id(4)
+    assert_not_nil level.board1
+    assert_not_nil level.board2
+  end
+
   test "empty board behaves" do
     b = Board.new
     8.times do |row|

@@ -1,18 +1,3 @@
-class Level < ActiveRecord::Base
-  # Returns all levels organized by difficult, in ordinal order
-  def self.by_difficulty
-    result = { :tutorial => [], :easy => [], :hard => [] }
-    Level.order('ordinal asc').each do |level|
-      result[level.difficulty.to_sym] << level
-    end
-    result
-  end
-
-  def boards
-    [Board.fake_board]
-  end
-end
-
 # A board is an 8x8 grid
 class Board
 
@@ -86,6 +71,18 @@ class Board
   end
 end
 
+class Level < ActiveRecord::Base
+  serialize :board1, Board
+  serialize :board2, Board
+  # Returns all levels organized by difficult, in ordinal order
+  def self.by_difficulty
+    result = { :tutorial => [], :easy => [], :hard => [] }
+    Level.order('ordinal asc').each do |level|
+      result[level.difficulty.to_sym] << level
+    end
+    result
+  end
+end
 # class Doit
 #   carl.board = board.copy
 #   solution.code.each { |command| self.execute(command) }

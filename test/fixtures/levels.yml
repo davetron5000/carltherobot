@@ -5,6 +5,7 @@ t_01:
   goal_description: Get Carl to the Goal
   ordinal: 1
   difficulty: tutorial
+  board1: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
 
 t_02:
   id: 2
@@ -23,6 +24,8 @@ h_01:
   goal_description: Bring all beacon to the goal
   ordinal: 1
   difficulty: hard
+  board1: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
+  board2: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
 
 h_02:
   id: 5

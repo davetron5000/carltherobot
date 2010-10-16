@@ -1,18 +1,19 @@
 class Executor
   def initialize(board,carl,code)
-    @board = Board.from_board(board)
+    @board = Board.from_board(board) unless board.nil?
     @carl = carl
-    @code = code
+    @code = code || []
   end
 
   def execute
+    return nil if @board.nil?
     @code.each do |command|
       case command
       when 'move'
         transform = @carl.if_move
         current = @board.carl
         new = [current[0] + transform[0],current[1] + transform[1]]
-        raise Explosion,"ran into a wall" if @board.wall?(*new)
+        raise Explosion,"ran into a wall at #{new[0]},#{new[1]}" if @board.wall?(*new)
         @board.place_carl(*new)
       when 'turnleft'
         @carl.turnleft

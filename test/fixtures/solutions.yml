@@ -2,18 +2,18 @@
 
 one:
   id: 1
-  code: "--- \n- move\n"
+  code: "--- \n- turnleft\n"
   player_id: 1
   level_id: 1
 
 two:
   id: 2
-  code: "--- \n- move\n- foobar\n"
+  code: "--- \n- turnleft\n- turnleft\n"
   player_id: 1
   level_id: 1
 
 three:
   id: 3
-  code: "--- \n- turnleft\n- move\n"
+  code: "--- \n- move\n- move\n"
   player_id: 2 
   level_id: 2

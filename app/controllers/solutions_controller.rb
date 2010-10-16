@@ -1,3 +1,5 @@
+require 'carl.rb'
+
 class SolutionsController < ApplicationController
   before_filter :authenticate_player!
   before_filter :check_access, :except => [:new,:create,:index]
@@ -44,8 +46,10 @@ class SolutionsController < ApplicationController
 
   def set_assigns(solution)
     @level = solution.level
-    @board0 = @level.board0
-    @board1 = @level.board1
+    executor = Executor.new(@level.board0,CarlTheRobot.new,solution.code)
+    @board0 = executor.execute
+    executor = Executor.new(@level.board1,CarlTheRobot.new,solution.code)
+    @board1 = executor.execute
     @execution_result0 = ExecutionResult.new(@level.goal,@board0,solution,false)
     @execution_result1 = ExecutionResult.new(@level.goal,@board1,solution,false) unless @board1.nil?
   end

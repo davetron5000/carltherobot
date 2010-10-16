@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class SolutionTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
   test "serialization works" do
     one = solutions(:one)
 
@@ -15,5 +14,15 @@ class SolutionTest < ActiveSupport::TestCase
     assert_equal 'move',code[0]
     assert_equal 'foobar',code[1]
 
+  end
+
+  test "level relationship works" do
+    one = solutions(:one)
+    assert_not_nil one.level
+    assert_equal 1,one.level.id
+
+    three = solutions(:three)
+    assert_not_nil three.level
+    assert_equal 2,three.level.id
   end
 end

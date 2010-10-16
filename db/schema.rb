@@ -10,13 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101016023849) do
+ActiveRecord::Schema.define(:version => 20101016044527) do
 
   create_table "commands", :force => true do |t|
     t.string   "name"
     t.string   "command_name"
     t.integer  "unlock"
     t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "levels", :force => true do |t|
+    t.string   "goal_description"
+    t.integer  "ordinal"
+    t.string   "difficulty"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -46,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20101016023849) do
     t.integer  "player_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "level_id"
   end
 
 end

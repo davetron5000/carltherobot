@@ -1,4 +1,6 @@
 Carl::Application.routes.draw do
+  resources :levels
+
   resources :solutions
 
   devise_for :players

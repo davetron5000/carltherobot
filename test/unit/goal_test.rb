@@ -6,7 +6,7 @@ class GoalTest < ActiveSupport::TestCase
     b.place_carl(0,0)
     g = Goal.new
     g.carl = [0,0]
-    assert_empty g.check_goals(b)
+    assert g.carl_goal_met?(b,nil)
   end
 
   test "basic goal NON-satisfaction for carl" do
@@ -14,7 +14,7 @@ class GoalTest < ActiveSupport::TestCase
     b.place_carl(0,0)
     g = Goal.new
     g.carl = [1,0]
-    assert g.check_goals(b).include? :carl
+    assert !g.carl_goal_met?(b,nil)
   end
 
   test "goal satisfaction for beacons" do 
@@ -25,7 +25,7 @@ class GoalTest < ActiveSupport::TestCase
     g = Goal.new
     g.carl = [0,0]
     g.beacons = [ [1,0], [0,1] ]
-    assert_empty g.check_goals(b)
+    assert g.beacon_goals_met?(b,nil)
   end
 
   test "goal NON-satisfaction for beacons" do 
@@ -34,10 +34,9 @@ class GoalTest < ActiveSupport::TestCase
     g = Goal.new
     g.carl = [0,0]
     g.beacons = [ [1,0], [0,1] ]
-    assert g.check_goals(b).include?([:beacon,[0,1]]),g.check_goals(b).inspect
-    assert g.check_goals(b).include?([:beacon,[1,0]]),g.check_goals(b).inspect
+    assert !g.beacon_goals_met?(b,nil)
     b.add_beacon(1,0)
-    assert g.check_goals(b).include?([:beacon,[0,1]])
+    assert !g.beacon_goals_met?(b,nil)
   end
 
   test "goal NON-satisfaction for lines_of_code" do
@@ -52,7 +51,7 @@ class GoalTest < ActiveSupport::TestCase
     s.code << 'turnleft'
     s.code << 'turnleft'
     s.code << 'turnleft'
-    assert g.check_goals(b,s).include?(:code_size),g.check_goals(b,s).inspect
+    assert !g.lines_of_code_goal_met?(b,s)
   end
 
   test "goal satisfaction for lines_of_code" do
@@ -67,12 +66,6 @@ class GoalTest < ActiveSupport::TestCase
     s.code << 'turnleft'
     s.code << 'turnleft'
     s.code << 'turnleft'
-    assert_empty g.check_goals(b,s)
-  end
-
-  private
-
-  def assert_empty(array)
-    assert array.empty?
+    assert g.lines_of_code_goal_met?(b,s)
   end
 end

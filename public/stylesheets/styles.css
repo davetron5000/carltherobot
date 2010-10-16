@@ -82,16 +82,18 @@ textarea#solution_code {
   color: #0f0;
   background: black;
   width: 100%;
+  font-size: 18px;
+  line-height: 20px;
 }
 
-/* line 79, ../../app/stylesheets/styles.scss */
+/* line 81, ../../app/stylesheets/styles.scss */
 .square {
   border: solid thin;
   background: #afa;
   margin-bottom: 12px;
 }
 
-/* line 84, ../../app/stylesheets/styles.scss */
+/* line 86, ../../app/stylesheets/styles.scss */
 #footer {
   background: black;
   color: white;

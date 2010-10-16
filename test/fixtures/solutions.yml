@@ -1,13 +1,16 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
+  id: 1
   code: "--- \n- move\n"
   player_id: 1
 
 two:
+  id: 2
   code: "--- \n- move\n- foobar\n"
   player_id: 1
 
 three:
+  id: 3
   code: "--- \n- turnleft\n- move\n"
   player_id: 2 

@@ -8,8 +8,7 @@ module SolutionsHelper
     end
   end
 
-  def goal_li(solution,goal,board0,board1,goal_type,new)
-    goal_met = goal.send(goal_type,board0,solution)
+  def goal_li(goal_met,goal,goal_type,new)
     klass = ""
     unless new
       if goal_met

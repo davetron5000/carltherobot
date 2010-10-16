@@ -48,6 +48,10 @@ class SolutionsController < ApplicationController
     @level = solution.level
     @execution_result0,@board0 = execute_solution(@level.goal,@level.board0,solution)
     @execution_result1,@board1 = execute_solution(@level.goal,@level.board1,solution)
+    if @execution_result0.success?
+      @solution.beat = true
+      @solution.save
+    end
   end
 
   def execute_solution(goal,board,solution)

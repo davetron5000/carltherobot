@@ -8,6 +8,10 @@ class ExecutionResult
 
   def exploded?; @exploded; end
 
+  def success?
+    lines_of_code_goal_met? && carl_goal_met? && beacon_goals_met?
+  end
+
   def lines_of_code_goal_met?
     @goal.lines_of_code_goal_met?(@board,@solution)
   end

@@ -92,6 +92,38 @@ class SolutionsControllerTest < ActionController::TestCase
     assert assigns(:execution_result0).lines_of_code_goal_met?
   end
 
+  test "db updated when we win" do
+    player = players(:one)
+    sign_in player
+    put :update, :id => 2, :code => [
+      'turnleft',
+      'turnleft',
+      'move',
+      'turnleft',
+      'move'
+    ].join("\n")
+
+    assert_redirected_to :action => :edit, :id => 2
+
+    get :show, :id => 2 
+    assert_response :success
+    assert_not_nil assigns(:solution)
+    assert_not_nil assigns(:level)
+    assert_not_nil assigns(:board0)
+    assert_not_nil assigns(:execution_result0)
+    assert assigns(:execution_result0).carl_goal_met?
+    assert assigns(:execution_result0).beacon_goals_met?
+    assert assigns(:execution_result0).lines_of_code_goal_met?
+    found_solution = false
+    player.solutions.each do |solution|
+      if solution.id == 2
+        found_solution = true
+        assert solution.beat?
+      end
+    end
+    assert found_solution
+  end
+
   test "detect an explosion" do
     player = players(:new_player)
     sign_in player

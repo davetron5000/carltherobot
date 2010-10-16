@@ -155,11 +155,17 @@ body.bp {
           color: lighten($main-color,20%);
           text-align: center;
         }
+        &:hover {
+          background: $highlight-color;
+        }
       }
       .disabled {
         cursor: default;
         h3, p, p a, p a:visited, p a:hover {
           color: #222;
+        }
+        &:hover {
+          background: $bg-color;
         }
       }
       #tutorial, #easy {

@@ -18,7 +18,7 @@ class CarlTest < ActiveSupport::TestCase
     c = CarlTheRobot.new
     c.pickup_beacon
     c.putdown_beacon
-    assert_raises RuntimeError do
+    assert_raises Explosion do
       c.putdown_beacon
     end
   end

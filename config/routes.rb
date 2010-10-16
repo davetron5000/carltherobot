@@ -1,4 +1,6 @@
 Carl::Application.routes.draw do
+  devise_for :players
+
   get "welcome/show"
   get "welcome/secret"
   root :to => "welcome#show"

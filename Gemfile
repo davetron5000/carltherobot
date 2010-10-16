@@ -7,6 +7,7 @@ gem 'rails', '3.0.1'
 
 gem 'mysql'
 gem "compass", ">= 0.10.5"
+gem 'devise'
 
 
 # Use unicorn as the web server

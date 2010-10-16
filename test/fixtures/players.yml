@@ -8,3 +8,15 @@ one:
   email: foo@bar.com
   encrypted_password: asdfasdf
   password_salt: 123445
+
+new_player:
+  email: newbie@blah.com
+  encrypted_password: asdfasdf
+  password_salt: 123445
+  unlock: 1
+
+advanced_player:
+  email: advanced_player@blah.com
+  encrypted_password: asdfasdf
+  password_salt: 123445
+  unlock: 4 

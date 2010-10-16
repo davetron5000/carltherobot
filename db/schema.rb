@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101016014116) do
+ActiveRecord::Schema.define(:version => 20101016020947) do
+
+  create_table "commands", :force => true do |t|
+    t.string   "name"
+    t.string   "command_name"
+    t.integer  "unlock"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "players", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -26,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20101016014116) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "unlock",                              :default => 1,  :null => false
   end
 
   add_index "players", ["email"], :name => "index_players_on_email", :unique => true

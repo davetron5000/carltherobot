@@ -1,8 +1,8 @@
-= Carl the Robot
+# Carl the Robot
 
 I am ready to rumble.
 
-== Current Status
+## Current Status
 
 * Setting up my linode
 * Getting bootstrapped

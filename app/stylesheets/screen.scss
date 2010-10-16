@@ -6,8 +6,72 @@
 
 // Import all the default blueprint modules so that we can access their mixins.
 @import "blueprint";
+@import "blueprint/scaffolding";
 
 // Combine the partials into a single screen stylesheet.
 @import "partials/page";
 @import "partials/form";
 @import "partials/two_col";
+
+@include blueprint-scaffolding("body.bp");
+body.bp {
+  @include blueprint-typography(false);
+  @include blueprint-utilities;
+  @include blueprint-debug;
+  @include blueprint-interaction;
+  // Remove the scaffolding when you're ready to start doing visual design.
+  // Or leave it in if you're happy with how blueprint looks out-of-the-box
+}
+
+form.bp {
+  @include blueprint-form; 
+}
+
+// Page layout can be done using mixins applied to your semantic classes and IDs:
+.mainpage {
+  //@include showgrid;
+  @include container;
+  #header, #footer {
+    @include column($blueprint-grid-columns); 
+    #title {
+      @include column($blueprint-grid-columns - 8);
+      display: inline;
+      h1 { 
+        margin:0; 
+      }
+      float: left;
+      .subhead {
+        font-size: 12px;
+        color: #777;
+        line-height: 12px;
+      }
+    }
+    #nav {
+      @include column(8,true);
+    }
+  }
+  #content {
+    @include column($blueprint-grid-columns); 
+    #start {
+      @include column($blueprint-grid-columns/6 + 2);
+    }
+    #resume {
+      @include column(2 * $blueprint-grid-columns/3 - 4);
+    }
+    #help {
+      @include column($blueprint-grid-columns/6 + 2,true);
+    }
+    #solution {
+      @include column($blueprint-grid-columns - 6);
+    }
+    #board {
+      @include column(6,true);
+      .square {
+        @include column(1);
+      }
+      .square .last {
+        @include column(1,true);
+      }
+    }
+  }
+}

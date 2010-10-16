@@ -1,1 +1,14 @@
-<h2>New Solutions</h2>
+<h2>New Solution</h2>
+<div id="solution">
+<% form_for @solution do |f| %>
+  <%= f.text_area :code, :name => 'code' %><br />
+  <%= f.submit 'Save Solution' %>
+<% end %>
+</div>
+<div id="board">
+  <% 5.times do |x| %>
+    <% 5.times do |x| %>
+      <div class="square <%= x == 4 ? 'last' : '' %>">&nbsp;</div>
+    <% end %>
+  <% end %>
+</div>

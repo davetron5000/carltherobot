@@ -4,16 +4,97 @@
 }
 
 /* line 9, ../../app/stylesheets/styles.scss */
-h1, h2 {
+body.bp, textarea {
   font-family: 'CPMono_v07_Plain', serif;
 }
 
 /* line 13, ../../app/stylesheets/styles.scss */
-h1 {
+body.bp {
+  line-height: 24px;
+}
+/* line 15, ../../app/stylesheets/styles.scss */
+body.bp h1 {
   font-size: 50px;
+  line-height: 50px;
+}
+/* line 20, ../../app/stylesheets/styles.scss */
+body.bp h2 {
+  font-size: 40px;
+  line-height: 50px;
+}
+/* line 24, ../../app/stylesheets/styles.scss */
+body.bp h3 {
+  font-size: 20px;
+  line-height: 20px;
 }
 
-/* line 17, ../../app/stylesheets/styles.scss */
-h2 {
-  font-size: 40px;
+/* line 30, ../../app/stylesheets/styles.scss */
+#header {
+  border-bottom: solid thin black;
+}
+/* line 31, ../../app/stylesheets/styles.scss */
+#header #nav {
+  text-align: right;
+}
+/* line 34, ../../app/stylesheets/styles.scss */
+#header #nav ul li {
+  display: inline;
+}
+
+/* line 42, ../../app/stylesheets/styles.scss */
+#content {
+  margin-bottom: 30px;
+}
+/* line 44, ../../app/stylesheets/styles.scss */
+#content h2 {
+  text-align: center;
+}
+/* line 48, ../../app/stylesheets/styles.scss */
+#content #help ul {
+  list-style: none;
+  text-align: center;
+}
+/* line 53, ../../app/stylesheets/styles.scss */
+#content #start {
+  text-align: center;
+}
+/* line 55, ../../app/stylesheets/styles.scss */
+#content #start .difficulty {
+  border: solid thin black;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+/* line 63, ../../app/stylesheets/styles.scss */
+#content #start .disabled h3 {
+  color: #aaa;
+}
+
+/* line 69, ../../app/stylesheets/styles.scss */
+.disabled {
+  background: #888;
+}
+
+/* line 74, ../../app/stylesheets/styles.scss */
+textarea#solution_code {
+  color: #0f0;
+  background: black;
+  width: 100%;
+}
+
+/* line 79, ../../app/stylesheets/styles.scss */
+.square {
+  border: solid thin;
+  background: #afa;
+  margin-bottom: 12px;
+}
+
+/* line 84, ../../app/stylesheets/styles.scss */
+#footer {
+  background: black;
+  color: white;
+  width: 100%;
+  text-align: center;
 }

@@ -6,9 +6,20 @@ class Goal
   # Number of lines or less that the solution must be
   attr_accessor :lines_of_code
 
-  # Returns true if this board configuration satisfies the goals
-  def achieved?(board)
-    false
+  # Returns a array of all failing goals; an empty array means all
+  # goals are met
+  def check_goals(board,solution=nil)
+    result = []
+    result << :carl unless carl == board.carl
+    unless beacons.nil?
+      beacons.each do |beacon|
+        result << [:beacon,beacon] unless board.beacon? *beacon
+      end
+    end
+    unless solution.nil? || lines_of_code.nil?
+      result << :code_size if solution.code.size > lines_of_code
+    end
+    result
   end
 end
 

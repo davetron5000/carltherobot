@@ -15,6 +15,9 @@ class SolutionsController < ApplicationController
 
   def new
     @solution = Solution.new(:player_id => current_player.id, :level => Level.find_by_difficulty_and_ordinal('tutorial',1))
+    @level = @solution.level
+    @board0 = @level.board0
+    @board1 = @level.board1
   end
 
   def edit
@@ -37,6 +40,9 @@ class SolutionsController < ApplicationController
       head :forbidden
     else
       @solution = solution
+      @level = @solution.level
+      @board0 = @level.board0
+      @board1 = @level.board1
     end
   end
 end

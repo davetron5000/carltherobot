@@ -18,83 +18,83 @@
   src: local("☺"), url('/fonts/../fonts/CPMono_v07_Black-webfont.woff') format('woff'), url('/fonts/../fonts/CPMono_v07_Black-webfont.ttf') format('truetype'), url('/fonts/../fonts/CPMono_v07_Black-webfont.svg#webfontRVXSRgPv') format('svg');
 }
 
-/* line 28, ../../app/stylesheets/styles.scss */
+/* line 31, ../../app/stylesheets/styles.scss */
 body.bp, textarea {
   font-family: 'CPMono_v07_Plain', monospace;
 }
 
-/* line 32, ../../app/stylesheets/styles.scss */
+/* line 35, ../../app/stylesheets/styles.scss */
 body.bp {
   line-height: 20px;
   background: black;
   color: lime;
 }
-/* line 36, ../../app/stylesheets/styles.scss */
+/* line 39, ../../app/stylesheets/styles.scss */
 body.bp h1 {
   font-size: 60px;
   line-height: 60px;
 }
-/* line 39, ../../app/stylesheets/styles.scss */
+/* line 42, ../../app/stylesheets/styles.scss */
 body.bp h1 a {
   text-decoration: none;
   color: lime;
 }
-/* line 42, ../../app/stylesheets/styles.scss */
+/* line 45, ../../app/stylesheets/styles.scss */
 body.bp h1 a:hover, body.bp h1 a:visited {
   color: lime;
 }
-/* line 47, ../../app/stylesheets/styles.scss */
+/* line 50, ../../app/stylesheets/styles.scss */
 body.bp h1, body.bp h3, body.bp h5 {
   color: lime;
 }
-/* line 50, ../../app/stylesheets/styles.scss */
+/* line 53, ../../app/stylesheets/styles.scss */
 body.bp h2, body.bp h4 {
   color: yellow;
 }
-/* line 54, ../../app/stylesheets/styles.scss */
+/* line 57, ../../app/stylesheets/styles.scss */
 body.bp h2 {
   font-size: 35px;
   line-height: 40px;
 }
-/* line 58, ../../app/stylesheets/styles.scss */
+/* line 61, ../../app/stylesheets/styles.scss */
 body.bp h3 {
   font-size: 25px;
   line-height: 30px;
 }
 
-/* line 64, ../../app/stylesheets/styles.scss */
+/* line 67, ../../app/stylesheets/styles.scss */
 #title {
   display: inline;
   float: left;
 }
-/* line 67, ../../app/stylesheets/styles.scss */
+/* line 70, ../../app/stylesheets/styles.scss */
 #title h1 {
   margin: 0;
   font-family: 'CPMono_v07_Black', monospace;
 }
 
-/* line 73, ../../app/stylesheets/styles.scss */
+/* line 76, ../../app/stylesheets/styles.scss */
 #header {
   border-bottom: solid thin lime;
 }
-/* line 74, ../../app/stylesheets/styles.scss */
+/* line 77, ../../app/stylesheets/styles.scss */
 #header #nav {
   text-align: right;
 }
-/* line 77, ../../app/stylesheets/styles.scss */
+/* line 80, ../../app/stylesheets/styles.scss */
 #header #nav ul li {
   display: inline;
 }
-/* line 79, ../../app/stylesheets/styles.scss */
+/* line 82, ../../app/stylesheets/styles.scss */
 #header #nav ul li a {
   font-family: 'CPMono_v07_Light', monospace;
   color: white;
 }
-/* line 82, ../../app/stylesheets/styles.scss */
+/* line 85, ../../app/stylesheets/styles.scss */
 #header #nav ul li a:hover, #header #nav ul li a:visited {
   color: white;
 }
-/* line 90, ../../app/stylesheets/styles.scss */
+/* line 93, ../../app/stylesheets/styles.scss */
 #header .subhead {
   font-family: 'CPMono_v07_ExtraLight', monospace;
   font-size: 12px;
@@ -102,50 +102,50 @@ body.bp h3 {
   line-height: 10px;
 }
 
-/* line 98, ../../app/stylesheets/styles.scss */
+/* line 101, ../../app/stylesheets/styles.scss */
 #content {
   margin-bottom: 30px;
 }
-/* line 100, ../../app/stylesheets/styles.scss */
+/* line 103, ../../app/stylesheets/styles.scss */
 #content h2 {
   text-align: center;
   padding-top: 20px;
 }
-/* line 105, ../../app/stylesheets/styles.scss */
+/* line 108, ../../app/stylesheets/styles.scss */
 #content #help ul {
   list-style: none;
   text-align: center;
 }
-/* line 112, ../../app/stylesheets/styles.scss */
+/* line 115, ../../app/stylesheets/styles.scss */
 #content #welcome div:hover {
   background: #002200;
   cursor: pointer;
   cursor: hand;
 }
-/* line 117, ../../app/stylesheets/styles.scss */
+/* line 120, ../../app/stylesheets/styles.scss */
 #content #welcome h2, #content #welcome h3 {
   color: yellow;
 }
-/* line 119, ../../app/stylesheets/styles.scss */
+/* line 122, ../../app/stylesheets/styles.scss */
 #content #welcome h2 a, #content #welcome h3 a {
   text-decoration: none;
   color: yellow;
 }
-/* line 122, ../../app/stylesheets/styles.scss */
+/* line 125, ../../app/stylesheets/styles.scss */
 #content #welcome h2 a:hover, #content #welcome h2 a:visited, #content #welcome h3 a:hover, #content #welcome h3 a:visited {
   color: yellow;
 }
-/* line 127, ../../app/stylesheets/styles.scss */
+/* line 130, ../../app/stylesheets/styles.scss */
 #content #welcome h3 {
   text-align: center;
   margin-top: 0;
   line-height: 0;
 }
-/* line 134, ../../app/stylesheets/styles.scss */
+/* line 137, ../../app/stylesheets/styles.scss */
 #content #solutions #start {
   text-align: left;
 }
-/* line 135, ../../app/stylesheets/styles.scss */
+/* line 138, ../../app/stylesheets/styles.scss */
 #content #solutions #start .difficulty {
   border: solid thin lime;
   margin-top: 0;
@@ -159,95 +159,105 @@ body.bp h3 {
   cursor: pointer;
   cursor: hand;
 }
-/* line 146, ../../app/stylesheets/styles.scss */
+/* line 149, ../../app/stylesheets/styles.scss */
 #content #solutions #start .difficulty a {
   text-decoration: none;
   color: lime;
 }
-/* line 149, ../../app/stylesheets/styles.scss */
+/* line 152, ../../app/stylesheets/styles.scss */
 #content #solutions #start .difficulty a:hover, #content #solutions #start .difficulty a:visited {
   color: lime;
 }
-/* line 153, ../../app/stylesheets/styles.scss */
+/* line 156, ../../app/stylesheets/styles.scss */
 #content #solutions #start .difficulty p {
   font-family: 'CPMono_v07_Light', monospace;
   color: #66ff66;
   text-align: center;
 }
-/* line 158, ../../app/stylesheets/styles.scss */
+/* line 161, ../../app/stylesheets/styles.scss */
 #content #solutions #start .difficulty:hover {
   background: #002200;
 }
-/* line 162, ../../app/stylesheets/styles.scss */
+/* line 165, ../../app/stylesheets/styles.scss */
 #content #solutions #start .disabled {
   cursor: default;
 }
-/* line 164, ../../app/stylesheets/styles.scss */
+/* line 167, ../../app/stylesheets/styles.scss */
 #content #solutions #start .disabled h3, #content #solutions #start .disabled p, #content #solutions #start .disabled p a, #content #solutions #start .disabled p a:visited, #content #solutions #start .disabled p a:hover {
   color: #222;
 }
-/* line 167, ../../app/stylesheets/styles.scss */
+/* line 170, ../../app/stylesheets/styles.scss */
 #content #solutions #start .disabled:hover {
   background: black;
 }
-/* line 171, ../../app/stylesheets/styles.scss */
+/* line 174, ../../app/stylesheets/styles.scss */
 #content #solutions #start #tutorial, #content #solutions #start #easy {
   border-bottom: none;
 }
-/* line 175, ../../app/stylesheets/styles.scss */
+/* line 178, ../../app/stylesheets/styles.scss */
 #content #solutions #start h2 {
   text-align: left;
   padding-left: 15px;
 }
-/* line 179, ../../app/stylesheets/styles.scss */
+/* line 182, ../../app/stylesheets/styles.scss */
 #content #solutions #start h3 {
   text-align: center;
 }
-/* line 183, ../../app/stylesheets/styles.scss */
+/* line 186, ../../app/stylesheets/styles.scss */
 #content #solutions #resume {
   text-align: right;
 }
-/* line 185, ../../app/stylesheets/styles.scss */
+/* line 188, ../../app/stylesheets/styles.scss */
 #content #solutions #resume h2, #content #solutions #resume h3 {
   text-align: right;
 }
-/* line 192, ../../app/stylesheets/styles.scss */
+/* line 195, ../../app/stylesheets/styles.scss */
 #content #solution .controls div.command, #content #solution .controls div.sub, #content #solution .controls div.control-command {
   margin-bottom: 10px;
 }
-/* line 194, ../../app/stylesheets/styles.scss */
+/* line 197, ../../app/stylesheets/styles.scss */
 #content #solution .controls div.command div, #content #solution .controls div.sub div, #content #solution .controls div.control-command div {
   border: solid thin;
   height: 40px;
 }
-/* line 202, ../../app/stylesheets/styles.scss */
+/* line 205, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-title h3 {
   padding-top: 20px;
   text-align: right;
+  color: aqua;
 }
-/* line 207, ../../app/stylesheets/styles.scss */
-#content #solution #board ul {
+/* line 212, ../../app/stylesheets/styles.scss */
+#content #solution #board #goal-list ul {
   margin-top: 20px;
   list-style: none;
 }
-/* line 210, ../../app/stylesheets/styles.scss */
-#content #solution #board ul li {
+/* line 215, ../../app/stylesheets/styles.scss */
+#content #solution #board #goal-list ul li {
   color: aqua;
 }
-/* line 214, ../../app/stylesheets/styles.scss */
+/* line 218, ../../app/stylesheets/styles.scss */
+#content #solution #board #goal-list ul li.satisfied {
+  color: lime;
+  font-family: 'CPMono_v07_Black', monospace;
+}
+/* line 222, ../../app/stylesheets/styles.scss */
+#content #solution #board #goal-list ul li.unsatisfied {
+  color: red;
+}
+/* line 227, ../../app/stylesheets/styles.scss */
 #content #solution #board h3 {
   text-align: center;
 }
-/* line 218, ../../app/stylesheets/styles.scss */
+/* line 231, ../../app/stylesheets/styles.scss */
 #content #solution .hidden {
   visibility: hidden;
 }
-/* line 221, ../../app/stylesheets/styles.scss */
+/* line 234, ../../app/stylesheets/styles.scss */
 #content #solution #program form {
   margin-right: 30px;
 }
 
-/* line 226, ../../app/stylesheets/styles.scss */
+/* line 239, ../../app/stylesheets/styles.scss */
 textarea#solution_code, pre.code {
   width: 100%;
   color: white;
@@ -256,19 +266,19 @@ textarea#solution_code, pre.code {
   line-height: 20px;
 }
 
-/* line 236, ../../app/stylesheets/styles.scss */
+/* line 249, ../../app/stylesheets/styles.scss */
 #signin form input, #signup form input {
   font-size: 28px;
   font-family: 'CPMono_v07_ExtraLight', monospace;
   border: solid thin;
   margin-top: 14px;
 }
-/* line 242, ../../app/stylesheets/styles.scss */
+/* line 255, ../../app/stylesheets/styles.scss */
 #signin form input[type="submit"], #signup form input[type="submit"] {
   padding-left: 20px;
   padding-right: 20px;
 }
-/* line 246, ../../app/stylesheets/styles.scss */
+/* line 259, ../../app/stylesheets/styles.scss */
 #signin form .label, #signup form .label {
   text-align: right;
   vertical-align: middle;
@@ -276,25 +286,25 @@ textarea#solution_code, pre.code {
   padding-right: 0px;
   margin-right: 0px;
 }
-/* line 253, ../../app/stylesheets/styles.scss */
+/* line 266, ../../app/stylesheets/styles.scss */
 #signin form .input, #signup form .input {
   padding-left: 0px;
   margin-left: 0px;
 }
-/* line 257, ../../app/stylesheets/styles.scss */
+/* line 270, ../../app/stylesheets/styles.scss */
 #signin form label, #signup form label {
   font-size: 18px;
   font-family: 'CPMono_v07_Light', monospace;
   margin-left: 0px;
 }
-/* line 264, ../../app/stylesheets/styles.scss */
+/* line 277, ../../app/stylesheets/styles.scss */
 #signin ul#devise-links, #signup ul#devise-links {
   list-style: none;
   padding: 0;
   margin: 0;
   padding-top: 20px;
 }
-/* line 269, ../../app/stylesheets/styles.scss */
+/* line 282, ../../app/stylesheets/styles.scss */
 #signin ul#devise-links li, #signup ul#devise-links li {
   padding: 0;
   display: inline;
@@ -302,7 +312,7 @@ textarea#solution_code, pre.code {
   padding-right: 15px;
 }
 
-/* line 278, ../../app/stylesheets/styles.scss */
+/* line 291, ../../app/stylesheets/styles.scss */
 .square {
   border: solid thin aqua;
   background: #002200;
@@ -310,27 +320,27 @@ textarea#solution_code, pre.code {
   height: 30px;
 }
 
-/* line 284, ../../app/stylesheets/styles.scss */
+/* line 297, ../../app/stylesheets/styles.scss */
 .last-row .square {
   margin-bottom: 0;
 }
 
-/* line 288, ../../app/stylesheets/styles.scss */
+/* line 301, ../../app/stylesheets/styles.scss */
 .carl .square {
   background: #fff;
 }
 
-/* line 292, ../../app/stylesheets/styles.scss */
+/* line 305, ../../app/stylesheets/styles.scss */
 .goal .square {
   background: #f00;
 }
 
-/* line 296, ../../app/stylesheets/styles.scss */
+/* line 309, ../../app/stylesheets/styles.scss */
 .wall .square {
   background: lime;
 }
 
-/* line 299, ../../app/stylesheets/styles.scss */
+/* line 312, ../../app/stylesheets/styles.scss */
 #footer {
   background: lime;
   color: black;

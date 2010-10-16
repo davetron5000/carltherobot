@@ -21,6 +21,8 @@ class SolutionsControllerTest < ActionController::TestCase
     get :show, :id => 1
     assert_response :success
     assert_not_nil assigns(:solution)
+    assert_not_nil assigns(:level)
+    assert_not_nil assigns(:board0)
   end
 
   test "can get the new form for a new solution" do
@@ -28,6 +30,8 @@ class SolutionsControllerTest < ActionController::TestCase
     get :new
     assert_response :success
     assert_not_nil assigns(:solution)
+    assert_not_nil assigns(:level)
+    assert_not_nil assigns(:board0)
     assert_equal assigns(:solution).player_id,players(:one).id
   end
 

@@ -20,7 +20,10 @@ $line-height: 20px;
 //$highlight-color: #ddd;
 $main-color: #0F0;
 $link-color: #FFF;
+$satisfied-color: $main-color;
+$unsatisfied-color: #F00;
 $alt-color: #0FF;
+$goal-color: $alt-color;
 $altalt-color: #FF0;
 $bg-color: black;
 $highlight-color: #020;
@@ -202,13 +205,23 @@ body.bp {
         h3 {
           padding-top: $line-height;
           text-align: right;
+          color: $goal-color
         }
       }
-      ul {
-        margin-top: $line-height;
-        list-style: none;
-        li {
-          color: $alt-color;
+      #goal-list {
+        ul {
+          margin-top: $line-height;
+          list-style: none;
+          li {
+            color: $goal-color
+          }
+          li.satisfied {
+            color: $satisfied-color;
+            font-family: 'CPMono_v07_Black', monospace;
+          }
+          li.unsatisfied {
+            color: $unsatisfied-color;
+          }
         }
       }
       h3 {

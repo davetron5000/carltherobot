@@ -31,7 +31,7 @@ class Command < ActiveRecord::Base
     Command.where(commands[:unlock].lteq(player.unlock))
   end
 
-  def self.command_named(command_name)
+  def self.named(command_name)
     commands = Command.arel_table
     Command.where(commands[:command_name].eq(command_name)).first
   end

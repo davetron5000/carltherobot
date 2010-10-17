@@ -31,6 +31,105 @@ class ExecutorTest < ActiveSupport::TestCase
     assert !new_board.beacon?(6,0)
   end
 
+  test "last line count works for branch" do
+    carl = CarlTheRobot.new
+    board = Board.new
+    board.place_carl(7,0)
+    board.add_beacon(7,1)
+    board.map[6][0] = :wall
+    board.map[7][1] = :wall
+    executor = Executor.new(board,
+                            carl,
+                            [
+                              Branch.new('front_clear',['move']),
+                              Branch.new('not_front_clear',
+                                         [
+                                           'turnleft',
+                                           'turnleft',
+                                           'turnleft',]
+                                        ),
+                              'move',
+
+    ])
+    assert_raises Explosion do 
+      new_board = executor.execute!
+    end
+    assert_equal 7,executor.last_index
+  end
+
+  test "last line count works for iterate" do
+    carl = CarlTheRobot.new
+    board = Board.new
+    board.place_carl(5,5)
+    board.map[5][6] = :wall
+    executor = Executor.new(board,
+                            carl,
+                            [
+                              Iterate.new(1,['move']),
+                              Iterate.new(3,['turnleft','move']),
+                              'move',
+    ])
+    assert_raises Explosion do 
+      new_board = executor.execute!
+    end
+    assert_equal 6,executor.last_index
+  end
+
+  test "last line count works for while" do
+    carl = CarlTheRobot.new
+    board = Board.new
+    board.place_carl(5,5)
+    board.map[5][6] = :wall
+    board.map[5][5] = :beacon
+    executor = Executor.new(board,
+                            carl,
+                            [
+                              Loop.new('front_clear',['move']),
+                              Loop.new('not_front_clear',['turnleft','turnleft']),
+                              'turnleft',
+                              'turnleft',
+                              'move'
+    ])
+    ex = assert_raises Explosion do 
+      new_board = executor.execute!
+    end
+    assert_equal 8,executor.last_index
+  end
+
+  test "last line count works for while 3" do
+    carl = CarlTheRobot.new
+    board = Board.new
+    board.place_carl(5,5)
+    board.map[5][4] = :wall
+    executor = Executor.new(board,
+                            carl,
+                            [
+                              Loop.new('front_clear',['move']),
+                              'move'
+    ])
+    ex = assert_raises Explosion do 
+      new_board = executor.execute!
+    end
+    assert_equal 2,executor.last_index
+  end
+
+  test "last line count works for while 2" do
+    carl = CarlTheRobot.new
+    board = Board.new
+    board.place_carl(5,5)
+    board.map[5][6] = :wall
+    executor = Executor.new(board,
+                            carl,
+                            [
+                              Loop.new('front_clear',['move']),
+                              'move'
+    ])
+    ex = assert_raises Explosion do 
+      new_board = executor.execute!
+    end
+    assert_equal 2,executor.last_index
+  end
+
   test "branch works" do
     carl = CarlTheRobot.new
     board = Board.new

@@ -12,7 +12,7 @@ class Executor
 
   def execute!
     return nil if @board.nil?
-    @last_index = 0
+    @last_index = -1 
     execute_internal!(@code)
   end
 
@@ -48,12 +48,12 @@ class Executor
         condition.times do 
           begin
             execute_internal!(code_block,depth+1)
-            @last_index -= code_block.size
             count += 1
           rescue Explosion => ex
             raise Explosion.new(ex.message + "(on iterateion #{count})",ex.where?)
           end
-          @last_index += code_block.size
+          (condition-2).times { @last_index -= code_block.size }
+          @last_index += 1 # extra for the 'end'
         end
       when Loop
         count = 0
@@ -62,16 +62,19 @@ class Executor
         while (Conditions.send(condition,@board.carl,@carl.direction,@board))
           raise Explosion.new("Possible Infinite Loop",nil) if count > 50
           execute_internal!(code_block,depth+1)
-          @last_index -= code_block.size
           count += 1
         end
-        @last_index += code_block.size
+        (count-1).times { @last_index -= code_block.size }
+          @last_index += 1 # extra for the 'end'
       when Branch
         condition = command.condition
         code_block = command.code
         if (Conditions.send(condition,@board.carl,@carl.direction,@board))
           execute_internal!(code_block,depth+1)
+        else
+          @last_index += code_block.size # have to account for it
         end
+        @last_index += 1 # extra for the 'end'
       else
         raise "unknown command '#{command}'"
       end

@@ -28,8 +28,47 @@ $control-highlight-color: #050;
 
 body.bp, textarea {
   font-family: 'CPMono_v07_Plain', monospace;
+        a {
+          font-family: 'CPMono_v07_Light', monospace;
+          color: $link-color;
+          &:hover, &:visited {
+            color: $link-color;
+          }
+        }
 }
 
+#credits {
+  p {
+    font-size: $font-size;
+  }
+}
+#help {
+text-align: center;
+  h3 {
+    color: $alt-color;
+  }
+  img {
+    border: solid 4px;
+    @include border-radius(5px);
+  }
+}
+#about {
+  font-size: $font-size;
+  line-height: $line-height;
+  p {
+    font-family: 'CPMono_v07_Light', monospace;
+  }
+  ul li {
+    font-size: $font-size - 4;
+    font-family: 'CPMono_v07_ExtraLight', monospace;
+  }
+  .alt {
+color: $alt-color;
+  }
+  .altalt {
+color: $altalt-color;
+  }
+}
 body.bp {
   line-height: $line-height;
   background: $bg-color;

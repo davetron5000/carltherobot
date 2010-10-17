@@ -20,9 +20,10 @@
         </div>
         <div id="nav">
         <ul>
-          <li><a href="#">about carl</a></li>
+          <li><a href="<%= about_about_url %>">about carl</a></li>
+          <li><a href="<%= about_help_url %>">help</a></li>
+          <li><a href="<%= about_credits_url %>">contact</a></li>
           <% if player_signed_in? %>
-            <li><a href="#">about you</a></li>
             <li><a href="<%= destroy_player_session_url %>">logout</a></li>
           <% else %>
             <li><a href="<%= new_player_registration_url %>">signup</a></li>

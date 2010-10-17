@@ -1,4 +1,8 @@
 Carl::Application.routes.draw do
+  get "about/about"
+  get "about/help"
+  get "about/credits"
+
   resources :levels
 
   resources :solutions

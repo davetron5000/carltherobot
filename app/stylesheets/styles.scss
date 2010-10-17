@@ -403,6 +403,10 @@ textarea#solution_code, pre.code {
   }
 }
 
+#board0-title h3, #board1-title h3 {
+  margin:0;
+  padding:0;
+}
 .square {
   background-color: $altalt-color;
   margin-bottom: $blueprint-grid-margin;

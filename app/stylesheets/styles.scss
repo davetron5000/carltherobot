@@ -283,7 +283,7 @@ body.bp {
           }
         }
       }
-      div.command:hover {
+      div.command:hover, div.control-command:hover {
         cursor: move;
         background-color: $control-highlight-color;
       }

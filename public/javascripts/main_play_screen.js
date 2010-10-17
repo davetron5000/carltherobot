@@ -4,6 +4,9 @@ $(document).ready(function() {
     $("#turnleft").simpletip({ content: "Turn C.A.R.L. in place to his left", position: "bottom", });
     $("#pickbeacon").simpletip({ content: "Pick up a beacon at the current position", position: "bottom", });
     $("#putbeacon").simpletip({ content: "Put down a beacon at the current position", position: "bottom", });
+    $("#branch").simpletip({ content: "Have C.A.R.L. do something only under certain conditions", position: "right", showTime: '350'});
+    $("#loop").simpletip({ content: "Have C.A.R.L. do something until a certain condition is met", position: "left", });
+    $("#iterate").simpletip({ content: "Have C.A.R.L. do something a fixed number of times", position: "right", });
     $(".draggable").draggable({
       cursor: 'move',
       helper: 'clone',
@@ -34,9 +37,15 @@ $(document).ready(function() {
         placeholder: 'command-reorder-highlight',
         stop: function(event,ui) {
           var code = $("#source").sortable("toArray");
+          new_command = ui.item.attr("id");
+          is_control = false;
+          if ((new_command == 'loop') || (new_command == 'branch') || (new_command == 'iterate') ) {
+            is_control = true;
+          }
           $("#source div").remove();
           var program = "";
           for (var i=0; i<code.length; i++) {
+            add_end = false;
             var loc = code[i];
             if ((loc != codeToRemove) && (loc != 'placeholder')) {
               var command = loc;
@@ -45,24 +54,46 @@ $(document).ready(function() {
                 var parts = command.split(/_/);
                 command = parts[1];
               }
-              program += command + "\n";
+              else if ( (command == new_command) && is_control) {
+                add_end = true;
+              }
+              else {
+                add_end = false;
+              }
               var symbol = "";
+              var condition = "";
               if (command == "move") {
-                symbol = "&#x2191; "
+                symbol = "&#x2191; ";
               }
               else if (command == "turnleft") {
-                symbol = "&#x21B0; "
+                symbol = "&#x21B0; ";
               }
               else if (command == "pickbeacon") {
-                symbol = "&#x21F1; "
+                symbol = "&#x21F1; ";
               }
               else if (command == "putbeacon") {
-                symbol = "&#x21F2; "
+                symbol = "&#x21F2; ";
+              }
+              else if (command == "loop") {
+                symbol = "&#x21BA; ";
+                condition = " front_clear";
+              }
+              else if (command == "branch") {
+                symbol = "&#x21B9; ";
+                condition = " front_clear";
+              }
+              else if (command == "iterate" ) {
+                symbol = "&#x21C8; ";
+                condition = " 3";
               }
                 
-
+              program += command + condition + "\n";
               var command_text = symbol + command;
               $("#source").append("<div id='" + i + "_" + command + "' class='" + command + "'>" + command_text + "</div>");
+              if (add_end) {
+                $("#source").append("<div id='" + i + "_end' class='end'>end</div>");
+                program += "end\n";
+              }
             }
           }
           code = $("#source").sortable("toArray");
@@ -82,3 +113,8 @@ $(document).ready(function() {
     };
     $("#source").sortable(sortable_options());
 });
+
+function debug() {
+  alert($("#code textarea").val());
+}
+

@@ -333,7 +333,7 @@ body.bp h3 {
   padding: 10px;
 }
 /* line 286, ../../app/stylesheets/styles.scss */
-#content #solution .controls div.command:hover {
+#content #solution .controls div.command:hover, #content #solution .controls div.control-command:hover {
   cursor: move;
   background-color: #005500;
 }

@@ -12,12 +12,12 @@ class Executor
 
   def execute!
     return nil if @board.nil?
+    @last_index = 0
     execute_internal!(@code)
   end
 
   def execute_internal!(code,depth=0)
     raise Explosion.new("Stack Overflow",nil) if depth > 20
-    @last_index = 0
     code.each do |command|
       next if command.nil? || (command.respond_to?(:strip) && command.strip =~ /^$/)
       case command
@@ -48,10 +48,12 @@ class Executor
         condition.times do 
           begin
             execute_internal!(code_block,depth+1)
+            @last_index -= code_block.size
             count += 1
           rescue Explosion => ex
             raise Explosion.new(ex.message + "(on iterateion #{count})",ex.where?)
           end
+          @last_index += code_block.size
         end
       when Loop
         count = 0
@@ -60,8 +62,10 @@ class Executor
         while (Conditions.send(condition,@board.carl,@carl.direction,@board))
           raise Explosion.new("Possible Infinite Loop",nil) if count > 50
           execute_internal!(code_block,depth+1)
+          @last_index -= code_block.size
           count += 1
         end
+        @last_index += code_block.size
       when Branch
         condition = command.condition
         code_block = command.code

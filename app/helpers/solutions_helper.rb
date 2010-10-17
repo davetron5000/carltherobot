@@ -8,6 +8,48 @@ module SolutionsHelper
     end
   end
 
+  def render_code(code,last_line_executed,exploded)
+    html = ""
+    code.nil? || code.each do |line|
+      if line.kind_of? Branch
+        html << render_one_line(line.class.command_name,last_line_executed,exploded) + "\n"
+        html << render_code(line.code,last_line_executed,exploded) + "\n"
+        html << render_one_line("end",last_line_executed,exploded) + "\n"
+        @counter += line.code.size + 2 # one for the control, one for the end
+      else
+        html << render_one_line(line,last_line_executed,exploded)
+        html << "\n"
+        @counter += 1
+      end
+    end
+    raw(html)
+  end
+
+  def render_one_line(line,last_line_executed,exploded)
+    div = ""
+    executed = last_line_executed >= @counter ? 'executed' : ''
+    final_line = last_line_executed == @counter
+    explode = final_line && exploded
+    symbol = nil
+    case line
+    when 'move'
+      symbol = "2191"
+    when 'turnleft'
+      symbol = "21B0"
+    when 'pickbeacon'
+      symbol = "21F1"
+    when 'putbeacon'
+      symbol = "21F2"
+    end
+    div = <<EOF
+<div id="#{ @counter }_#{ line }" class="#{ line } #{ explode ? 'explode' : executed }">#{ symbol.nil? ? '' : raw("&#x#{symbol};") } 
+    #{line}
+    #{executed == '' ? '' : final_line ? " &#x2717;" : " &#x2713;" }
+</div>
+EOF
+    div
+  end
+
   def goal_markup(has_goal,goal_met,goal,goal_type,new,no_goal_text)
     klass = ""
     unless new

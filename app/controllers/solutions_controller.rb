@@ -29,7 +29,7 @@ class SolutionsController < ApplicationController
 
   def update
     code = params[:code].split(/\n/).map(&:strip)
-    @solution.code = code
+    @solution.parse_code(code)
     @solution.save
     redirect_to edit_solution_url(@solution)
   end

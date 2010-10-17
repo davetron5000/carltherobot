@@ -7,37 +7,18 @@
     <% some_code = !(@solution.code.nil? || @solution.code.empty?) %>
     <div class="trash top" <%= some_code ? '' : raw('style="visibility: hidden"')%>>&darr;Drop Command to Remove&darr;</div>
     <div id="source">
-      <% counter = 0 %>
       <% unless some_code %>
         <div id="placeholder">Drop Code Here To Start</div>
       <% end %>
-      <% @solution.code.nil? || @solution.code.each do |line| %>
-        <% executed = @execution_result0.last_line >= counter ? 'executed' : '' %>
-        <% final_line = @execution_result0.last_line == counter %>
-        <% explode = final_line && @execution_result0.exploded? %>
-        <% symbol = nil
-          case line
-          when 'move'
-            symbol = "2191"
-          when 'turnleft'
-            symbol = "21B0"
-          when 'pickbeacon'
-            symbol = "21F1"
-          when 'putbeacon'
-            symbol = "21F2"
-          end
-        %>
-        <div id="<%= counter %>_<%= line %>" class="<%= line %> <%= explode ? 'explode' : executed %>"><%= symbol.nil? ? '' : raw("&#x#{symbol};") %> <%= line %>
-          <%= executed == '' ? '' : final_line ? raw("&#x2717;") : raw(" &#x2713;") %>
-        </div>
-        <% counter += 1 %>
-      <% end %>
+      <% @counter = 0 %>
+      <%= render_code(@solution.code,@execution_result0.last_line,@execution_result0.exploded?) %>
     </div>
     <%= form_for @solution do |f| %>
       <%= f.hidden_field :level_id, :name => 'level_id' %>
-      <div id="code"><%= f.text_area :code, :name => 'code', :value => @solution.code.nil? ? '' : @solution.code.join("\n") %></div>
+      <div id="code"><%= f.text_area :code, :name => 'code' %></div>
       <div class="trash bottom" <%= some_code ? '' : raw('style="visibility: hidden"')%>>&uarr;Drop Command to Remove&uarr;</div>
       <div id="execute"><%= f.submit 'RUN!' %></div>
+      <a id="debug" onclick="debug(); return false;" href="#">Debug</a>
     <% end %>
   </div>
   <div id="playfield">
@@ -50,21 +31,21 @@
       <div class="goals" id="goal-title"><div><h3>Goals:</h3></div></div>
     </div>
     <div class="controls">
-      <div class="control-command disabled" id="branch"><div><div>&#x21B9;</div></div></div>
+      <div class="control-command disabled draggable" id="branch"><div><div>&#x21B9; <span class="command-name">Branch</span></div></div></div>
       <div class="subroutine disabled" id="sub1"><div><div>SUB 00</div></div></div>
       <div class="goals" id="carl-goal"><div>
           <%= goal_markup(true,@execution_result0.carl_goal_met?,@level.goal,:carl_goal_met?,new,nil) %>
       </div></div>
     </div>
     <div class="controls">
-      <div class="control-command disabled" id="loop"><div><div>&#x21BA;</div></div></div>
+      <div class="control-command disabled draggable" id="loop"><div><div>&#x21BA; <span class="command-name">Loop</span></div></div></div>
     <div class="subroutine disabled" id="sub2"><div><div>SUB 01</div></div></div>
       <div class="goals" id="loc-goal"><div>
           <%= goal_markup(@execution_result0.lines_of_code_goal?,@execution_result0.lines_of_code_goal_met?,@level.goal,:lines_of_code_goal_met?,new,"No lines of code goals for this level") %>
       </div></div>
     </div>
     <div class="controls">
-      <div class="control-command disabled" id="iterate"><div><div>&#x21C8;</div></div></div>
+      <div class="control-command disabled draggable" id="iterate"><div><div>&#x21C8; <span class="command-name">Iterate</span></div></div></div>
         <div class="subroutine disabled" id="sub3"><div><div>SUB 10</div></div></div>
       <div class="goals" id="beacon-goal"><div>
           <%= goal_markup(@execution_result0.beacon_goals?,@execution_result0.beacon_goals_met?,@level.goal,:beacons_goal_met?,new,"No beacon goals for this level") %>

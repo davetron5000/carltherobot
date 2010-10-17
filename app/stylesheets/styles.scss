@@ -437,11 +437,8 @@ body.bp {
       }
     }
     #playfield {
-    /*
-      position:fixed;
-      padding-left: 11 * $blueprint-grid-width;
-      z-index: -1;
-      */
+      //position:fixed;
+      //right: 15 * $blueprint-grid-width;
     }
   }
   #levels {

@@ -5,6 +5,19 @@ class Solution < ActiveRecord::Base
 
   COMMAND_NAMES = Command::KNOWN_COMMANDS.map(&:command_name)
 
+  def loc
+    return 0 if self.code.nil?
+    lines_of_code = 0
+    self.code.each do |line|
+      if line.respond_to?(:loc)
+        lines_of_code += line.loc
+      else
+        lines_of_code += 1
+      end
+    end
+    lines_of_code
+  end
+
   def parse_code(code)
     @control_names ||= {}
     Command::CONTROL_COMMANDS.each { |klass| @control_names[klass.command_name] = klass }

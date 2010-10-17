@@ -4,9 +4,9 @@ $(document).ready(function() {
     $("#turnleft").simpletip({ content: "Turn C.A.R.L. in place to his left", position: "bottom", });
     $("#pickbeacon").simpletip({ content: "Pick up a beacon at the current position", position: "bottom", });
     $("#putbeacon").simpletip({ content: "Put down a beacon at the current position", position: "bottom", });
-    $("#branch").simpletip({ content: "Have C.A.R.L. do something only under certain conditions", position: "right", showTime: '350'});
-    $("#loop").simpletip({ content: "Have C.A.R.L. do something until a certain condition is met", position: "left", });
-    $("#iterate").simpletip({ content: "Have C.A.R.L. do something a fixed number of times", position: "right", });
+    $("#branch").simpletip({ content: "Have C.A.R.L. do something only if the front is clear", position: "right", showTime: '350'});
+    $("#loop").simpletip({ content: "Have C.A.R.L. do something as long as the front is clear", position: "left", });
+    $("#iterate").simpletip({ content: "Have C.A.R.L. do something 3 times", position: "right", });
     $(".draggable").draggable({
       cursor: 'move',
       helper: 'clone',
@@ -62,6 +62,7 @@ $(document).ready(function() {
               }
               var symbol = "";
               var condition = "";
+              var condition_text = "";
               if (command == "move") {
                 symbol = "&#x2191; ";
               }
@@ -77,19 +78,22 @@ $(document).ready(function() {
               else if (command == "loop") {
                 symbol = "&#x21BA; ";
                 condition = " front_clear";
+                condition_text = " if front clear";
               }
               else if (command == "branch") {
                 symbol = "&#x21B9; ";
                 condition = " front_clear";
+                condition_text = " while front clear";
               }
               else if (command == "iterate" ) {
                 symbol = "&#x21C8; ";
                 condition = " 3";
+                condition_text = " 3 times";
               }
                 
               program += command + condition + "\n";
               var command_text = symbol + command;
-              $("#source").append("<div id='" + i + "_" + command + "' class='" + command + "'>" + command_text + "</div>");
+              $("#source").append("<div id='" + i + "_" + command + "' class='" + command + "'>" + command_text + condition_text + "</div>");
               if (add_end) {
                 $("#source").append("<div id='" + i + "_end' class='end'>end</div>");
                 program += "end\n";

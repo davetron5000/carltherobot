@@ -9,11 +9,17 @@ module SolutionsHelper
   end
 
   def render_code(code,last_line_executed,exploded)
+    @indent = ""
+    do_render(code,last_line_executed,exploded)
+  end
+
+  def do_render(code,last_line_executed,exploded)
+    last_line_executed += 1
     html = ""
     code.nil? || code.each do |line|
       if line.kind_of? Branch
         html << render_one_line(line.class.command_name,last_line_executed,exploded) + "\n"
-        html << render_code(line.code,last_line_executed,exploded) + "\n"
+        html << do_render(line.code,last_line_executed,exploded) + "\n"
         html << render_one_line("end",last_line_executed,exploded) + "\n"
         @counter += line.code.size + 2 # one for the control, one for the end
       else
@@ -30,7 +36,9 @@ module SolutionsHelper
     executed = last_line_executed >= @counter ? 'executed' : ''
     final_line = last_line_executed == @counter
     explode = final_line && exploded
+    text = ""
     symbol = nil
+    indent = @indent
     case line
     when 'move'
       symbol = "2191"
@@ -40,13 +48,29 @@ module SolutionsHelper
       symbol = "21F1"
     when 'putbeacon'
       symbol = "21F2"
+    when 'iterate'
+      symbol = "21C8"
+      text = " 3 times"
+      indent += " "
+    when 'loop'
+      symbol = "21BA"
+      text = " while front is clear"
+      indent += " "
+    when 'branch'
+      symbol = "21B9"
+      text = " if front is clear"
+      indent += " "
+    when 'end'
+      @indent.sub!(' ','')
     end
     div = <<EOF
-<div id="#{ @counter }_#{ line }" class="#{ line } #{ explode ? 'explode' : executed }">#{ symbol.nil? ? '' : raw("&#x#{symbol};") } 
-    #{line}
+<div id="#{ @counter }_#{ line }" class="#{ line } #{ explode ? 'explode' : executed }">
+    #{@indent.gsub(' ','&nbsp;')}
+    #{ symbol.nil? ? '' : raw("&#x#{symbol};") } #{line}#{text}
     #{executed == '' ? '' : final_line ? " &#x2717;" : " &#x2713;" }
 </div>
 EOF
+    @indent = indent
     div
   end
 

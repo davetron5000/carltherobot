@@ -13,6 +13,18 @@ class Branch
     @condition = condition
     @code = code
   end
+
+  def loc
+    lines_of_code = 1
+    code.each do |line|
+      if line.respond_to?(:loc)
+        lines_of_code += line.loc
+      else
+        lines_of_code += 1
+      end
+    end
+    lines_of_code
+  end
 end
 
 class Loop < Branch

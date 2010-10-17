@@ -1,3 +1,13 @@
+<%
+  branch_enabled = ''
+  loop_enabled = ''
+  iterate_enabled = ''
+  branch_enabled = 'disabled' if @level.difficulty == 'tutorial' 
+  loop_enabled = 'disabled' if @level.difficulty == 'tutorial'
+  iterate_enabled = 'disabled' if @level.difficulty == 'tutorial'
+  loop_enabled = 'disabled' if @level.difficulty == 'easy' && @level.ordinal <= 3
+  branch_enabled = 'disabled' if @level.difficulty == 'easy' && @level.ordinal <= 6
+%>
 <div id="solution">
   <h2><div id="back">
       <a href="<%= levels_url :difficulty => @level.difficulty %>">&lt;&lt; Levels</a>&nbsp;&nbsp;
@@ -17,7 +27,7 @@
       <%= f.hidden_field :level_id, :name => 'level_id' %>
       <div id="code"><%= f.text_area :code, :name => 'code' %></div>
       <div class="trash bottom" <%= some_code ? '' : raw('style="visibility: hidden"')%>>&uarr;Drop Command to Remove&uarr;</div>
-      <div id="execute"><%= f.submit 'RUN!' %></div>
+      <div id="execute"><%= f.submit "RUN!" %></div>
       <a id="debug" onclick="debug(); return false;" href="#">Debug</a>
     <% end %>
   </div>
@@ -31,21 +41,21 @@
       <div class="goals" id="goal-title"><div><h3>Goals:</h3></div></div>
     </div>
     <div class="controls">
-      <div class="control-command disabled draggable" id="branch"><div><div>&#x21B9; <span class="command-name">Branch</span></div></div></div>
+      <div class="control-command draggable <%= iterate_enabled %>" id="iterate"><div><div>&#x21C8; <span class="command-name">Iterate</span></div></div></div>
       <div class="subroutine disabled" id="sub1"><div><div>SUB 00</div></div></div>
       <div class="goals" id="carl-goal"><div>
           <%= goal_markup(true,@execution_result0.carl_goal_met?,@level.goal,:carl_goal_met?,new,nil) %>
       </div></div>
     </div>
     <div class="controls">
-      <div class="control-command disabled draggable" id="loop"><div><div>&#x21BA; <span class="command-name">Loop</span></div></div></div>
+      <div class="control-command draggable <%= loop_enabled %>" id="loop"><div><div>&#x21BA; <span class="command-name">Loop</span></div></div></div>
     <div class="subroutine disabled" id="sub2"><div><div>SUB 01</div></div></div>
       <div class="goals" id="loc-goal"><div>
           <%= goal_markup(@execution_result0.lines_of_code_goal?,@execution_result0.lines_of_code_goal_met?,@level.goal,:lines_of_code_goal_met?,new,"No lines of code goals for this level") %>
       </div></div>
     </div>
     <div class="controls">
-      <div class="control-command disabled draggable" id="iterate"><div><div>&#x21C8; <span class="command-name">Iterate</span></div></div></div>
+      <div class="control-command draggable <%= branch_enabled %>" id="branch"><div><div>&#x21B9; <span class="command-name">Branch</span></div></div></div>
         <div class="subroutine disabled" id="sub3"><div><div>SUB 10</div></div></div>
       <div class="goals" id="beacon-goal"><div>
           <%= goal_markup(@execution_result0.beacon_goals?,@execution_result0.beacon_goals_met?,@level.goal,:beacons_goal_met?,new,"No beacon goals for this level") %>

@@ -523,49 +523,41 @@ body.bp h3 {
   cursor: hand;
   cursor: pointer;
 }
-/* line 439, ../../app/stylesheets/styles.scss */
-#content #solution #playfield {
-  /*
-    position:fixed;
-    padding-left: 11 * $blueprint-grid-width;
-    z-index: -1;
-    */
-}
-/* line 448, ../../app/stylesheets/styles.scss */
+/* line 445, ../../app/stylesheets/styles.scss */
 #content #levels #back {
   display: inline;
   vertical-align: middle;
   font-size: 20px;
 }
-/* line 452, ../../app/stylesheets/styles.scss */
+/* line 449, ../../app/stylesheets/styles.scss */
 #content #levels #back a {
   color: lime;
 }
-/* line 454, ../../app/stylesheets/styles.scss */
+/* line 451, ../../app/stylesheets/styles.scss */
 #content #levels #back a:hover, #content #levels #back a:visited {
   color: lime;
 }
-/* line 459, ../../app/stylesheets/styles.scss */
+/* line 456, ../../app/stylesheets/styles.scss */
 #content #levels h3 {
   text-align: center;
 }
-/* line 462, ../../app/stylesheets/styles.scss */
+/* line 459, ../../app/stylesheets/styles.scss */
 #content #levels h4 {
   margin: 0;
   padding: 0;
   color: aqua;
   font-size: 20px;
 }
-/* line 467, ../../app/stylesheets/styles.scss */
+/* line 464, ../../app/stylesheets/styles.scss */
 #content #levels h4 a {
   color: aqua;
   text-decoration: none;
 }
-/* line 470, ../../app/stylesheets/styles.scss */
+/* line 467, ../../app/stylesheets/styles.scss */
 #content #levels h4 a:hover, #content #levels h4 a:visited {
   color: aqua;
 }
-/* line 475, ../../app/stylesheets/styles.scss */
+/* line 472, ../../app/stylesheets/styles.scss */
 #content #levels div.level {
   border: solid thin;
   padding-top: 20px;
@@ -573,16 +565,16 @@ body.bp h3 {
   padding-left: 30px;
   padding-right: 30px;
 }
-/* line 481, ../../app/stylesheets/styles.scss */
+/* line 478, ../../app/stylesheets/styles.scss */
 #content #levels div.level p {
   font-family: 'CPMono_v07_ExtraLight', monospace;
 }
-/* line 485, ../../app/stylesheets/styles.scss */
+/* line 482, ../../app/stylesheets/styles.scss */
 #content #levels ul {
   list-style: none;
 }
 
-/* line 490, ../../app/stylesheets/styles.scss */
+/* line 487, ../../app/stylesheets/styles.scss */
 textarea#solution_code, pre.code {
   width: 100%;
   color: white;
@@ -591,19 +583,19 @@ textarea#solution_code, pre.code {
   line-height: 20px;
 }
 
-/* line 500, ../../app/stylesheets/styles.scss */
+/* line 497, ../../app/stylesheets/styles.scss */
 #signin form input, #signup form input {
   font-size: 28px;
   font-family: 'CPMono_v07_ExtraLight', monospace;
   border: solid thin;
   margin-top: 14px;
 }
-/* line 506, ../../app/stylesheets/styles.scss */
+/* line 503, ../../app/stylesheets/styles.scss */
 #signin form input[type="submit"], #signup form input[type="submit"] {
   padding-left: 20px;
   padding-right: 20px;
 }
-/* line 510, ../../app/stylesheets/styles.scss */
+/* line 507, ../../app/stylesheets/styles.scss */
 #signin form .label, #signup form .label {
   text-align: right;
   vertical-align: middle;
@@ -611,25 +603,25 @@ textarea#solution_code, pre.code {
   padding-right: 0px;
   margin-right: 0px;
 }
-/* line 517, ../../app/stylesheets/styles.scss */
+/* line 514, ../../app/stylesheets/styles.scss */
 #signin form .input, #signup form .input {
   padding-left: 0px;
   margin-left: 0px;
 }
-/* line 521, ../../app/stylesheets/styles.scss */
+/* line 518, ../../app/stylesheets/styles.scss */
 #signin form label, #signup form label {
   font-size: 18px;
   font-family: 'CPMono_v07_Light', monospace;
   margin-left: 0px;
 }
-/* line 528, ../../app/stylesheets/styles.scss */
+/* line 525, ../../app/stylesheets/styles.scss */
 #signin ul#devise-links, #signup ul#devise-links {
   list-style: none;
   padding: 0;
   margin: 0;
   padding-top: 20px;
 }
-/* line 533, ../../app/stylesheets/styles.scss */
+/* line 530, ../../app/stylesheets/styles.scss */
 #signin ul#devise-links li, #signup ul#devise-links li {
   padding: 0;
   display: inline;
@@ -637,13 +629,13 @@ textarea#solution_code, pre.code {
   padding-right: 15px;
 }
 
-/* line 542, ../../app/stylesheets/styles.scss */
+/* line 539, ../../app/stylesheets/styles.scss */
 #board0-title h3, #board1-title h3 {
   margin: 0;
   padding: 0;
 }
 
-/* line 546, ../../app/stylesheets/styles.scss */
+/* line 543, ../../app/stylesheets/styles.scss */
 .square {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -656,108 +648,108 @@ textarea#solution_code, pre.code {
   height: 30px;
 }
 
-/* line 552, ../../app/stylesheets/styles.scss */
+/* line 549, ../../app/stylesheets/styles.scss */
 .last-row .square {
   margin-bottom: 0;
 }
 
-/* line 556, ../../app/stylesheets/styles.scss */
+/* line 553, ../../app/stylesheets/styles.scss */
 .square {
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-/* line 560, ../../app/stylesheets/styles.scss */
+/* line 557, ../../app/stylesheets/styles.scss */
 .beacon .square {
   background-image: url(/images/beacon.png);
 }
 
-/* line 564, ../../app/stylesheets/styles.scss */
+/* line 561, ../../app/stylesheets/styles.scss */
 .carl-north .square {
   background-image: url(/images/carl_north.png);
 }
 
-/* line 565, ../../app/stylesheets/styles.scss */
+/* line 562, ../../app/stylesheets/styles.scss */
 .carl-east .square {
   background-image: url(/images/carl_east.png);
 }
 
-/* line 566, ../../app/stylesheets/styles.scss */
+/* line 563, ../../app/stylesheets/styles.scss */
 .carl-west .square {
   background-image: url(/images/carl_west.png);
 }
 
-/* line 567, ../../app/stylesheets/styles.scss */
+/* line 564, ../../app/stylesheets/styles.scss */
 .carl-south .square {
   background-image: url(/images/carl_south.png);
 }
 
-/* line 569, ../../app/stylesheets/styles.scss */
+/* line 566, ../../app/stylesheets/styles.scss */
 .goal-carl-north .square {
   background-image: url(/images/carl_north.png);
   background-color: lime;
 }
 
-/* line 573, ../../app/stylesheets/styles.scss */
+/* line 570, ../../app/stylesheets/styles.scss */
 .goal-carl-south .square {
   background-image: url(/images/carl_south.png);
   background-color: lime;
 }
 
-/* line 577, ../../app/stylesheets/styles.scss */
+/* line 574, ../../app/stylesheets/styles.scss */
 .goal-carl-east .square {
   background-image: url(/images/carl_east.png);
   background-color: lime;
 }
 
-/* line 581, ../../app/stylesheets/styles.scss */
+/* line 578, ../../app/stylesheets/styles.scss */
 .goal-carl-west .square {
   background-image: url(/images/carl_west.png);
   background-color: lime;
 }
 
-/* line 586, ../../app/stylesheets/styles.scss */
+/* line 583, ../../app/stylesheets/styles.scss */
 .beacon-carl-north .square {
   background-image: url(/images/carl_north-beacon.png);
   background-color: lime;
 }
 
-/* line 590, ../../app/stylesheets/styles.scss */
+/* line 587, ../../app/stylesheets/styles.scss */
 .beacon-carl-south .square {
   background-image: url(/images/carl_south-beacon.png);
   background-color: lime;
 }
 
-/* line 594, ../../app/stylesheets/styles.scss */
+/* line 591, ../../app/stylesheets/styles.scss */
 .beacon-carl-east .square {
   background-image: url(/images/carl_east-beacon.png);
   background-color: lime;
 }
 
-/* line 598, ../../app/stylesheets/styles.scss */
+/* line 595, ../../app/stylesheets/styles.scss */
 .beacon-carl-west .square {
   background-image: url(/images/carl_west-beacon.png);
   background-color: lime;
 }
 
-/* line 603, ../../app/stylesheets/styles.scss */
+/* line 600, ../../app/stylesheets/styles.scss */
 .explode .square {
   background-color: #F87800;
   background-image: url(/images/boom.png);
 }
 
-/* line 608, ../../app/stylesheets/styles.scss */
+/* line 605, ../../app/stylesheets/styles.scss */
 .goal .square {
   background-color: lime;
   background-image: url(/images/goal.png);
 }
 
-/* line 613, ../../app/stylesheets/styles.scss */
+/* line 610, ../../app/stylesheets/styles.scss */
 .wall .square {
   background: #002200;
 }
 
-/* line 616, ../../app/stylesheets/styles.scss */
+/* line 613, ../../app/stylesheets/styles.scss */
 #footer {
   background: lime;
   color: black;
@@ -765,7 +757,7 @@ textarea#solution_code, pre.code {
   text-align: center;
 }
 
-/* line 623, ../../app/stylesheets/styles.scss */
+/* line 620, ../../app/stylesheets/styles.scss */
 .tooltip {
   position: absolute;
   top: 0;

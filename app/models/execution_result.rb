@@ -13,10 +13,12 @@ class ExecutionResult
   def exploded?; @exploded; end
 
   def success?
+    return false if exploded?
     lines_of_code_goal_met? && carl_goal_met? && beacon_goals_met?
   end
 
   def lines_of_code_goal_met?
+    return false if exploded?
     @goal.lines_of_code_goal_met?(@board,@solution)
   end
 
@@ -32,6 +34,7 @@ class ExecutionResult
     !(@goal.beacons.nil? || @goal.beacons.empty?)
   end
   def carl_goal_met?
+    return false if exploded?
     @goal.carl_goal_met?(@board,@solution)
   end
 end

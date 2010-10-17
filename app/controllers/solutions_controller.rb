@@ -36,11 +36,15 @@ class SolutionsController < ApplicationController
   private
   def check_access
     solution = Solution.find_by_id(params[:id])
-    if solution.player_id != current_player.id
-      head :forbidden
+    if solution.nil?
+      head :not_found
     else
-      @solution = solution
-      set_assigns(@solution)
+      if solution.player_id != current_player.id
+        head :forbidden
+      else
+        @solution = solution
+        set_assigns(@solution)
+      end
     end
   end
 

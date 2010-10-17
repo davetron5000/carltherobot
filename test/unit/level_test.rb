@@ -5,7 +5,7 @@ class LevelTest < ActiveSupport::TestCase
   test "ordering" do
     levels = Level.by_difficulty
     assert_equal 3,levels.size
-    assert_equal 2,levels[:tutorial].size
+    assert_equal 4,levels[:tutorial].size
     assert_equal 1,levels[:easy].size
     assert_equal 3,levels[:hard].size
     assert_equal 1,levels[:tutorial][0].ordinal
@@ -23,11 +23,11 @@ class LevelTest < ActiveSupport::TestCase
     assert level.board0.kind_of? Board
 
     assert level.goal.kind_of? Goal
-    assert_equal [1,1],level.goal.carl
+    assert_equal [5,0],level.goal.carl
     assert_nil level.goal.beacons
-    assert_equal 10,level.goal.lines_of_code
+    assert_equal 3,level.goal.lines_of_code
 
-    level = Level.find_by_id(4)
+    level = Level.find_by_id(44)
     assert_not_nil level.board0
     assert_not_nil level.board1
   end

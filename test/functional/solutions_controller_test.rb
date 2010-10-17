@@ -24,8 +24,8 @@ class SolutionsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:level)
     assert_not_nil assigns(:board0)
     assert_not_nil assigns(:execution_result0)
-    assert !assigns(:execution_result0).carl_goal_met?
-    assert !assigns(:execution_result0).beacon_goals_met?
+    assert assigns(:execution_result0).carl_goal_met?
+    assert assigns(:execution_result0).beacon_goals_met?
     assert assigns(:execution_result0).lines_of_code_goal_met?
     assert_equal [5,0],assigns(:board0).carl
   end
@@ -67,14 +67,7 @@ class SolutionsControllerTest < ActionController::TestCase
     put :update, :id => 3, :code => [
       'move',
       'move',
-      'move',
-      'move',
-      'move',
-      'move',
       'turnleft',
-      'turnleft',
-      'turnleft',
-      'move'
     ].join("\n")
 
     solutions = player.solutions
@@ -88,19 +81,16 @@ class SolutionsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:board0)
     assert_not_nil assigns(:execution_result0)
     assert assigns(:execution_result0).carl_goal_met?
-    assert !assigns(:execution_result0).beacon_goals_met?
+    assert assigns(:execution_result0).beacon_goals_met?
     assert assigns(:execution_result0).lines_of_code_goal_met?
-    assert_equal :east,assigns(:execution_result0).carl.direction
+    assert_equal :west,assigns(:execution_result0).carl.direction
   end
 
   test "db updated when we win" do
     player = players(:one)
     sign_in player
     put :update, :id => 2, :code => [
-      'turnleft',
-      'turnleft',
       'move',
-      'turnleft',
       'move'
     ].join("\n")
 
@@ -150,8 +140,8 @@ class SolutionsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:board0)
     assert_not_nil assigns(:execution_result0)
     assert !assigns(:execution_result0).carl_goal_met?
-    assert !assigns(:execution_result0).beacon_goals_met?
-    assert assigns(:execution_result0).lines_of_code_goal_met?
+    assert assigns(:execution_result0).beacon_goals_met?
+    assert !assigns(:execution_result0).lines_of_code_goal_met?
     assert assigns(:execution_result0).exploded?
   end
 

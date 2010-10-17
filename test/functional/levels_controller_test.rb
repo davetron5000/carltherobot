@@ -18,7 +18,7 @@ class LevelsControllerTest < ActionController::TestCase
     get :index, :difficulty => 'tutorial'
     assert_response :success
     assert_not_nil assigns(:levels)
-    assert_equal 2,assigns(:levels).size
+    assert_equal 4,assigns(:levels).size
     assert_equal 1,assigns(:levels)[0].ordinal
     assert_equal 2,assigns(:levels)[1].ordinal
   end

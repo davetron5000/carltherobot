@@ -23,6 +23,6 @@ class SolutionTest < ActiveSupport::TestCase
 
     three = solutions(:three)
     assert_not_nil three.level
-    assert_equal 2,three.level.id
+    assert_equal 1,three.level.id
   end
 end

@@ -4,8 +4,8 @@
   iterate_enabled = ''
   branch_enabled = 'disabled' if @level.difficulty == 'tutorial' 
   loop_enabled = 'disabled' if @level.difficulty == 'tutorial'
-  iterate_enabled = 'disabled' if @level.difficulty == 'tutorial'
-  loop_enabled = 'disabled' if @level.difficulty == 'easy' && @level.ordinal <= 3
+  loop_enabled = 'disabled' if @level.difficulty == 'tutorial'
+  iterate_enabled = 'disabled' if @level.difficulty == 'easy' && @level.ordinal <= 3
   branch_enabled = 'disabled' if @level.difficulty == 'easy' && @level.ordinal <= 6
 %>
 <div id="solution">
@@ -44,31 +44,32 @@
       <div class="control-command draggable <%= iterate_enabled %>" id="iterate"><div><div>&#x21C8; <span class="command-name">Iterate</span></div></div></div>
       <div class="subroutine disabled" id="sub1"><div><div>SUB 00</div></div></div>
       <div class="goals" id="carl-goal"><div>
-          <%= goal_markup(true,@execution_result0.carl_goal_met?,@level.goal,:carl_goal_met?,new,nil) %>
+          <%= goal_markup(true,@execution_result0.carl_goal_met? && @execution_result1.carl_goal_met?,@level.goal,:carl_goal_met?,new,nil) %>
       </div></div>
     </div>
     <div class="controls">
       <div class="control-command draggable <%= loop_enabled %>" id="loop"><div><div>&#x21BA; <span class="command-name">Loop</span></div></div></div>
     <div class="subroutine disabled" id="sub2"><div><div>SUB 01</div></div></div>
       <div class="goals" id="loc-goal"><div>
-          <%= goal_markup(@execution_result0.lines_of_code_goal?,@execution_result0.lines_of_code_goal_met?,@level.goal,:lines_of_code_goal_met?,new,"No lines of code goals for this level") %>
+          <%= goal_markup(@execution_result0.lines_of_code_goal?, @execution_result0.lines_of_code_goal_met? && @execution_result1.lines_of_code_goal_met?, @level.goal,:lines_of_code_goal_met?,new,"No lines of code goals for this level") %>
       </div></div>
     </div>
     <div class="controls">
       <div class="control-command draggable <%= branch_enabled %>" id="branch"><div><div>&#x21B9; <span class="command-name">Branch</span></div></div></div>
         <div class="subroutine disabled" id="sub3"><div><div>SUB 10</div></div></div>
       <div class="goals" id="beacon-goal"><div>
-          <%= goal_markup(@execution_result0.beacon_goals?,@execution_result0.beacon_goals_met?,@level.goal,:beacons_goal_met?,new,"No beacon goals for this level") %>
+          <%= goal_markup(@execution_result0.beacon_goals?, @execution_result0.beacon_goals_met? && @execution_result1.beacon_goals_met?, @level.goal,:beacons_goal_met?,new,"No beacon goals for this level") %>
       </div></div>
     </div>
     <div id="board">
+      <% exploded = @execution_result0.exploded? || @execution_result1.exploded? %>
       <div id="execution-result-summary"><div>
         <% if new %>
           <div class="ready"><h4>READY!</h4></div>
         <% else %>
-          <% if @execution_result0.exploded? %>
+          <% if exploded %>
             <div class="explosion"><h4>BOOM!</h4>C.A.R.L. ran into something or did something he couldn't do!  Try Again.</div>
-          <% elsif @execution_result0.lines_of_code_goal_met? && @execution_result0.beacon_goals_met? && @execution_result0.carl_goal_met? %>
+          <% elsif @execution_result0.lines_of_code_goal_met? && @execution_result0.beacon_goals_met? && @execution_result0.carl_goal_met?  && @execution_result1.lines_of_code_goal_met? && @execution_result1.beacon_goals_met? && @execution_result1.carl_goal_met? %>
             <div class="passed" onclick="navigate('<%= new_solution_url :level_id => @level.next.id %>');"><h4>YAY!</h4>You did it!  <a href="<%= new_solution_url :level_id => @level.next.id %>">Move on to the next level &gt;&gt;</a></div>
           <% else %>
             <div class="failure"><h4>FAIL.</h4>You didn't meet all the goals (but at least you didn't explode!); keep at it!</div>

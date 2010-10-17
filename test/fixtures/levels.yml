@@ -41,10 +41,10 @@ e_01:
   name: Knuth
   ordinal: 1
   difficulty: easy
-  hype_text: Use your subroutine to keep the line count low
-  goal: "--- !ruby/object:Goal \nbeacons: \n- - 5\n  - 1\n- - 5\n  - 2\ncarl: \n- 4\n- 0\nlines_of_code: 40\n"
-  board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 0\nmap: \n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :beacon\n  - :beacon\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - \n  - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n"
-
+  hype_text: Can one program solve both puzzles?
+  goal: "--- !ruby/object:Goal \nbeacons: \n- - 6\n  - 2\ncarl: \n- 5\n- 2\nlines_of_code: 40\n"
+  board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 0\nmap: \n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :beacon\n  - :wall\n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n"
+  board1: "--- !ruby/object:Board \ncarl: \n- 7\n- 0\nmap: \n- - :beacon\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - :wall\n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - :wall\n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n"
 h_01:
   id: 44
   name: Backus

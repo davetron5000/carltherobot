@@ -16,7 +16,7 @@ class SolutionsController < ApplicationController
   end
 
   def new
-    @solution = Solution.new(:player_id => current_player.id, :level => Level.find_by_difficulty_and_ordinal('tutorial',1))
+    @solution = Solution.new(:player_id => current_player.id, :level => Level.find_by_id(params[:level_id]))
     set_assigns(@solution)
   end
 

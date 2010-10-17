@@ -119,5 +119,12 @@ form.bp {
       #email, #password, #rememberme, #submit-button, #devise-links {
       }
     }
+    #levels {
+      .padleft { @include column(6); }
+      .padright { @include column(6,true); }
+      #levels-list {
+        @include column($blueprint-grid-columns - 12);
+      }
+    }
   }
 }

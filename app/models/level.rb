@@ -3,6 +3,10 @@ class Level < ActiveRecord::Base
   serialize :board1, Board
   serialize :goal, Goal
 
+  def title(difficulty=true)
+    sprintf("%s%02d: %s",difficulty ? "#{self.difficulty} " : '',self.ordinal,self.name)
+  end
+
   # Returns all levels organized by difficult, in ordinal order
   def self.by_difficulty
     result = { :tutorial => [], :easy => [], :hard => [] }

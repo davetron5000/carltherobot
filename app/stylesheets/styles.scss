@@ -162,6 +162,25 @@ body.bp {
           background: $highlight-color;
         }
       }
+      div#tutorial {
+        font-family: 'CPMono_v07_ExtraLight', monospace;
+        background: lighten($bg-color,10%);
+        h3 { color: darken($main-color,30%); }
+        &:hover {
+          background: $highlight-color;
+        }
+      }
+      div#easy {
+        font-family: 'CPMono_v07_Plain', monospace;
+        background: lighten($bg-color,8%);
+        h3 { color: darken($main-color,20%); }
+        &:hover {
+          background: $highlight-color;
+        }
+      }
+      div#hard {
+        font-family: 'CPMono_v07_Black', monospace;
+      }
       .disabled {
         cursor: default;
         h3, p, p a, p a:visited, p a:hover {
@@ -187,6 +206,32 @@ body.bp {
       text-align: right;
       h2,h3 {
         text-align: right;
+      }
+      ul {
+        list-style: none;
+        li {
+          a {
+            color: $main-color;
+            &:hover, &:visited {
+              color: $main-color;
+            }
+          }
+          font-size: $font-size;
+          span.timestamp {
+            font-size: $font-size - 8;
+            font-family: 'CPMono_v07_ExtraLight', monospace;
+            color: darken($main-color,20%);
+          }
+        }
+        li.tutorial a {
+          font-family: 'CPMono_v07_ExtraLight', monospace;
+        }
+        li.easy a {
+          font-family: 'CPMono_v07_Plain', monospace;
+        }
+        li.hard a {
+          font-family: 'CPMono_v07_Black', monospace;
+        }
       }
     }
   }
@@ -243,6 +288,12 @@ body.bp {
             color: #F70;
           }
         }
+        .ready {
+          color: $link-color;
+          h4 {
+            color: $link-color;
+          }
+        }
         .failure {
           color: $unsatisfied-color;
           h4 {
@@ -266,6 +317,37 @@ body.bp {
     }
     #program form {
       margin-right: $blueprint-grid-width;
+    }
+  }
+  #levels {
+    h3 {
+      text-align: center;
+    }
+    h4 {
+      margin:0;
+      padding:0;
+      color: $alt-color;
+      font-size: $font-size;
+      a {
+        color: $alt-color;
+        text-decoration: none;
+        &:hover, &:visited {
+          color: $alt-color;
+        }
+      }
+    }
+    div.level {
+      border: solid thin;
+      padding-top: $line-height;
+      padding-bottom: $line-height;
+      padding-left: $blueprint-grid-width;
+      padding-right: $blueprint-grid-width;
+      p {
+        font-family: 'CPMono_v07_ExtraLight', monospace;
+      }
+    }
+    ul {
+      list-style: none;
     }
   }
 }

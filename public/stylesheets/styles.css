@@ -179,127 +179,235 @@ body.bp h3 {
   background: #002200;
 }
 /* line 165, ../../app/stylesheets/styles.scss */
+#content #solutions #start div#tutorial {
+  font-family: 'CPMono_v07_ExtraLight', monospace;
+  background: #1a1a1a;
+}
+/* line 168, ../../app/stylesheets/styles.scss */
+#content #solutions #start div#tutorial h3 {
+  color: #006600;
+}
+/* line 169, ../../app/stylesheets/styles.scss */
+#content #solutions #start div#tutorial:hover {
+  background: #002200;
+}
+/* line 173, ../../app/stylesheets/styles.scss */
+#content #solutions #start div#easy {
+  font-family: 'CPMono_v07_Plain', monospace;
+  background: #141414;
+}
+/* line 176, ../../app/stylesheets/styles.scss */
+#content #solutions #start div#easy h3 {
+  color: #009900;
+}
+/* line 177, ../../app/stylesheets/styles.scss */
+#content #solutions #start div#easy:hover {
+  background: #002200;
+}
+/* line 181, ../../app/stylesheets/styles.scss */
+#content #solutions #start div#hard {
+  font-family: 'CPMono_v07_Black', monospace;
+}
+/* line 184, ../../app/stylesheets/styles.scss */
 #content #solutions #start .disabled {
   cursor: default;
 }
-/* line 167, ../../app/stylesheets/styles.scss */
+/* line 186, ../../app/stylesheets/styles.scss */
 #content #solutions #start .disabled h3, #content #solutions #start .disabled p, #content #solutions #start .disabled p a, #content #solutions #start .disabled p a:visited, #content #solutions #start .disabled p a:hover {
   color: #222;
 }
-/* line 170, ../../app/stylesheets/styles.scss */
+/* line 189, ../../app/stylesheets/styles.scss */
 #content #solutions #start .disabled:hover {
   background: black;
 }
-/* line 174, ../../app/stylesheets/styles.scss */
+/* line 193, ../../app/stylesheets/styles.scss */
 #content #solutions #start #tutorial, #content #solutions #start #easy {
   border-bottom: none;
 }
-/* line 178, ../../app/stylesheets/styles.scss */
+/* line 197, ../../app/stylesheets/styles.scss */
 #content #solutions #start h2 {
   text-align: left;
   padding-left: 15px;
 }
-/* line 182, ../../app/stylesheets/styles.scss */
+/* line 201, ../../app/stylesheets/styles.scss */
 #content #solutions #start h3 {
   text-align: center;
 }
-/* line 186, ../../app/stylesheets/styles.scss */
+/* line 205, ../../app/stylesheets/styles.scss */
 #content #solutions #resume {
   text-align: right;
 }
-/* line 188, ../../app/stylesheets/styles.scss */
+/* line 207, ../../app/stylesheets/styles.scss */
 #content #solutions #resume h2, #content #solutions #resume h3 {
   text-align: right;
 }
-/* line 195, ../../app/stylesheets/styles.scss */
+/* line 210, ../../app/stylesheets/styles.scss */
+#content #solutions #resume ul {
+  list-style: none;
+}
+/* line 212, ../../app/stylesheets/styles.scss */
+#content #solutions #resume ul li {
+  font-size: 20px;
+}
+/* line 213, ../../app/stylesheets/styles.scss */
+#content #solutions #resume ul li a {
+  color: lime;
+}
+/* line 215, ../../app/stylesheets/styles.scss */
+#content #solutions #resume ul li a:hover, #content #solutions #resume ul li a:visited {
+  color: lime;
+}
+/* line 220, ../../app/stylesheets/styles.scss */
+#content #solutions #resume ul li span.timestamp {
+  font-size: 12px;
+  font-family: 'CPMono_v07_ExtraLight', monospace;
+  color: #009900;
+}
+/* line 226, ../../app/stylesheets/styles.scss */
+#content #solutions #resume ul li.tutorial a {
+  font-family: 'CPMono_v07_ExtraLight', monospace;
+}
+/* line 229, ../../app/stylesheets/styles.scss */
+#content #solutions #resume ul li.easy a {
+  font-family: 'CPMono_v07_Plain', monospace;
+}
+/* line 232, ../../app/stylesheets/styles.scss */
+#content #solutions #resume ul li.hard a {
+  font-family: 'CPMono_v07_Black', monospace;
+}
+/* line 240, ../../app/stylesheets/styles.scss */
 #content #solution .controls div.command, #content #solution .controls div.sub, #content #solution .controls div.control-command {
   margin-bottom: 10px;
 }
-/* line 197, ../../app/stylesheets/styles.scss */
+/* line 242, ../../app/stylesheets/styles.scss */
 #content #solution .controls div.command div, #content #solution .controls div.sub div, #content #solution .controls div.control-command div {
   border: solid thin;
   height: 40px;
 }
-/* line 203, ../../app/stylesheets/styles.scss */
+/* line 248, ../../app/stylesheets/styles.scss */
 #content #solution #board {
   border-top: solid 4px yellow;
 }
-/* line 206, ../../app/stylesheets/styles.scss */
+/* line 251, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-title h3 {
   padding-top: 20px;
   text-align: right;
   color: aqua;
 }
-/* line 213, ../../app/stylesheets/styles.scss */
+/* line 258, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-list ul {
   margin-top: 20px;
   list-style: none;
 }
-/* line 216, ../../app/stylesheets/styles.scss */
+/* line 261, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-list ul li {
   color: aqua;
 }
-/* line 219, ../../app/stylesheets/styles.scss */
+/* line 264, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-list ul li.satisfied {
   color: lime;
   font-family: 'CPMono_v07_Black', monospace;
 }
-/* line 223, ../../app/stylesheets/styles.scss */
+/* line 268, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-list ul li.unsatisfied {
   color: red;
 }
-/* line 228, ../../app/stylesheets/styles.scss */
+/* line 273, ../../app/stylesheets/styles.scss */
 #content #solution #board h3 {
   text-align: center;
 }
-/* line 232, ../../app/stylesheets/styles.scss */
+/* line 277, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary div {
   text-align: center;
 }
-/* line 234, ../../app/stylesheets/styles.scss */
+/* line 279, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary div h4 {
   font-size: 24px;
   padding: 0;
   margin: 0;
 }
-/* line 240, ../../app/stylesheets/styles.scss */
+/* line 285, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary .explosion {
   color: #F70;
 }
-/* line 242, ../../app/stylesheets/styles.scss */
+/* line 287, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary .explosion h4 {
   color: #F70;
 }
-/* line 246, ../../app/stylesheets/styles.scss */
+/* line 291, ../../app/stylesheets/styles.scss */
+#content #solution #board #execution-result-summary .ready {
+  color: white;
+}
+/* line 293, ../../app/stylesheets/styles.scss */
+#content #solution #board #execution-result-summary .ready h4 {
+  color: white;
+}
+/* line 297, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary .failure {
   color: red;
 }
-/* line 248, ../../app/stylesheets/styles.scss */
+/* line 299, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary .failure h4 {
   color: red;
 }
-/* line 252, ../../app/stylesheets/styles.scss */
+/* line 303, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary .passed {
   background-color: lime;
   color: black;
   font-family: 'CPMono_v07_Black', monospace;
 }
-/* line 256, ../../app/stylesheets/styles.scss */
+/* line 307, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary .passed h4 {
   color: black;
   background-color: lime;
   font-family: 'CPMono_v07_Black', monospace;
 }
-/* line 264, ../../app/stylesheets/styles.scss */
+/* line 315, ../../app/stylesheets/styles.scss */
 #content #solution .hidden {
   visibility: hidden;
 }
-/* line 267, ../../app/stylesheets/styles.scss */
+/* line 318, ../../app/stylesheets/styles.scss */
 #content #solution #program form {
   margin-right: 30px;
 }
+/* line 323, ../../app/stylesheets/styles.scss */
+#content #levels h3 {
+  text-align: center;
+}
+/* line 326, ../../app/stylesheets/styles.scss */
+#content #levels h4 {
+  margin: 0;
+  padding: 0;
+  color: aqua;
+  font-size: 20px;
+}
+/* line 331, ../../app/stylesheets/styles.scss */
+#content #levels h4 a {
+  color: aqua;
+  text-decoration: none;
+}
+/* line 334, ../../app/stylesheets/styles.scss */
+#content #levels h4 a:hover, #content #levels h4 a:visited {
+  color: aqua;
+}
+/* line 339, ../../app/stylesheets/styles.scss */
+#content #levels div.level {
+  border: solid thin;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+/* line 345, ../../app/stylesheets/styles.scss */
+#content #levels div.level p {
+  font-family: 'CPMono_v07_ExtraLight', monospace;
+}
+/* line 349, ../../app/stylesheets/styles.scss */
+#content #levels ul {
+  list-style: none;
+}
 
-/* line 272, ../../app/stylesheets/styles.scss */
+/* line 354, ../../app/stylesheets/styles.scss */
 textarea#solution_code, pre.code {
   width: 100%;
   color: white;
@@ -308,19 +416,19 @@ textarea#solution_code, pre.code {
   line-height: 20px;
 }
 
-/* line 282, ../../app/stylesheets/styles.scss */
+/* line 364, ../../app/stylesheets/styles.scss */
 #signin form input, #signup form input {
   font-size: 28px;
   font-family: 'CPMono_v07_ExtraLight', monospace;
   border: solid thin;
   margin-top: 14px;
 }
-/* line 288, ../../app/stylesheets/styles.scss */
+/* line 370, ../../app/stylesheets/styles.scss */
 #signin form input[type="submit"], #signup form input[type="submit"] {
   padding-left: 20px;
   padding-right: 20px;
 }
-/* line 292, ../../app/stylesheets/styles.scss */
+/* line 374, ../../app/stylesheets/styles.scss */
 #signin form .label, #signup form .label {
   text-align: right;
   vertical-align: middle;
@@ -328,25 +436,25 @@ textarea#solution_code, pre.code {
   padding-right: 0px;
   margin-right: 0px;
 }
-/* line 299, ../../app/stylesheets/styles.scss */
+/* line 381, ../../app/stylesheets/styles.scss */
 #signin form .input, #signup form .input {
   padding-left: 0px;
   margin-left: 0px;
 }
-/* line 303, ../../app/stylesheets/styles.scss */
+/* line 385, ../../app/stylesheets/styles.scss */
 #signin form label, #signup form label {
   font-size: 18px;
   font-family: 'CPMono_v07_Light', monospace;
   margin-left: 0px;
 }
-/* line 310, ../../app/stylesheets/styles.scss */
+/* line 392, ../../app/stylesheets/styles.scss */
 #signin ul#devise-links, #signup ul#devise-links {
   list-style: none;
   padding: 0;
   margin: 0;
   padding-top: 20px;
 }
-/* line 315, ../../app/stylesheets/styles.scss */
+/* line 397, ../../app/stylesheets/styles.scss */
 #signin ul#devise-links li, #signup ul#devise-links li {
   padding: 0;
   display: inline;
@@ -354,39 +462,39 @@ textarea#solution_code, pre.code {
   padding-right: 15px;
 }
 
-/* line 324, ../../app/stylesheets/styles.scss */
+/* line 406, ../../app/stylesheets/styles.scss */
 .square {
   background: #002200;
   margin-bottom: 10px;
   height: 30px;
 }
 
-/* line 329, ../../app/stylesheets/styles.scss */
+/* line 411, ../../app/stylesheets/styles.scss */
 .last-row .square {
   margin-bottom: 0;
 }
 
-/* line 333, ../../app/stylesheets/styles.scss */
+/* line 415, ../../app/stylesheets/styles.scss */
 .carl .square {
   background: #fff;
 }
 
-/* line 337, ../../app/stylesheets/styles.scss */
+/* line 419, ../../app/stylesheets/styles.scss */
 .explosion .square {
   background: #F87800;
 }
 
-/* line 341, ../../app/stylesheets/styles.scss */
+/* line 423, ../../app/stylesheets/styles.scss */
 .goal .square {
   background: #f00;
 }
 
-/* line 345, ../../app/stylesheets/styles.scss */
+/* line 427, ../../app/stylesheets/styles.scss */
 .wall .square {
   background: lime;
 }
 
-/* line 348, ../../app/stylesheets/styles.scss */
+/* line 430, ../../app/stylesheets/styles.scss */
 #footer {
   background: lime;
   color: black;

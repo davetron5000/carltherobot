@@ -10,7 +10,7 @@ class Board
       x.each { |y| row << y }
       b.map << row
     end
-    b.place_carl(*board.carl)
+    b.place_carl(*board.carl) unless board.carl.nil?
     b
   end
 

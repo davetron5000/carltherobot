@@ -6,6 +6,7 @@ t_01:
   name: Carmack
   goal: "--- !ruby/object:Goal \ncarl: \n- 1\n- 1\nlines_of_code: 10\n"
   difficulty: tutorial
+  hype_text: Get your feet wet!
   board0: "--- !ruby/object:Board \ncarl: \n- 0\n- 0\nmap: \n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n"
 
 t_02:
@@ -13,6 +14,7 @@ t_02:
   name: Knuth
   ordinal: 2
   difficulty: tutorial
+  hype_text: A baby step toward controlling C.A.R.L.
   goal: "--- !ruby/object:Goal \nbeacons: \n- - 1\n  - 1\n- - 0\n  - 1\ncarl: \n- 1\n- 1\nlines_of_code: 10\n" 
   board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 0\nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
 
@@ -21,6 +23,7 @@ e_01:
   name: Oderksy
   ordinal: 1
   difficulty: easy
+  hype_text: Use your subroutine to keep the line count low
   goal: "--- !ruby/object:Goal \nbeacons: \n- - 1\n  - 1\n- - 0\n  - 1\ncarl: \n- 1\n- 1\nlines_of_code: 10\n" 
   board0: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
 
@@ -29,6 +32,7 @@ h_01:
   name: Hanson
   ordinal: 1
   difficulty: hard
+  hype_text: One program, 2 C.A.R.L.s - are you up to the challenge?
   goal: "--- !ruby/object:Goal \nbeacons: \n- - 1\n  - 1\n- - 0\n  - 1\ncarl: \n- 1\n- 1\nlines_of_code: 10\n" 
   board0: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
   board1: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
@@ -38,6 +42,7 @@ h_02:
   ordinal: 2
   name: Johnson
   difficulty: hard
+  hype_text: 
   goal: "--- !ruby/object:Goal \nbeacons: \n- - 1\n  - 1\n- - 0\n  - 1\ncarl: \n- 1\n- 1\nlines_of_code: 10\n" 
   board0: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
 
@@ -46,5 +51,6 @@ h_03:
   name: Hellesoy
   ordinal: 3
   difficulty: hard
+  hype_text: Do you have enough memory to make it?
   goal: "--- !ruby/object:Goal \nbeacons: \n- - 1\n  - 1\n- - 0\n  - 1\ncarl: \n- 1\n- 1\nlines_of_code: 10\n" 
   board0: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"

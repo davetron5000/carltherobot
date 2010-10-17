@@ -27,7 +27,11 @@ class CarlTheRobot
   end
 
   def if_move
-    case @direction
+    Carl.direction_transform(@direction)
+  end
+
+  def Carl.direction_transform(direction)
+    case direction
     when :north
       [-1,0]
     when :south

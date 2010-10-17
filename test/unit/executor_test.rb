@@ -31,6 +31,79 @@ class ExecutorTest < ActiveSupport::TestCase
     assert !new_board.beacon?(6,0)
   end
 
+  test "branch works" do
+    carl = CarlTheRobot.new
+    board = Board.new
+    board.place_carl(7,0)
+    board.add_beacon(7,1)
+    board.map[6][0] = :wall
+    executor = Executor.new(board,
+                            carl,
+                            [
+                              Branch.new('front_clear',['move']),
+                              Branch.new('not_front_clear',
+                                         [
+                                           'turnleft',
+                                           'turnleft',
+                                           'turnleft',
+                                           Branch.new('not_front_clear',['move'])]
+                                        ),
+                              'move',
+                              'turnleft','turnleft','turnleft',
+                              Branch.new('front_clear',['move']),
+                              Branch.new('not_front_clear',['turnleft','move']),
+    ])
+    new_board = executor.execute!
+    assert new_board.carl?(7,2)
+  end
+
+  test "loop works" do
+    carl = CarlTheRobot.new
+    board = Board.new
+    board.place_carl(7,0)
+    board.add_beacon(7,1)
+    board.map[4][0] = :wall
+    executor = Executor.new(board,
+                            carl,
+                            [ Loop.new('front_clear',['move']),
+    ])
+    new_board = executor.execute!
+    assert new_board.carl?(5,0)
+  end
+
+  test "iterate works" do
+    carl = CarlTheRobot.new
+    board = Board.new
+    board.place_carl(7,0)
+    board.add_beacon(7,1)
+    board.map[4][0] = :wall
+    executor = Executor.new(board,
+                            carl,
+                            [ Iterate.new(2,['move']),
+                            Iterate.new(3,['turnleft']),
+                            'move',
+    ])
+    new_board = executor.execute!
+    assert new_board.carl?(5,1)
+    assert_equal :east,carl.direction
+  end
+
+  test "infinite loop barfs" do
+    carl = CarlTheRobot.new
+    board = Board.new
+    board.place_carl(7,0)
+    board.add_beacon(7,1)
+    board.map[4][0] = :wall
+    executor = Executor.new(board,
+                            carl,
+                            [ Loop.new('front_clear',['turnleft','turnleft','turnleft','turnleft']),
+    ])
+    explosion = assert_raises Explosion do 
+      new_board = executor.execute!
+    end
+    assert_equal "Possible Infinite Loop",explosion.message
+  end
+
   test "pickup when no beacon explodes" do
     carl = CarlTheRobot.new
     board = Board.new

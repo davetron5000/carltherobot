@@ -14,3 +14,19 @@ class Command < ActiveRecord::Base
     self.unlock <= player.unlock
   end
 end
+
+class Branch
+  attr_reader :condition
+  attr_reader :code
+
+  def initialize(condition,code)
+    @condition = condition
+    @code = code
+  end
+end
+
+class Loop < Branch
+end
+
+class Iterate < Branch
+end

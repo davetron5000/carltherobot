@@ -12,9 +12,14 @@ class Executor
 
   def execute!
     return nil if @board.nil?
+    execute_internal!(@code)
+  end
+
+  def execute_internal!(code,depth=0)
+    raise Explosion.new("Stack Overflow",nil) if depth > 20
     @last_index = 0
-    @code.each do |command|
-      next if command.strip =~ /^$/
+    code.each do |command|
+      next if command.nil? || (command.respond_to?(:strip) && command.strip =~ /^$/)
       case command
       when 'move'
         transform = @carl.if_move
@@ -36,6 +41,33 @@ class Executor
         raise Explosion.new("no beacon at #{@board.carl.inspect}",@board.carl) unless @board.beacon?(*@board.carl)
         @board.remove_beacon(*@board.carl)
         @carl.pickup_beacon
+      when Iterate
+        condition = command.condition
+        code_block = command.code
+        count = 1
+        condition.times do 
+          begin
+            execute_internal!(code_block,depth+1)
+            count += 1
+          rescue Explosion => ex
+            raise Explosion.new(ex.message + "(on iterateion #{count})",ex.where?)
+          end
+        end
+      when Loop
+        count = 0
+        condition = command.condition
+        code_block = command.code
+        while (Conditions.send(condition,@board.carl,@carl.direction,@board))
+          raise Explosion.new("Possible Infinite Loop",nil) if count > 50
+          execute_internal!(code_block,depth+1)
+          count += 1
+        end
+      when Branch
+        condition = command.condition
+        code_block = command.code
+        if (Conditions.send(condition,@board.carl,@carl.direction,@board))
+          execute_internal!(code_block,depth+1)
+        end
       else
         raise "unknown command '#{command}'"
       end

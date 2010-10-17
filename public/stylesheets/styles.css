@@ -18,83 +18,83 @@
   src: local("☺"), url('/fonts/../fonts/CPMono_v07_Black-webfont.woff') format('woff'), url('/fonts/../fonts/CPMono_v07_Black-webfont.ttf') format('truetype'), url('/fonts/../fonts/CPMono_v07_Black-webfont.svg#webfontRVXSRgPv') format('svg');
 }
 
-/* line 31, ../../app/stylesheets/styles.scss */
+/* line 28, ../../app/stylesheets/styles.scss */
 body.bp, textarea {
   font-family: 'CPMono_v07_Plain', monospace;
 }
 
-/* line 35, ../../app/stylesheets/styles.scss */
+/* line 32, ../../app/stylesheets/styles.scss */
 body.bp {
   line-height: 20px;
   background: black;
   color: lime;
 }
-/* line 39, ../../app/stylesheets/styles.scss */
+/* line 36, ../../app/stylesheets/styles.scss */
 body.bp h1 {
   font-size: 60px;
   line-height: 60px;
 }
-/* line 42, ../../app/stylesheets/styles.scss */
+/* line 39, ../../app/stylesheets/styles.scss */
 body.bp h1 a {
   text-decoration: none;
   color: lime;
 }
-/* line 45, ../../app/stylesheets/styles.scss */
+/* line 42, ../../app/stylesheets/styles.scss */
 body.bp h1 a:hover, body.bp h1 a:visited {
   color: lime;
 }
-/* line 50, ../../app/stylesheets/styles.scss */
+/* line 47, ../../app/stylesheets/styles.scss */
 body.bp h1, body.bp h3, body.bp h5 {
   color: lime;
 }
-/* line 53, ../../app/stylesheets/styles.scss */
+/* line 50, ../../app/stylesheets/styles.scss */
 body.bp h2, body.bp h4 {
   color: yellow;
 }
-/* line 57, ../../app/stylesheets/styles.scss */
+/* line 54, ../../app/stylesheets/styles.scss */
 body.bp h2 {
   font-size: 35px;
   line-height: 40px;
 }
-/* line 61, ../../app/stylesheets/styles.scss */
+/* line 58, ../../app/stylesheets/styles.scss */
 body.bp h3 {
   font-size: 25px;
   line-height: 30px;
 }
 
-/* line 67, ../../app/stylesheets/styles.scss */
+/* line 64, ../../app/stylesheets/styles.scss */
 #title {
   display: inline;
   float: left;
 }
-/* line 70, ../../app/stylesheets/styles.scss */
+/* line 67, ../../app/stylesheets/styles.scss */
 #title h1 {
   margin: 0;
   font-family: 'CPMono_v07_Black', monospace;
 }
 
-/* line 76, ../../app/stylesheets/styles.scss */
+/* line 73, ../../app/stylesheets/styles.scss */
 #header {
   border-bottom: solid thin lime;
 }
-/* line 77, ../../app/stylesheets/styles.scss */
+/* line 74, ../../app/stylesheets/styles.scss */
 #header #nav {
   text-align: right;
 }
-/* line 80, ../../app/stylesheets/styles.scss */
+/* line 77, ../../app/stylesheets/styles.scss */
 #header #nav ul li {
   display: inline;
 }
-/* line 82, ../../app/stylesheets/styles.scss */
+/* line 79, ../../app/stylesheets/styles.scss */
 #header #nav ul li a {
   font-family: 'CPMono_v07_Light', monospace;
   color: white;
 }
-/* line 85, ../../app/stylesheets/styles.scss */
+/* line 82, ../../app/stylesheets/styles.scss */
 #header #nav ul li a:hover, #header #nav ul li a:visited {
   color: white;
 }
-/* line 93, ../../app/stylesheets/styles.scss */
+/* line 90, ../../app/stylesheets/styles.scss */
 #header .subhead {
   font-family: 'CPMono_v07_ExtraLight', monospace;
   font-size: 12px;
@@ -102,50 +102,50 @@ body.bp h3 {
   line-height: 10px;
 }
 
-/* line 101, ../../app/stylesheets/styles.scss */
+/* line 98, ../../app/stylesheets/styles.scss */
 #content {
   margin-bottom: 30px;
 }
-/* line 103, ../../app/stylesheets/styles.scss */
+/* line 100, ../../app/stylesheets/styles.scss */
 #content h2 {
   text-align: center;
   padding-top: 20px;
 }
-/* line 108, ../../app/stylesheets/styles.scss */
+/* line 105, ../../app/stylesheets/styles.scss */
 #content #help ul {
   list-style: none;
   text-align: center;
 }
-/* line 115, ../../app/stylesheets/styles.scss */
+/* line 112, ../../app/stylesheets/styles.scss */
 #content #welcome div:hover {
   background: #002200;
   cursor: pointer;
   cursor: hand;
 }
-/* line 120, ../../app/stylesheets/styles.scss */
+/* line 117, ../../app/stylesheets/styles.scss */
 #content #welcome h2, #content #welcome h3 {
   color: yellow;
 }
-/* line 122, ../../app/stylesheets/styles.scss */
+/* line 119, ../../app/stylesheets/styles.scss */
 #content #welcome h2 a, #content #welcome h3 a {
   text-decoration: none;
   color: yellow;
 }
-/* line 125, ../../app/stylesheets/styles.scss */
+/* line 122, ../../app/stylesheets/styles.scss */
 #content #welcome h2 a:hover, #content #welcome h2 a:visited, #content #welcome h3 a:hover, #content #welcome h3 a:visited {
   color: yellow;
 }
-/* line 130, ../../app/stylesheets/styles.scss */
+/* line 127, ../../app/stylesheets/styles.scss */
 #content #welcome h3 {
   text-align: center;
   margin-top: 0;
   line-height: 0;
 }
-/* line 137, ../../app/stylesheets/styles.scss */
+/* line 134, ../../app/stylesheets/styles.scss */
 #content #solutions #start {
   text-align: left;
 }
-/* line 138, ../../app/stylesheets/styles.scss */
+/* line 135, ../../app/stylesheets/styles.scss */
 #content #solutions #start .difficulty {
   border: solid thin lime;
   margin-top: 0;
@@ -159,238 +159,248 @@ body.bp h3 {
   cursor: pointer;
   cursor: hand;
 }
-/* line 149, ../../app/stylesheets/styles.scss */
+/* line 146, ../../app/stylesheets/styles.scss */
 #content #solutions #start .difficulty a {
   text-decoration: none;
   color: lime;
 }
-/* line 152, ../../app/stylesheets/styles.scss */
+/* line 149, ../../app/stylesheets/styles.scss */
 #content #solutions #start .difficulty a:hover, #content #solutions #start .difficulty a:visited {
   color: lime;
 }
-/* line 156, ../../app/stylesheets/styles.scss */
+/* line 153, ../../app/stylesheets/styles.scss */
 #content #solutions #start .difficulty p {
   font-family: 'CPMono_v07_Light', monospace;
   color: #66ff66;
   text-align: center;
 }
-/* line 161, ../../app/stylesheets/styles.scss */
+/* line 158, ../../app/stylesheets/styles.scss */
 #content #solutions #start .difficulty:hover {
   background: #002200;
 }
-/* line 165, ../../app/stylesheets/styles.scss */
+/* line 162, ../../app/stylesheets/styles.scss */
 #content #solutions #start div#tutorial {
   font-family: 'CPMono_v07_ExtraLight', monospace;
   background: #1a1a1a;
 }
-/* line 168, ../../app/stylesheets/styles.scss */
+/* line 165, ../../app/stylesheets/styles.scss */
 #content #solutions #start div#tutorial h3 {
   color: #006600;
 }
-/* line 169, ../../app/stylesheets/styles.scss */
+/* line 166, ../../app/stylesheets/styles.scss */
 #content #solutions #start div#tutorial:hover {
   background: #002200;
 }
-/* line 173, ../../app/stylesheets/styles.scss */
+/* line 170, ../../app/stylesheets/styles.scss */
 #content #solutions #start div#easy {
   font-family: 'CPMono_v07_Plain', monospace;
   background: #141414;
 }
-/* line 176, ../../app/stylesheets/styles.scss */
+/* line 173, ../../app/stylesheets/styles.scss */
 #content #solutions #start div#easy h3 {
   color: #009900;
 }
-/* line 177, ../../app/stylesheets/styles.scss */
+/* line 174, ../../app/stylesheets/styles.scss */
 #content #solutions #start div#easy:hover {
   background: #002200;
 }
-/* line 181, ../../app/stylesheets/styles.scss */
+/* line 178, ../../app/stylesheets/styles.scss */
 #content #solutions #start div#hard {
   font-family: 'CPMono_v07_Black', monospace;
 }
-/* line 184, ../../app/stylesheets/styles.scss */
+/* line 181, ../../app/stylesheets/styles.scss */
 #content #solutions #start .disabled {
   cursor: default;
 }
-/* line 186, ../../app/stylesheets/styles.scss */
+/* line 183, ../../app/stylesheets/styles.scss */
 #content #solutions #start .disabled h3, #content #solutions #start .disabled p, #content #solutions #start .disabled p a, #content #solutions #start .disabled p a:visited, #content #solutions #start .disabled p a:hover {
   color: #222;
 }
-/* line 189, ../../app/stylesheets/styles.scss */
+/* line 186, ../../app/stylesheets/styles.scss */
 #content #solutions #start .disabled:hover {
   background: black;
 }
-/* line 193, ../../app/stylesheets/styles.scss */
+/* line 190, ../../app/stylesheets/styles.scss */
 #content #solutions #start #tutorial, #content #solutions #start #easy {
   border-bottom: none;
 }
-/* line 197, ../../app/stylesheets/styles.scss */
+/* line 194, ../../app/stylesheets/styles.scss */
 #content #solutions #start h2 {
   text-align: left;
   padding-left: 15px;
 }
-/* line 201, ../../app/stylesheets/styles.scss */
+/* line 198, ../../app/stylesheets/styles.scss */
 #content #solutions #start h3 {
   text-align: center;
 }
-/* line 205, ../../app/stylesheets/styles.scss */
+/* line 202, ../../app/stylesheets/styles.scss */
 #content #solutions #resume {
   text-align: right;
 }
-/* line 207, ../../app/stylesheets/styles.scss */
+/* line 204, ../../app/stylesheets/styles.scss */
 #content #solutions #resume h2, #content #solutions #resume h3 {
   text-align: right;
 }
-/* line 210, ../../app/stylesheets/styles.scss */
+/* line 207, ../../app/stylesheets/styles.scss */
 #content #solutions #resume ul {
   list-style: none;
 }
-/* line 212, ../../app/stylesheets/styles.scss */
+/* line 209, ../../app/stylesheets/styles.scss */
 #content #solutions #resume ul li {
   font-size: 20px;
 }
-/* line 213, ../../app/stylesheets/styles.scss */
+/* line 210, ../../app/stylesheets/styles.scss */
 #content #solutions #resume ul li a {
   color: lime;
 }
-/* line 215, ../../app/stylesheets/styles.scss */
+/* line 212, ../../app/stylesheets/styles.scss */
 #content #solutions #resume ul li a:hover, #content #solutions #resume ul li a:visited {
   color: lime;
 }
-/* line 220, ../../app/stylesheets/styles.scss */
+/* line 217, ../../app/stylesheets/styles.scss */
 #content #solutions #resume ul li span.timestamp {
   font-size: 12px;
   font-family: 'CPMono_v07_ExtraLight', monospace;
   color: #009900;
 }
-/* line 226, ../../app/stylesheets/styles.scss */
+/* line 223, ../../app/stylesheets/styles.scss */
 #content #solutions #resume ul li.tutorial a {
   font-family: 'CPMono_v07_ExtraLight', monospace;
 }
-/* line 229, ../../app/stylesheets/styles.scss */
+/* line 226, ../../app/stylesheets/styles.scss */
 #content #solutions #resume ul li.easy a {
   font-family: 'CPMono_v07_Plain', monospace;
 }
-/* line 232, ../../app/stylesheets/styles.scss */
+/* line 229, ../../app/stylesheets/styles.scss */
 #content #solutions #resume ul li.hard a {
   font-family: 'CPMono_v07_Black', monospace;
 }
-/* line 240, ../../app/stylesheets/styles.scss */
+/* line 237, ../../app/stylesheets/styles.scss */
 #content #solution .controls div.command, #content #solution .controls div.sub, #content #solution .controls div.control-command {
   margin-bottom: 10px;
 }
-/* line 242, ../../app/stylesheets/styles.scss */
+/* line 239, ../../app/stylesheets/styles.scss */
 #content #solution .controls div.command div, #content #solution .controls div.sub div, #content #solution .controls div.control-command div {
   border: solid thin;
   height: 40px;
 }
+/* line 244, ../../app/stylesheets/styles.scss */
+#content #solution .controls div.command:hover {
+  cursor: move;
+  background-color: #005500;
+}
 /* line 248, ../../app/stylesheets/styles.scss */
+#content #solution .controls div.disabled {
+  color: #004400;
+  background-color: #001100;
+}
+/* line 253, ../../app/stylesheets/styles.scss */
 #content #solution #board {
   border-top: solid 4px yellow;
 }
-/* line 251, ../../app/stylesheets/styles.scss */
+/* line 256, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-title h3 {
   padding-top: 20px;
   text-align: right;
   color: aqua;
 }
-/* line 258, ../../app/stylesheets/styles.scss */
+/* line 263, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-list ul {
   margin-top: 20px;
   list-style: none;
 }
-/* line 261, ../../app/stylesheets/styles.scss */
+/* line 266, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-list ul li {
   color: aqua;
 }
-/* line 264, ../../app/stylesheets/styles.scss */
+/* line 269, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-list ul li.satisfied {
   color: lime;
   font-family: 'CPMono_v07_Black', monospace;
 }
-/* line 268, ../../app/stylesheets/styles.scss */
+/* line 273, ../../app/stylesheets/styles.scss */
 #content #solution #board #goal-list ul li.unsatisfied {
   color: red;
 }
-/* line 273, ../../app/stylesheets/styles.scss */
+/* line 278, ../../app/stylesheets/styles.scss */
 #content #solution #board h3 {
   text-align: center;
 }
-/* line 277, ../../app/stylesheets/styles.scss */
+/* line 282, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary div {
   text-align: center;
 }
-/* line 279, ../../app/stylesheets/styles.scss */
+/* line 284, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary div h4 {
   font-size: 24px;
   padding: 0;
   margin: 0;
 }
-/* line 285, ../../app/stylesheets/styles.scss */
+/* line 290, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary .explosion {
   color: #F70;
 }
-/* line 287, ../../app/stylesheets/styles.scss */
+/* line 292, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary .explosion h4 {
   color: #F70;
 }
-/* line 291, ../../app/stylesheets/styles.scss */
+/* line 296, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary .ready {
   color: white;
 }
-/* line 293, ../../app/stylesheets/styles.scss */
+/* line 298, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary .ready h4 {
   color: white;
 }
-/* line 297, ../../app/stylesheets/styles.scss */
+/* line 302, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary .failure {
   color: red;
 }
-/* line 299, ../../app/stylesheets/styles.scss */
+/* line 304, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary .failure h4 {
   color: red;
 }
-/* line 303, ../../app/stylesheets/styles.scss */
+/* line 308, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary .passed {
   background-color: lime;
   color: black;
   font-family: 'CPMono_v07_Black', monospace;
 }
-/* line 307, ../../app/stylesheets/styles.scss */
+/* line 312, ../../app/stylesheets/styles.scss */
 #content #solution #board #execution-result-summary .passed h4 {
   color: black;
   background-color: lime;
   font-family: 'CPMono_v07_Black', monospace;
 }
-/* line 315, ../../app/stylesheets/styles.scss */
+/* line 320, ../../app/stylesheets/styles.scss */
 #content #solution .hidden {
   visibility: hidden;
 }
-/* line 318, ../../app/stylesheets/styles.scss */
+/* line 323, ../../app/stylesheets/styles.scss */
 #content #solution #program form {
   margin-right: 30px;
 }
-/* line 323, ../../app/stylesheets/styles.scss */
+/* line 328, ../../app/stylesheets/styles.scss */
 #content #levels h3 {
   text-align: center;
 }
-/* line 326, ../../app/stylesheets/styles.scss */
+/* line 331, ../../app/stylesheets/styles.scss */
 #content #levels h4 {
   margin: 0;
   padding: 0;
   color: aqua;
   font-size: 20px;
 }
-/* line 331, ../../app/stylesheets/styles.scss */
+/* line 336, ../../app/stylesheets/styles.scss */
 #content #levels h4 a {
   color: aqua;
   text-decoration: none;
 }
-/* line 334, ../../app/stylesheets/styles.scss */
+/* line 339, ../../app/stylesheets/styles.scss */
 #content #levels h4 a:hover, #content #levels h4 a:visited {
   color: aqua;
 }
-/* line 339, ../../app/stylesheets/styles.scss */
+/* line 344, ../../app/stylesheets/styles.scss */
 #content #levels div.level {
   border: solid thin;
   padding-top: 20px;
@@ -398,16 +408,16 @@ body.bp h3 {
   padding-left: 30px;
   padding-right: 30px;
 }
-/* line 345, ../../app/stylesheets/styles.scss */
+/* line 350, ../../app/stylesheets/styles.scss */
 #content #levels div.level p {
   font-family: 'CPMono_v07_ExtraLight', monospace;
 }
-/* line 349, ../../app/stylesheets/styles.scss */
+/* line 354, ../../app/stylesheets/styles.scss */
 #content #levels ul {
   list-style: none;
 }
 
-/* line 354, ../../app/stylesheets/styles.scss */
+/* line 359, ../../app/stylesheets/styles.scss */
 textarea#solution_code, pre.code {
   width: 100%;
   color: white;
@@ -416,19 +426,19 @@ textarea#solution_code, pre.code {
   line-height: 20px;
 }
 
-/* line 364, ../../app/stylesheets/styles.scss */
+/* line 369, ../../app/stylesheets/styles.scss */
 #signin form input, #signup form input {
   font-size: 28px;
   font-family: 'CPMono_v07_ExtraLight', monospace;
   border: solid thin;
   margin-top: 14px;
 }
-/* line 370, ../../app/stylesheets/styles.scss */
+/* line 375, ../../app/stylesheets/styles.scss */
 #signin form input[type="submit"], #signup form input[type="submit"] {
   padding-left: 20px;
   padding-right: 20px;
 }
-/* line 374, ../../app/stylesheets/styles.scss */
+/* line 379, ../../app/stylesheets/styles.scss */
 #signin form .label, #signup form .label {
   text-align: right;
   vertical-align: middle;
@@ -436,25 +446,25 @@ textarea#solution_code, pre.code {
   padding-right: 0px;
   margin-right: 0px;
 }
-/* line 381, ../../app/stylesheets/styles.scss */
+/* line 386, ../../app/stylesheets/styles.scss */
 #signin form .input, #signup form .input {
   padding-left: 0px;
   margin-left: 0px;
 }
-/* line 385, ../../app/stylesheets/styles.scss */
+/* line 390, ../../app/stylesheets/styles.scss */
 #signin form label, #signup form label {
   font-size: 18px;
   font-family: 'CPMono_v07_Light', monospace;
   margin-left: 0px;
 }
-/* line 392, ../../app/stylesheets/styles.scss */
+/* line 397, ../../app/stylesheets/styles.scss */
 #signin ul#devise-links, #signup ul#devise-links {
   list-style: none;
   padding: 0;
   margin: 0;
   padding-top: 20px;
 }
-/* line 397, ../../app/stylesheets/styles.scss */
+/* line 402, ../../app/stylesheets/styles.scss */
 #signin ul#devise-links li, #signup ul#devise-links li {
   padding: 0;
   display: inline;
@@ -462,121 +472,121 @@ textarea#solution_code, pre.code {
   padding-right: 15px;
 }
 
-/* line 406, ../../app/stylesheets/styles.scss */
+/* line 411, ../../app/stylesheets/styles.scss */
 #board0-title h3, #board1-title h3 {
   margin: 0;
   padding: 0;
 }
 
-/* line 410, ../../app/stylesheets/styles.scss */
+/* line 415, ../../app/stylesheets/styles.scss */
 .square {
   background-color: yellow;
   margin-bottom: 10px;
   height: 30px;
 }
 
-/* line 415, ../../app/stylesheets/styles.scss */
+/* line 420, ../../app/stylesheets/styles.scss */
 .last-row .square {
   margin-bottom: 0;
 }
 
-/* line 419, ../../app/stylesheets/styles.scss */
+/* line 424, ../../app/stylesheets/styles.scss */
 .square {
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-/* line 423, ../../app/stylesheets/styles.scss */
+/* line 428, ../../app/stylesheets/styles.scss */
 .beacon .square {
   background-image: url(/images/beacon.png);
 }
 
-/* line 427, ../../app/stylesheets/styles.scss */
+/* line 432, ../../app/stylesheets/styles.scss */
 .carl-north .square {
   background-image: url(/images/carl_north.png);
 }
 
-/* line 428, ../../app/stylesheets/styles.scss */
+/* line 433, ../../app/stylesheets/styles.scss */
 .carl-east .square {
   background-image: url(/images/carl_east.png);
 }
 
-/* line 429, ../../app/stylesheets/styles.scss */
+/* line 434, ../../app/stylesheets/styles.scss */
 .carl-west .square {
   background-image: url(/images/carl_west.png);
 }
 
-/* line 430, ../../app/stylesheets/styles.scss */
+/* line 435, ../../app/stylesheets/styles.scss */
 .carl-south .square {
   background-image: url(/images/carl_south.png);
 }
 
-/* line 432, ../../app/stylesheets/styles.scss */
+/* line 437, ../../app/stylesheets/styles.scss */
 .goal-carl-north .square {
   background-image: url(/images/carl_north.png);
   background-color: lime;
 }
 
-/* line 436, ../../app/stylesheets/styles.scss */
+/* line 441, ../../app/stylesheets/styles.scss */
 .goal-carl-south .square {
   background-image: url(/images/carl_south.png);
   background-color: lime;
 }
 
-/* line 440, ../../app/stylesheets/styles.scss */
+/* line 445, ../../app/stylesheets/styles.scss */
 .goal-carl-east .square {
   background-image: url(/images/carl_east.png);
   background-color: lime;
 }
 
-/* line 444, ../../app/stylesheets/styles.scss */
+/* line 449, ../../app/stylesheets/styles.scss */
 .goal-carl-west .square {
   background-image: url(/images/carl_west.png);
   background-color: lime;
 }
 
-/* line 449, ../../app/stylesheets/styles.scss */
+/* line 454, ../../app/stylesheets/styles.scss */
 .beacon-carl-north .square {
   background-image: url(/images/carl_north-beacon.png);
   background-color: lime;
 }
 
-/* line 453, ../../app/stylesheets/styles.scss */
+/* line 458, ../../app/stylesheets/styles.scss */
 .beacon-carl-south .square {
   background-image: url(/images/carl_south-beacon.png);
   background-color: lime;
 }
 
-/* line 457, ../../app/stylesheets/styles.scss */
+/* line 462, ../../app/stylesheets/styles.scss */
 .beacon-carl-east .square {
   background-image: url(/images/carl_east-beacon.png);
   background-color: lime;
 }
 
-/* line 461, ../../app/stylesheets/styles.scss */
+/* line 466, ../../app/stylesheets/styles.scss */
 .beacon-carl-west .square {
   background-image: url(/images/carl_west-beacon.png);
   background-color: lime;
 }
 
-/* line 466, ../../app/stylesheets/styles.scss */
+/* line 471, ../../app/stylesheets/styles.scss */
 .explode .square {
   background-color: #F87800;
   background-image: url(/images/boom.png);
 }
 
-/* line 471, ../../app/stylesheets/styles.scss */
+/* line 476, ../../app/stylesheets/styles.scss */
 .goal .square {
   background-color: lime;
   background-image: url(/images/goal.png);
 }
 
-/* line 476, ../../app/stylesheets/styles.scss */
+/* line 481, ../../app/stylesheets/styles.scss */
 .wall .square {
   background: #002200;
 }
 
-/* line 479, ../../app/stylesheets/styles.scss */
+/* line 484, ../../app/stylesheets/styles.scss */
 #footer {
   background: lime;
   color: black;

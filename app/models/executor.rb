@@ -14,6 +14,7 @@ class Executor
     return nil if @board.nil?
     @last_index = 0
     @code.each do |command|
+      next if command.strip =~ /^$/
       case command
       when 'move'
         transform = @carl.if_move
@@ -35,7 +36,7 @@ class Executor
         @board.remove_beacon(*@board.carl)
         @carl.pickup_beacon
       else
-        raise "unknown command"
+        raise "unknown command '#{command}'"
       end
       @last_index += 1
     end

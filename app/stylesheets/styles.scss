@@ -12,12 +12,6 @@
 
 $font-size: 20px;
 $line-height: 20px;
-//$main-color: black;
-//$link-color: black;
-//$alt-color: #777;
-//$altalt-color: black;
-//$bg-color: white;
-//$highlight-color: #ddd;
 $main-color: #0F0;
 $link-color: #FFF;
 $satisfied-color: $main-color;
@@ -27,6 +21,9 @@ $goal-color: $alt-color;
 $altalt-color: #FF0;
 $bg-color: black;
 $highlight-color: #020;
+$disabled-color: #040;
+$disabled-bg-color: #010;
+$control-highlight-color: #050;
 
 body.bp, textarea {
   font-family: 'CPMono_v07_Plain', monospace;
@@ -243,6 +240,14 @@ body.bp {
           border: solid thin;
           height: $line-height * 2;
         }
+      }
+      div.command:hover {
+        cursor: move;
+        background-color: $control-highlight-color;
+      }
+      div.disabled {
+        color: $disabled-color;
+        background-color: $disabled-bg-color;
       }
     }
     #board {

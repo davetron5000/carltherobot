@@ -9,7 +9,7 @@ class SolutionsController < ApplicationController
   end
 
   def create
-    code = params[:code].split(/\n/).map(&:strip)
+    code = params[:code].split(/\n/).map(&:strip).select{ |x| x.size > 0 }
     solution = Solution.new(:player_id => current_player.id, :code => code, :level_id => params[:level_id])
     solution.save
     redirect_to edit_solution_url(solution)
@@ -64,9 +64,8 @@ class SolutionsController < ApplicationController
     rescue Explosion => explosion
       exploded = true
       new_board = executor.board
-      row,col = explosion.where?
-      new_board.place_carl(row,col)
-      new_board.map[row][col] = :explosion
+      carl = new_board.carl
+      new_board.map[carl[0]][carl[1]] = :explosion
     end
     carl = executor.carl
     last_line = executor.last_index

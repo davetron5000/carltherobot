@@ -273,6 +273,19 @@ body.bp {
     }
   }
   #solution {
+    #instructional-text {
+      p {
+        border: solid thin $link-color;
+        background-color: darken($link-color,75%);
+        color: $link-color;
+        margin-left: $blueprint-grid-width * 3;
+        margin-right: $blueprint-grid-width * 3;
+        padding-left: $blueprint-grid-width * 1;
+        padding-right: $blueprint-grid-width * 1;
+        padding-top: $line-height / 2;
+        padding-bottom: $line-height / 2;
+      }
+    }
     #back {
       display: inline;
       vertical-align: middle;
@@ -514,6 +527,10 @@ body.bp {
       padding-bottom: $line-height;
       padding-left: $blueprint-grid-width;
       padding-right: $blueprint-grid-width;
+      &:hover {
+        cursor: hand; cursor: pointer;
+        background-color: $highlight-color;
+      }
       p {
         font-family: 'CPMono_v07_ExtraLight', monospace;
       }

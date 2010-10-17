@@ -4,7 +4,7 @@
   <div class="padleft">&nbsp;</div>
   <div id="levels-list">
     <% @levels.each do |level| %>
-      <div class="level">
+      <div onclick="navigate('<%= new_solution_url :level_id => level.id %>');" class="level">
         <h4><a href="<%= new_solution_url :level_id => level.id %>"><%= level.title(false) %></a></h4>
         <p><%= level.hype_text %></p>
       </div>

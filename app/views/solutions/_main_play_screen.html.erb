@@ -4,7 +4,7 @@
   iterate_enabled = ''
   branch_enabled = 'disabled' if @level.difficulty == 'tutorial' 
   loop_enabled = 'disabled' if @level.difficulty == 'tutorial'
-  loop_enabled = 'disabled' if @level.difficulty == 'tutorial'
+  iterate_enabled = 'disabled' if @level.difficulty == 'tutorial'
   iterate_enabled = 'disabled' if @level.difficulty == 'easy' && @level.ordinal <= 3
   branch_enabled = 'disabled' if @level.difficulty == 'easy' && @level.ordinal <= 6
 %>
@@ -13,6 +13,13 @@
       <a href="<%= levels_url :difficulty => @level.difficulty %>">&lt;&lt; Levels</a>&nbsp;&nbsp;
       <a href="<%= solutions_url %>">&lt;&lt; Solutions</a>
   </div>&nbsp;&nbsp;|&nbsp;<%= @level.difficulty %> <%= sprintf("%02d",@level.ordinal) %>: <%= @level.name %></h2>
+  <% if @level.instructions %>
+    <div id="instructional-text">
+      <p>
+      <%= raw(@level.instructions) %>
+      </p>
+    </div>
+  <% end %>
   <div id="program" style="<%= !@solution.code.nil? && @solution.code.size > 4 ? "" : "height: 500px;" %>">
     <% some_code = !(@solution.code.nil? || @solution.code.empty?) %>
     <div class="trash top" <%= some_code ? '' : raw('style="visibility: hidden"')%>>&darr;Drop Command to Remove&darr;</div>

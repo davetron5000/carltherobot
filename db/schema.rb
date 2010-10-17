@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101017002820) do
+ActiveRecord::Schema.define(:version => 20101017232549) do
 
   create_table "commands", :force => true do |t|
     t.string   "name"
@@ -26,11 +26,12 @@ ActiveRecord::Schema.define(:version => 20101017002820) do
     t.string   "difficulty"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "board0",     :null => false
+    t.text     "board0",       :null => false
     t.text     "board1"
-    t.text     "goal",       :null => false
-    t.string   "name",       :null => false
+    t.text     "goal",         :null => false
+    t.string   "name",         :null => false
     t.string   "hype_text"
+    t.string   "instructions"
   end
 
   create_table "players", :force => true do |t|

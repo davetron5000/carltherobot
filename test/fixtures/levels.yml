@@ -6,6 +6,7 @@ t_01:
   name: Perlis
   goal: "--- !ruby/object:Goal \ncarl: \n- 5\n- 0\nlines_of_code: 3\n"
   difficulty: tutorial
+  instructions: "C.A.R.L. just needs to get a few squares away; the checkered field is his goal.  Can you program him to move (&#x2191;) there?"
   hype_text: Get your feet wet!
   board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 0\nmap: \n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n"
 
@@ -14,6 +15,7 @@ t_02:
   name: Minsky
   ordinal: 2
   difficulty: tutorial
+  instructions: "Using C.A.R.L.'s turnleft (&#x21B0;) command to guide him to victory!"
   hype_text: Turn toward victory!
   goal: "--- !ruby/object:Goal \ncarl: \n- 5\n- 0\nlines_of_code: 4\n" 
   board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 1\nmap: \n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n" 
@@ -23,6 +25,7 @@ t_03:
   name: McCarthy
   ordinal: 3
   difficulty: tutorial
+  instructions: "C.A.R.L. is made to pick up (&#x21F1;) and put down (&#x21F2;) beacons."
   hype_text: Bring on the beacons!
   goal: "--- !ruby/object:Goal \nbeacons: \n- - 5\n  - 1\ncarl: \n- 5\n- 0\nlines_of_code: 6\n" 
   board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 1\nmap: \n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :beacon\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n"
@@ -32,6 +35,7 @@ t_04:
   name: Dijkstra
   ordinal: 4
   difficulty: tutorial
+  instructions: "Now, use these basic skills to get C.A.R.L. and the beacons where they need to be!"
   hype_text: Bringing it all together
   goal: "--- !ruby/object:Goal \nbeacons: \n- - 6\n  - 2\ncarl: \n- 5\n- 2\nlines_of_code: 40\n"
   board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 0\nmap: \n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - :wall\n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :beacon\n  - :wall\n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n"

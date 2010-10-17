@@ -7,6 +7,9 @@ $(document).ready(function() {
     $("#branch").simpletip({ content: "Have C.A.R.L. do something only if the front is clear", position: "right", showTime: '350'});
     $("#loop").simpletip({ content: "Have C.A.R.L. do something as long as the front is clear", position: "left", });
     $("#iterate").simpletip({ content: "Have C.A.R.L. do something 3 times", position: "right", });
+    $("#instructional-text").fadeTo(5000,0.0001,function() {
+        $("#instructional-text").slideUp(2000);
+      });
     $(".draggable").draggable({
       cursor: 'move',
       helper: 'clone',

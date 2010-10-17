@@ -10,7 +10,8 @@ class SolutionsController < ApplicationController
 
   def create
     code = params[:code].split(/\n/).map(&:strip).select{ |x| x.size > 0 }
-    solution = Solution.new(:player_id => current_player.id, :code => code, :level_id => params[:level_id])
+    solution = Solution.new(:player_id => current_player.id, :level_id => params[:level_id])
+    solution.parse_code(code)
     solution.save
     redirect_to edit_solution_url(solution)
   end

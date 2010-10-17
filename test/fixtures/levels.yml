@@ -3,24 +3,42 @@
 t_01:
   id: 1
   ordinal: 1
-  name: Carmack
-  goal: "--- !ruby/object:Goal \ncarl: \n- 1\n- 1\nlines_of_code: 10\n"
+  name: Perlis
+  goal: "--- !ruby/object:Goal \ncarl: \n- 5\n- 0\nlines_of_code: 3\n"
   difficulty: tutorial
   hype_text: Get your feet wet!
-  board0: "--- !ruby/object:Board \ncarl: \n- 0\n- 0\nmap: \n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n"
+  board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 0\nmap: \n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n"
 
 t_02:
   id: 2
-  name: Knuth
+  name: Minsky
   ordinal: 2
   difficulty: tutorial
-  hype_text: A baby step toward controlling C.A.R.L.
-  goal: "--- !ruby/object:Goal \nbeacons: \n- - 1\n  - 1\n- - 0\n  - 1\ncarl: \n- 1\n- 1\nlines_of_code: 10\n" 
-  board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 0\nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - :beacon\n  - :beacon\n"
+  hype_text: Turn toward victory!
+  goal: "--- !ruby/object:Goal \ncarl: \n- 5\n- 0\nlines_of_code: 4\n" 
+  board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 1\nmap: \n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n" 
+
+t_03:
+  id: 3
+  name: McCarthy
+  ordinal: 3
+  difficulty: tutorial
+  hype_text: Bring on the beacons!
+  goal: "--- !ruby/object:Goal \nbeacons: \n- - 6\n  - 1\ncarl: \n- 5\n- 0\nlines_of_code: 11\n" 
+  board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 1\nmap: \n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - :beacon\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n" 
+
+t_04:
+  id: 4
+  name: Dijkstra
+  ordinal: 4
+  difficulty: tutorial
+  hype_text: Bringing it all together
+  goal: "--- !ruby/object:Goal \nbeacons: \n- - 5\n  - 1\n- - 5\n  - 2\ncarl: \n- 4\n- 0\nlines_of_code: 40\n"
+  board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 0\nmap: \n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :beacon\n  - :beacon\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - \n  - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n"
 
 e_01:
-  id: 3
-  name: Oderksy
+  id: 33 
+  name: Knuth
   ordinal: 1
   difficulty: easy
   hype_text: Use your subroutine to keep the line count low
@@ -28,8 +46,8 @@ e_01:
   board0: "--- !ruby/object:Board \nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
 
 h_01:
-  id: 4
-  name: Hanson
+  id: 44
+  name: Backus
   ordinal: 1
   difficulty: hard
   hype_text: One program, 2 C.A.R.L.s - are you up to the challenge?
@@ -40,7 +58,7 @@ h_01:
 h_02:
   id: 5
   ordinal: 2
-  name: Johnson
+  name: Hoare
   difficulty: hard
   hype_text: 
   goal: "--- !ruby/object:Goal \nbeacons: \n- - 1\n  - 1\n- - 0\n  - 1\ncarl: \n- 1\n- 1\nlines_of_code: 10\n" 
@@ -48,7 +66,7 @@ h_02:
 
 h_03:
   id: 6
-  name: Hellesoy
+  name: Codd
   ordinal: 3
   difficulty: hard
   hype_text: Do you have enough memory to make it?

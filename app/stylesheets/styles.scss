@@ -16,6 +16,7 @@ $main-color: #0F0;
 $link-color: #FFF;
 $satisfied-color: $main-color;
 $unsatisfied-color: #F00;
+$nogoal-color: darken($main-color,40%);
 $alt-color: #0FF;
 $goal-color: $alt-color;
 $altalt-color: #FF0;
@@ -27,9 +28,6 @@ $control-highlight-color: #050;
 
 body.bp, textarea {
   font-family: 'CPMono_v07_Plain', monospace;
-}
-div {
-  @include border-radius;
 }
 
 body.bp {
@@ -237,7 +235,23 @@ body.bp {
   }
   #solution {
     .controls {
-      div.command, div.sub, div.control-command {
+      div.goals {
+        margin-bottom: $line-height / 2;
+        text-align:center;
+        div {
+          font-size: $font-size - 6;
+          padding-left: $blueprint-grid-width;
+          padding-right: $blueprint-grid-width;
+          border: solid thin $bg-color;
+          height: $line-height * 2;
+        }
+      }
+      #goal-title {
+        h3 {
+          color: $alt-color
+        }
+      }
+      div.command, div.subroutine, div.control-command {
         margin-bottom: $line-height / 2;
         div {
           border: solid thin;
@@ -254,32 +268,14 @@ body.bp {
       }
     }
     #board {
-      border-top: solid 4px $altalt-color;
-      #goal-title {
-        h3 {
-          padding-top: $line-height;
-          text-align: right;
-          color: $goal-color
-        }
-      }
-      #goal-list {
-        ul {
-          margin-top: $line-height;
-          list-style: none;
-          li {
-            color: $goal-color
-          }
-          li.satisfied {
-            color: $satisfied-color;
-            font-family: 'CPMono_v07_Black', monospace;
-          }
-          li.unsatisfied {
-            color: $unsatisfied-color;
-          }
-        }
-      }
+      //border-top: solid 4px $altalt-color;
       h3 {
         text-align: center;
+      }
+      #execution-result-summary > div {
+        border: solid thin darken($main-color,30%);
+        background-color: darken($main-color,45%);
+        @include border-radius;
       }
       #execution-result-summary {
         div {
@@ -320,12 +316,25 @@ body.bp {
         }
       }
     }
+    .one-goal {
+      color: $goal-color
+    }
+    .satisfied {
+      color: $satisfied-color;
+      font-family: 'CPMono_v07_Black', monospace;
+    }
+    .unsatisfied {
+      color: $unsatisfied-color;
+    }
+    .nogoal {
+      color: $nogoal-color;
+    }
     .hidden {
       visibility:hidden;
     }
     #program {
       #source {
-        margin-right: $blueprint-grid-width;
+        //margin-right: $blueprint-grid-width;
         div {
           border: solid thin;
           padding-top: $line-height / 2;
@@ -386,6 +395,13 @@ body.bp {
           }
         }
       }
+    }
+    #playfield {
+    /*
+      position:fixed;
+      padding-left: 11 * $blueprint-grid-width;
+      z-index: -1;
+      */
     }
   }
   #levels {

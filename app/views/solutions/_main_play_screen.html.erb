@@ -1,7 +1,7 @@
 <div id="solution">
   <h2><%= @level.difficulty %> <%= sprintf("%02d",@level.ordinal) %>: <%= @level.name %></h2>
   <div id="program" style="<%= !@solution.code.nil? && @solution.code.size > 4 ? "" : "height: 500px;" %>">
-    <div class="trash top">Remove Command</div>
+    <div class="trash top">Drop to Remove Command</div>
     <div id="source">
       <% counter = 0 %>
       <% if @solution.code.nil? || @solution.code.empty? %>
@@ -16,47 +16,42 @@
     <%= form_for @solution do |f| %>
       <%= f.hidden_field :level_id, :name => 'level_id' %>
       <div id="code"><%= f.text_area :code, :name => 'code', :value => @solution.code.nil? ? '' : @solution.code.join("\n") %></div>
-      <div class="trash bottom">Remove Command</div>
+      <div class="trash bottom">Drop to Remove Command</div>
       <div id="execute"><%= f.submit 'RUN!' %></div>
     <% end %>
   </div>
   <div id="playfield">
+      <% goal_square = @level.goal.carl %>
     <div class="controls">
       <div class="command draggable" id="move"><div>Move</div></div>
       <div class="command draggable" id="turnleft"><div>Turn Left</div></div>
       <div class="command draggable" id="pickbeacon"><div>Pick Beacon</div></div>
       <div class="command draggable" id="putbeacon"><div>Put Beacon</div></div>
-      <div class="sub disabled" id="sub1"><div>sub1</div></div>
+      <div class="goals" id="goal-title"><div><h3>Goals:</h3></div></div>
     </div>
     <div class="controls">
       <div class="control-command disabled" id="branch"><div>Branch</div></div>
-      <div class="sub disabled" id="sub2"><div>sub2</div></div>
+      <div class="subroutine disabled" id="sub1"><div>Subroutine 1</div></div>
+      <div class="goals" id="carl-goal"><div>
+          <%= goal_markup(true,@execution_result0.carl_goal_met?,@level.goal,:carl_goal_met?,new,nil) %>
+      </div></div>
     </div>
     <div class="controls">
       <div class="control-command disabled" id="loop"><div>Loop</div></div>
-      <div class="sub disabled" id="sub3"><div>sub3</div></div>
+      <div class="subroutine disabled" id="sub2"><div>Subroutine 2</div></div>
+      <div class="goals" id="loc-goal"><div>
+          <%= goal_markup(@execution_result0.lines_of_code_goal?,@execution_result0.lines_of_code_goal_met?,@level.goal,:lines_of_code_goal_met?,new,"No lines of code goals for this level") %>
+      </div></div>
     </div>
     <div class="controls">
       <div class="control-command disabled" id="iterate"><div>Iterate</div></div>
-      <div class="sub disabled" id="sub4"><div>sub4</div></div>
+      <div class="subroutine disabled" id="sub3"><div>Subroutine 3</div></div>
+      <div class="goals" id="beacon-goal"><div>
+          <%= goal_markup(@execution_result0.beacon_goals?,@execution_result0.beacon_goals_met?,@level.goal,:beacons_goal_met?,new,"No beacon goals for this level") %>
+      </div></div>
     </div>
     <div id="board">
-      <% goal_square = @level.goal.carl %>
-      <div id="goal-title"><h3>Goals:</h3></div>
-      <div id="goal-list">
-        <ul>
-          <%= goal_li(@execution_result0.carl_goal_met?,@level.goal,:carl_goal_met?,new) %>
-          <% if @execution_result0.beacon_goals? %>
-            <%= goal_li(@execution_result0.beacon_goals_met?,@level.goal,:beacons_goal_met?,new) %>
-          <% end %>
-          <% if @execution_result0.lines_of_code_goal? %>
-            <%= goal_li(@execution_result0.lines_of_code_goal_met?,@level.goal,:lines_of_code_goal_met?,new) %>
-          <% else %>
-            <li>&nbsp;</li>
-          <% end %>
-        </ul>
-      </div>
-      <div id="execution-result-summary">
+      <div id="execution-result-summary"><div>
         <% if new %>
           <div class="ready"><h4>READY!</h4></div>
         <% else %>
@@ -68,7 +63,7 @@
             <div class="failure"><h4>FAIL.</h4>You didn't meet all the goals; keep working on your code!</div>
           <% end %>
         <% end %>
-      </div>
+      </div></div>
       <%
         hidden = ''
         hidden = 'hidden' if @board1.nil?

@@ -82,13 +82,10 @@ form.bp {
         .command {
           @include column(2);
         }
-        .control-command {
-          @include column(8);
+        .control-command, .subroutine {
+          @include column(4);
         }
-        .command-empty {
-          @include column(8);
-        }
-        .sub {
+        .goals {
           @include column(8,true);
         }
       }

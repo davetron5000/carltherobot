@@ -24,7 +24,7 @@ t_03:
   ordinal: 3
   difficulty: tutorial
   hype_text: Bring on the beacons!
-  goal: "--- !ruby/object:Goal \nbeacons: \n- - 6\n  - 1\ncarl: \n- 5\n- 0\nlines_of_code: 11\n" 
+  goal: "--- !ruby/object:Goal \nbeacons: \n- - 6\n  - 1\ncarl: \n- 5\n- 0\nlines_of_code: 12\n" 
   board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 1\nmap: \n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - :beacon\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - :wall\n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n- - \n  - \n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n  - :wall\n" 
 
 t_04:

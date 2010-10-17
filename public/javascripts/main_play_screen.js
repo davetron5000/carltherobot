@@ -30,8 +30,10 @@ $(document).ready(function() {
             var loc = code[i];
             if ((loc != codeToRemove) && (loc != 'placeholder')) {
               var command = loc;
-              if (command[1] == '_') {
-                command = command.substring(2,command.length);
+              var regex = /^[0-9]*_/;
+              if (command.match(regex)) {
+                var parts = command.split(/_/);
+                command = parts[1];
               }
               program += command + "\n";
               $("#source").append("<div id='" + i + "_" + command + "' class='" + command + "'>" + command + "</div>");
@@ -42,6 +44,10 @@ $(document).ready(function() {
               $("#source").append("<div id='placeholder'>Drop Code Here</div>");
           }
           $("#code textarea").val(program);
+          var height = $("#program").height();
+          if (height > $("#entirepage").height()) {
+            $("#entirepage").height(height);
+          }
           codeToRemove = null;
         }
       };

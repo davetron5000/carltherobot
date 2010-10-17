@@ -19,6 +19,7 @@ class Executor
       when 'move'
         transform = @carl.if_move
         current = @board.carl
+        raise "No carl on the board?!?!??!" if current.nil?
         new = [current[0] + transform[0],current[1] + transform[1]]
         raise Explosion.new("ran into a wall at #{new[0]},#{new[1]}",new) if @board.wall?(*new)
         @board.place_carl(*new)

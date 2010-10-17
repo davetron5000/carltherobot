@@ -8,16 +8,24 @@ module SolutionsHelper
     end
   end
 
-  def goal_li(goal_met,goal,goal_type,new)
+  def goal_markup(has_goal,goal_met,goal,goal_type,new,no_goal_text)
     klass = ""
     unless new
-      if goal_met
-        klass = "satisfied"
+      if has_goal
+        if goal_met
+          klass = "satisfied"
+        else
+          klass = "unsatisfied"
+        end
       else
-        klass = "unsatisfied"
+        klass = "nogoal"
       end
     end
-    raw("<li class=\"#{klass}\">#{goal_text(goal,goal_type)}</li>")
+    if has_goal
+      raw("<div class=\"one-goal #{klass}\">#{goal_text(goal,goal_type)}</div>")
+    else
+      raw("<div class=\"one-goal #{klass}\">#{no_goal_text}</div>")
+    end
   end
 
   def goal_text(goal,goal_type)

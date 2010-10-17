@@ -28,6 +28,9 @@ $control-highlight-color: #050;
 body.bp, textarea {
   font-family: 'CPMono_v07_Plain', monospace;
 }
+div {
+  @include border-radius;
+}
 
 body.bp {
   line-height: $line-height;
@@ -320,8 +323,69 @@ body.bp {
     .hidden {
       visibility:hidden;
     }
-    #program form {
-      margin-right: $blueprint-grid-width;
+    #program {
+      #source {
+        margin-right: $blueprint-grid-width;
+        div {
+          border: solid thin;
+          padding-top: $line-height / 2;
+          padding-bottom: $line-height / 2;
+          padding-left: $blueprint-grid-width / 2;
+          font-size: $font-size - 2;
+          color: $altalt-color;
+          cursor: move;
+        }
+        div.executed {
+          color: $main-color;
+        }
+        .command-reorder-highlight {
+          background-color: $highlight-color;
+          padding-top: $line-height / 2;
+          padding-bottom: $line-height / 2;
+        }
+      }
+      .trash {
+        font-size: $font-size - 4;
+        color: #800;
+        border: solid thin;
+        padding-top: $line-height / 2;
+        padding-bottom: $line-height / 2;
+        text-align: center;
+        margin-right: $blueprint-grid-width;
+      }
+      .trash-highlight {
+        background-color: #f00;
+        color: $bg-color;
+      }
+      .top {
+        margin-bottom: $line-height / 2;
+      }
+      .bottom {
+        margin-top: $line-height / 2;
+      }
+      form {
+        textarea {
+          display: none;
+        }
+        #execute {
+          margin-right: $blueprint-grid-width;
+          margin-top: $line-height;
+          input {
+            width: 100%;
+            border: solid thin;
+            background: $bg-color;
+            color: $alt-color;
+            font-size: $font-size + 4;
+            padding-top: 4px;
+            font-family: 'CPMono_v07_Black', monospace;
+            &:hover {
+            color: $bg-color;
+            background-color: $alt-color;
+            cursor: hand; cursor: pointer;
+            }
+          }
+        }
+      }
     }
   }
   #levels {

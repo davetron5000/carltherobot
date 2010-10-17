@@ -1,10 +1,23 @@
 <div id="solution">
   <h2><%= @level.difficulty %> <%= sprintf("%02d",@level.ordinal) %>: <%= @level.name %></h2>
-  <div id="program">
+  <div id="program" style="<%= !@solution.code.nil? && @solution.code.size > 4 ? "" : "height: 500px;" %>">
+    <div class="trash top">Remove Command</div>
+    <div id="source">
+      <% counter = 0 %>
+      <% if @solution.code.nil? || @solution.code.empty? %>
+        <div id="placeholder">Drop Code Here To Start</div>
+      <% end %>
+      <% @solution.code.nil? || @solution.code.each do |line| %>
+        <% executed = @execution_result0.last_line >= counter ? 'executed' : '' %>
+        <div id="<%= counter %>_<%= line %>" class="<%= line %> <%= executed %>"><%= line %></div>
+        <% counter += 1 %>
+      <% end %>
+    </div>
     <%= form_for @solution do |f| %>
       <%= f.hidden_field :level_id, :name => 'level_id' %>
       <div id="code"><%= f.text_area :code, :name => 'code', :value => @solution.code.nil? ? '' : @solution.code.join("\n") %></div>
-      <div id="execute"><%= f.submit 'Save Solution' %></div>
+      <div class="trash bottom">Remove Command</div>
+      <div id="execute"><%= f.submit 'RUN!' %></div>
     <% end %>
   </div>
   <div id="playfield">

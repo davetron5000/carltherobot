@@ -336,7 +336,6 @@ body.bp {
         }
       }
       div.command:hover, div.control-command:hover {
-        cursor: move;
         background-color: $control-highlight-color;
       }
       div.disabled {
@@ -430,7 +429,6 @@ body.bp {
           margin-right: $blueprint-grid-width;
           font-size: $font-size - 2;
           color: $altalt-color;
-          cursor: move;
         }
         div.executed {
           color: $main-color;
@@ -691,3 +689,4 @@ textarea#solution_code, pre.code {
   line-height: $line-height / 2;
   @include opacity(75%);
 }
+      .draggable:hover  { cursor: move; }

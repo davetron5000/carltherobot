@@ -1,8 +1,11 @@
 <div id="solution">
-  <h2><%= @level.difficulty %> <%= sprintf("%02d",@level.ordinal) %>: <%= @level.name %></h2>
+  <h2><div id="back">
+      <a href="<%= levels_url :difficulty => @level.difficulty %>">&lt;&lt; Levels</a>&nbsp;&nbsp;
+      <a href="<%= solutions_url %>">&lt;&lt; Solutions</a>
+  </div>&nbsp;&nbsp;|&nbsp;<%= @level.difficulty %> <%= sprintf("%02d",@level.ordinal) %>: <%= @level.name %></h2>
   <div id="program" style="<%= !@solution.code.nil? && @solution.code.size > 4 ? "" : "height: 500px;" %>">
     <% some_code = !(@solution.code.nil? || @solution.code.empty?) %>
-    <div class="trash top" <%= some_code ? '' : raw('style="visibility: hidden"')%>>Drop to Remove Command</div>
+    <div class="trash top" <%= some_code ? '' : raw('style="visibility: hidden"')%>>&darr;Drop Command to Remove&darr;</div>
     <div id="source">
       <% counter = 0 %>
       <% unless some_code %>
@@ -10,43 +13,59 @@
       <% end %>
       <% @solution.code.nil? || @solution.code.each do |line| %>
         <% executed = @execution_result0.last_line >= counter ? 'executed' : '' %>
-        <div id="<%= counter %>_<%= line %>" class="<%= line %> <%= executed %>"><%= line %></div>
+        <% final_line = @execution_result0.last_line == counter %>
+        <% explode = final_line && @execution_result0.exploded? %>
+        <% symbol = nil
+          case line
+          when 'move'
+            symbol = "2191"
+          when 'turnleft'
+            symbol = "21B0"
+          when 'pickbeacon'
+            symbol = "21F1"
+          when 'putbeacon'
+            symbol = "21F2"
+          end
+        %>
+        <div id="<%= counter %>_<%= line %>" class="<%= line %> <%= explode ? 'explode' : executed %>"><%= symbol.nil? ? '' : raw("&#x#{symbol};") %> <%= line %>
+          <%= executed == '' ? '' : final_line ? raw("&#x2717;") : raw(" &#x2713;") %>
+        </div>
         <% counter += 1 %>
       <% end %>
     </div>
     <%= form_for @solution do |f| %>
       <%= f.hidden_field :level_id, :name => 'level_id' %>
       <div id="code"><%= f.text_area :code, :name => 'code', :value => @solution.code.nil? ? '' : @solution.code.join("\n") %></div>
-      <div class="trash bottom" <%= some_code ? '' : raw('style="visibility: hidden"')%>>Drop to Remove Command</div>
+      <div class="trash bottom" <%= some_code ? '' : raw('style="visibility: hidden"')%>>&uarr;Drop Command to Remove&uarr;</div>
       <div id="execute"><%= f.submit 'RUN!' %></div>
     <% end %>
   </div>
   <div id="playfield">
       <% goal_square = @level.goal.carl %>
     <div class="controls">
-      <div class="command draggable" id="move"><div>Move</div></div>
-      <div class="command draggable" id="turnleft"><div>Turn Left</div></div>
-      <div class="command draggable" id="pickbeacon"><div>Pick Beacon</div></div>
-      <div class="command draggable" id="putbeacon"><div>Put Beacon</div></div>
+      <div class="command draggable" id="move"><div><div>&#x2191;</div></div></div>
+      <div class="command draggable" id="turnleft"><div><div>&#x21B0;</div></div></div>
+      <div class="command draggable" id="pickbeacon"><div><div>&#x21F1;</div></div></div>
+      <div class="command draggable" id="putbeacon"><div><div>&#x21F2;</div></div></div>
       <div class="goals" id="goal-title"><div><h3>Goals:</h3></div></div>
     </div>
     <div class="controls">
-      <div class="control-command disabled" id="branch"><div>Branch</div></div>
-      <div class="subroutine disabled" id="sub1"><div>Subroutine 1</div></div>
+      <div class="control-command disabled" id="branch"><div><div>&#x21B9;</div></div></div>
+      <div class="subroutine disabled" id="sub1"><div><div>SUB 00</div></div></div>
       <div class="goals" id="carl-goal"><div>
           <%= goal_markup(true,@execution_result0.carl_goal_met?,@level.goal,:carl_goal_met?,new,nil) %>
       </div></div>
     </div>
     <div class="controls">
-      <div class="control-command disabled" id="loop"><div>Loop</div></div>
-      <div class="subroutine disabled" id="sub2"><div>Subroutine 2</div></div>
+      <div class="control-command disabled" id="loop"><div><div>&#x21BA;</div></div></div>
+    <div class="subroutine disabled" id="sub2"><div><div>SUB 01</div></div></div>
       <div class="goals" id="loc-goal"><div>
           <%= goal_markup(@execution_result0.lines_of_code_goal?,@execution_result0.lines_of_code_goal_met?,@level.goal,:lines_of_code_goal_met?,new,"No lines of code goals for this level") %>
       </div></div>
     </div>
     <div class="controls">
-      <div class="control-command disabled" id="iterate"><div>Iterate</div></div>
-      <div class="subroutine disabled" id="sub3"><div>Subroutine 3</div></div>
+      <div class="control-command disabled" id="iterate"><div><div>&#x21C8;</div></div></div>
+        <div class="subroutine disabled" id="sub3"><div><div>SUB 10</div></div></div>
       <div class="goals" id="beacon-goal"><div>
           <%= goal_markup(@execution_result0.beacon_goals?,@execution_result0.beacon_goals_met?,@level.goal,:beacons_goal_met?,new,"No beacon goals for this level") %>
       </div></div>
@@ -59,9 +78,9 @@
           <% if @execution_result0.exploded? %>
             <div class="explosion"><h4>BOOM!</h4>C.A.R.L. ran into something or did something he couldn't do!  Try Again.</div>
           <% elsif @execution_result0.lines_of_code_goal_met? && @execution_result0.beacon_goals_met? && @execution_result0.carl_goal_met? %>
-            <div class="passed"><h4>YAY!</h4>You did it!  Move on to the next level &gt;&gt;</div>
+            <div class="passed" onclick="navigate('<%= new_solution_url :level_id => @level.next.id %>');"><h4>YAY!</h4>You did it!  <a href="<%= new_solution_url :level_id => @level.next.id %>">Move on to the next level &gt;&gt;</a></div>
           <% else %>
-            <div class="failure"><h4>FAIL.</h4>You didn't meet all the goals; keep working on your code!</div>
+            <div class="failure"><h4>FAIL.</h4>You didn't meet all the goals (but at least you didn't explode!); keep at it!</div>
           <% end %>
         <% end %>
       </div></div>
@@ -140,4 +159,5 @@
     </div>
   </div>
 </div>
+<div class="tooltip"></div>
 

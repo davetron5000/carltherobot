@@ -12,7 +12,7 @@
     <% else %>
       <ul>
         <% @solutions.each do |solution| %>
-          <li class="<%= solution.level.difficulty %>"><%= link_to solution.level.title,solution %><span class="timestamp"><br />(<%= solution.updated_at %>)</span></li>
+          <li class="<%= solution.level.difficulty %>"><a href="<%= edit_solution_url solution %>"><%= solution.level.title %></a><span class="timestamp"><br />(<%= solution.updated_at %>)</span></li>
         <% end %>
       </ul>
     <% end %>

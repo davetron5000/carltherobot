@@ -234,6 +234,20 @@ body.bp {
     }
   }
   #solution {
+    #back {
+      display: inline;
+      vertical-align: middle;
+      font-size: $font-size - 4;
+      a {
+        color: $main-color;
+        &:hover, &:visited {
+          color: $main-color;
+        }
+      }
+    }
+    h2 {
+      text-align: left;
+    }
     .controls {
       div.goals {
         margin-bottom: $line-height / 2;
@@ -251,11 +265,22 @@ body.bp {
           color: $alt-color
         }
       }
+      div.command {
+        div {
+        }
+      }
       div.command, div.subroutine, div.control-command {
         margin-bottom: $line-height / 2;
         div {
+          @include border-radius;
           border: solid thin;
           height: $line-height * 2;
+          text-align: center;
+          div {
+            font-size: $font-size;
+            border: none;
+            padding: $line-height / 2;
+          }
         }
       }
       div.command:hover {
@@ -305,8 +330,17 @@ body.bp {
           }
         }
         .passed {
+          &:hover {
+            cursor: hand; cursor: pointer;
+          }
           background-color: $satisfied-color;
           color: $bg-color;
+          a {
+            color: $bg-color;
+            &:hover, &:visited {
+              color: $bg-color;
+            }
+          }
           font-family: 'CPMono_v07_Black', monospace;
           h4 {
             color: $bg-color;
@@ -336,16 +370,21 @@ body.bp {
       #source {
         //margin-right: $blueprint-grid-width;
         div {
+          @include border-radius;
           border: solid thin;
           padding-top: $line-height / 2;
           padding-bottom: $line-height / 2;
           padding-left: $blueprint-grid-width / 2;
+          margin-right: $blueprint-grid-width;
           font-size: $font-size - 2;
           color: $altalt-color;
           cursor: move;
         }
         div.executed {
           color: $main-color;
+        }
+        div.explode {
+          color: #F87800;
         }
         .command-reorder-highlight {
           background-color: $highlight-color;
@@ -354,9 +393,10 @@ body.bp {
         }
       }
       .trash {
+        @include border-radius;
         font-size: $font-size - 4;
         color: #800;
-        border: solid thin;
+        border: solid 2px;
         padding-top: $line-height / 2;
         padding-bottom: $line-height / 2;
         text-align: center;
@@ -405,6 +445,17 @@ body.bp {
     }
   }
   #levels {
+    #back {
+      display: inline;
+      vertical-align: middle;
+      font-size: $font-size;
+      a {
+        color: $main-color;
+        &:hover, &:visited {
+          color: $main-color;
+        }
+      }
+    }
     h3 {
       text-align: center;
     }
@@ -493,6 +544,7 @@ textarea#solution_code, pre.code {
   padding:0;
 }
 .square {
+  @include border-radius;
   background-color: $altalt-color;
   margin-bottom: $blueprint-grid-margin;
   height: $blueprint-grid-width;
@@ -568,3 +620,21 @@ textarea#solution_code, pre.code {
   text-align: center;
 }
 
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+  color: $bg-color;
+  background-color: $main-color;
+  padding-left: $line-height/ 2;
+  padding-right: $line-height/ 2;
+  padding-top: $line-height/ 2;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  width: $blueprint-grid-width * 8;
+  font-size: $line-height / 2 + 2;
+  line-height: $line-height / 2;
+  @include opacity(75%);
+}

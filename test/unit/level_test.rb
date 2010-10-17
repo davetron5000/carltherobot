@@ -16,6 +16,13 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal 3,levels[:hard][2].ordinal
   end
 
+  test "next" do
+    level = Level.find_by_id(2)
+    assert_equal 3,level.next.id
+    assert_equal 4,level.next.next.id
+    assert_equal 'easy',level.next.next.next.difficulty
+  end
+
   test "board_and_goal_serialization" do
     level = Level.find_by_id(1)
     assert_not_nil level.board0

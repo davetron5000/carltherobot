@@ -7,6 +7,24 @@ class Level < ActiveRecord::Base
     sprintf("%s%02d: %s",difficulty ? "#{self.difficulty} " : '',self.ordinal,self.name)
   end
 
+  def next
+    Level.all.sort{ |a,b| a.super_ordinal <=> b.super_ordinal }.find do |level|
+      level.super_ordinal > self.super_ordinal
+    end
+  end
+
+  def super_ordinal
+    if self.difficulty == 'tutorial'
+      self.ordinal 
+    elsif self.difficulty == 'easy'
+      10 + self.ordinal
+    elsif self.difficulty == 'hard'
+      100 + self.ordinal
+    else
+      raise "Unknown difficulty #{self.difficulty}"
+    end
+  end
+
   # Returns all levels organized by difficult, in ordinal order
   def self.by_difficulty
     result = { :tutorial => [], :easy => [], :hard => [] }

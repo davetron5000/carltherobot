@@ -14,6 +14,22 @@ class Board
     b
   end
 
+  def to_s
+    @map.map do |row|
+      row.map do |square|
+        if square.nil?
+          " "
+        elsif square == :beacon
+          "B"
+        elsif square == :wall
+          "W"
+        else
+          "?"
+        end
+      end.join("")
+    end.join("\n")
+  end
+
   attr_accessor :map
 
   # Create an empty board

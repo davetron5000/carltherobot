@@ -40,8 +40,10 @@ $(document).ready(function() {
             }
           }
           code = $("#source").sortable("toArray");
+          $(".trash").css("visibility","visible");
           if (code.length == 0) {
               $("#source").append("<div id='placeholder'>Drop Code Here</div>");
+              $(".trash").css("visibility","hidden");
           }
           $("#code textarea").val(program);
           var height = $("#program").height();

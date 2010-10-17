@@ -464,7 +464,7 @@ textarea#solution_code, pre.code {
 
 /* line 406, ../../app/stylesheets/styles.scss */
 .square {
-  background: #002200;
+  background-color: yellow;
   margin-bottom: 10px;
   height: 30px;
 }
@@ -475,26 +475,102 @@ textarea#solution_code, pre.code {
 }
 
 /* line 415, ../../app/stylesheets/styles.scss */
-.carl .square {
-  background: #fff;
+.square {
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 /* line 419, ../../app/stylesheets/styles.scss */
-.explosion .square {
-  background: #F87800;
+.beacon .square {
+  background-image: url(/images/beacon.png);
 }
 
 /* line 423, ../../app/stylesheets/styles.scss */
+.carl-north .square {
+  background-image: url(/images/carl_north.png);
+}
+
+/* line 424, ../../app/stylesheets/styles.scss */
+.carl-east .square {
+  background-image: url(/images/carl_east.png);
+}
+
+/* line 425, ../../app/stylesheets/styles.scss */
+.carl-west .square {
+  background-image: url(/images/carl_west.png);
+}
+
+/* line 426, ../../app/stylesheets/styles.scss */
+.carl-south .square {
+  background-image: url(/images/carl_south.png);
+}
+
+/* line 428, ../../app/stylesheets/styles.scss */
+.goal-carl-north .square {
+  background-image: url(/images/carl_north.png);
+  background-color: lime;
+}
+
+/* line 432, ../../app/stylesheets/styles.scss */
+.goal-carl-south .square {
+  background-image: url(/images/carl_south.png);
+  background-color: lime;
+}
+
+/* line 436, ../../app/stylesheets/styles.scss */
+.goal-carl-east .square {
+  background-image: url(/images/carl_east.png);
+  background-color: lime;
+}
+
+/* line 440, ../../app/stylesheets/styles.scss */
+.goal-carl-west .square {
+  background-image: url(/images/carl_west.png);
+  background-color: lime;
+}
+
+/* line 445, ../../app/stylesheets/styles.scss */
+.beacon-carl-north .square {
+  background-image: url(/images/carl_north-beacon.png);
+  background-color: lime;
+}
+
+/* line 449, ../../app/stylesheets/styles.scss */
+.beacon-carl-south .square {
+  background-image: url(/images/carl_south-beacon.png);
+  background-color: lime;
+}
+
+/* line 453, ../../app/stylesheets/styles.scss */
+.beacon-carl-east .square {
+  background-image: url(/images/carl_east-beacon.png);
+  background-color: lime;
+}
+
+/* line 457, ../../app/stylesheets/styles.scss */
+.beacon-carl-west .square {
+  background-image: url(/images/carl_west-beacon.png);
+  background-color: lime;
+}
+
+/* line 462, ../../app/stylesheets/styles.scss */
+.explode .square {
+  background-color: #F87800;
+  background-image: url(/images/boom.png);
+}
+
+/* line 467, ../../app/stylesheets/styles.scss */
 .goal .square {
-  background: #f00;
+  background-color: lime;
+  background-image: url(/images/goal.png);
 }
 
-/* line 427, ../../app/stylesheets/styles.scss */
+/* line 472, ../../app/stylesheets/styles.scss */
 .wall .square {
-  background: lime;
+  background: #002200;
 }
 
-/* line 430, ../../app/stylesheets/styles.scss */
+/* line 475, ../../app/stylesheets/styles.scss */
 #footer {
   background: lime;
   color: black;

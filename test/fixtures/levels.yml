@@ -16,7 +16,7 @@ t_02:
   difficulty: tutorial
   hype_text: A baby step toward controlling C.A.R.L.
   goal: "--- !ruby/object:Goal \nbeacons: \n- - 1\n  - 1\n- - 0\n  - 1\ncarl: \n- 1\n- 1\nlines_of_code: 10\n" 
-  board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 0\nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n"
+  board0: "--- !ruby/object:Board \ncarl: \n- 7\n- 0\nmap: \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - \n  - \n- - \n  - \n  - \n  - \n  - \n  - \n  - :beacon\n  - :beacon\n"
 
 e_01:
   id: 3

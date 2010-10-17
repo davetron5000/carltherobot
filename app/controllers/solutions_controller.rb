@@ -59,15 +59,18 @@ class SolutionsController < ApplicationController
     exploded = false
     new_board = nil
     begin
-      new_board = executor.execute
+      executor.execute!
+      new_board = executor.board
     rescue Explosion => explosion
       exploded = true
-      new_board = board
+      new_board = executor.board
       row,col = explosion.where?
       new_board.place_carl(row,col)
       new_board.map[row][col] = :explosion
     end
-    execution_result = ExecutionResult.new(goal,new_board,solution,exploded)
+    carl = executor.carl
+    last_line = executor.last_index
+    execution_result = ExecutionResult.new(goal,new_board,solution,exploded,carl,last_line)
     [execution_result,new_board]
   end
 end

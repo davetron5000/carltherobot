@@ -32,7 +32,7 @@ class SolutionsControllerTest < ActionController::TestCase
 
   test "can get the new form for a new solution" do
     sign_in players(:one)
-    get :new
+    get :new, :level_id => 1
     assert_response :success
     assert_not_nil assigns(:solution)
     assert_not_nil assigns(:level)
@@ -90,6 +90,7 @@ class SolutionsControllerTest < ActionController::TestCase
     assert assigns(:execution_result0).carl_goal_met?
     assert !assigns(:execution_result0).beacon_goals_met?
     assert assigns(:execution_result0).lines_of_code_goal_met?
+    assert_equal :east,assigns(:execution_result0).carl.direction
   end
 
   test "db updated when we win" do

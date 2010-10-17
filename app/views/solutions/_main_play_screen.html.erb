@@ -67,7 +67,11 @@
           <% 8.times do |col| %>
             <% 
                board = @board0
-               board = @board1 if board_num == 1
+               execution_result = @execution_result0
+               if board_num == 1
+                 board = @board1
+                 execution_result = @execution_result1
+               end
                klass = "board-square"
                klass = "board-square-end" if board_num == 1 && col == 7
                klass = "board-square-board0-end" if board_num == 0 && col == 7
@@ -75,11 +79,29 @@
                klass += " " + hidden if board_num == 1
                square_contents = ''
                unless board.nil?
-                 square_contents = 'wall' if board.wall?(row,col)
-                 square_contents = 'beacon' if board.beacon?(row,col)
-                 square_contents = 'goal' if goal_square == [row,col]
-                 square_contents = 'explosion' if board.map[row][col] == :explosion
-                 square_contents += ' carl' if board.carl?(row,col) && board.map[row][col] != :explosion
+                 goal = goal_square == [row,col]
+                 carl = board.carl?(row,col)
+                 explosion = board.map[row][col] == :explosion
+                 wall = board.wall?(row,col)
+                 beacon = board.beacon?(row,col)
+
+                 if wall
+                 square_contents = 'wall'
+                 elsif explosion
+                   square_contents = 'explode'
+                 else
+                   if goal && carl
+                     square_contents = 'goal-carl-' + execution_result.carl.direction.to_s
+                   elsif goal
+                     square_contents = 'goal'
+                   elsif carl && beacon
+                     square_contents = 'beacon-carl-' + execution_result.carl.direction.to_s
+                   elsif carl
+                     square_contents = 'carl-' + execution_result.carl.direction.to_s
+                   elsif beacon
+                     square_contents = 'beacon'
+                   end
+                 end
                end
              %>
              <div class="<%= klass %> board<%= board_num %> <%= square_contents %>" id="board<%= board_num %>-<%= row %>-<%= col %>"><div class="square">&nbsp;</div></div>

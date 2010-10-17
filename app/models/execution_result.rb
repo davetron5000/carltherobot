@@ -1,9 +1,13 @@
 class ExecutionResult
-  def initialize(goal,board,solution,exploded)
+  attr_reader :carl
+  attr_reader :last_line
+  def initialize(goal,board,solution,exploded,carl,last_line)
     @goal = goal
     @board = board
     @solution = solution
     @exploded = exploded
+    @carl = carl
+    @last_line = last_line
   end
 
   def exploded?; @exploded; end

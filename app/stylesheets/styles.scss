@@ -404,7 +404,7 @@ textarea#solution_code, pre.code {
 }
 
 .square {
-  background: $highlight-color;
+  background-color: $altalt-color;
   margin-bottom: $blueprint-grid-margin;
   height: $blueprint-grid-width;
 }
@@ -412,20 +412,65 @@ textarea#solution_code, pre.code {
   margin-bottom: 0;
 }
 
-.carl .square {
-  background: #fff;
+.square {
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.beacon .square {
+  background-image: url(/images/beacon.png);
 }
 
-.explosion .square {
-  background: #F87800;
+.carl-north .square { background-image: url(/images/carl_north.png); }
+.carl-east .square { background-image: url(/images/carl_east.png); }
+.carl-west .square { background-image: url(/images/carl_west.png); }
+.carl-south .square { background-image: url(/images/carl_south.png); }
+
+.goal-carl-north .square {
+  background-image: url(/images/carl_north.png);
+  background-color: $main-color;
+}
+.goal-carl-south .square {
+  background-image: url(/images/carl_south.png);
+  background-color: $main-color;
+}
+.goal-carl-east .square {
+  background-image: url(/images/carl_east.png);
+  background-color: $main-color;
+}
+.goal-carl-west .square {
+  background-image: url(/images/carl_west.png);
+  background-color: $main-color;
+}
+
+.beacon-carl-north .square {
+  background-image: url(/images/carl_north-beacon.png);
+  background-color: $main-color;
+}
+.beacon-carl-south .square {
+  background-image: url(/images/carl_south-beacon.png);
+  background-color: $main-color;
+}
+.beacon-carl-east .square {
+  background-image: url(/images/carl_east-beacon.png);
+  background-color: $main-color;
+}
+.beacon-carl-west .square {
+  background-image: url(/images/carl_west-beacon.png);
+  background-color: $main-color;
+}
+
+.explode .square {
+  background-color: #F87800;
+  background-image: url(/images/boom.png);
 }
 
 .goal .square {
-  background: #f00;
+  background-color: $main-color;
+  background-image: url(/images/goal.png);
 }
 
 .wall .square {
-  background: $main-color;
+  background: $highlight-color;
 }
 #footer {
   background: $main-color;
